@@ -113,47 +113,48 @@
 
   <!-- Registration Consultation Form -->
   <section class="section">
-    <div style="max-width: 800px; margin: 0 auto; background: #fff; padding: 3rem; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: var(--shadow-md);">
+    <div style="max-width: 750px; margin: 0 auto; background: #ffffff; padding: 2.5rem 2rem; border-radius: 16px; border: 1px solid #cbd5e1; box-shadow: var(--shadow-md);">
       <div style="text-align: center; margin-bottom: 2rem;">
-        <span class="section-badge">KONSULTASI PENDIDIKAN</span>
-        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary-navy);">Formulir Konsultasi & Pendaftaran</h2>
-        <p style="color: #64748b; font-size: 0.95rem;">Hubungi konsultan pendidikan Admiral Malika.</p>
+        <span class="hero-tag" style="margin-bottom: 0.5rem; display: inline-block;">KONSULTASI PENDIDIKAN</span>
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: #091424; margin: 0.5rem 0;">Formulir Konsultasi & Pendaftaran</h2>
+        <p style="color: #64748b; font-size: 0.98rem;">Hubungi konsultan pendidikan Admiral Malika untuk program Ausbildung & Duales Studium di Jerman.</p>
       </div>
 
       <form id="inquiry-form">
         <input type="hidden" id="inq-pillar" value="Pendidikan Jerman">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-          <div class="form-group">
-            <label class="form-label">Nama Calon Peserta *</label>
-            <input type="text" id="inq-name" class="form-control" required placeholder="Nama Lengkap Anda">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Email Aktif *</label>
-            <input type="email" id="inq-email" class="form-control" required placeholder="nama@gmail.com">
-          </div>
+        
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;">Nama Calon Peserta* :</label>
+          <input type="text" id="inq-name" required placeholder="Nama Lengkap Anda" style="width: 100%; padding: 0.65rem 0.9rem; border: 1px solid #94a3b8; border-radius: 4px; font-size: 0.95rem; box-sizing: border-box;">
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-          <div class="form-group">
-            <label class="form-label">Nomor WhatsApp *</label>
-            <input type="tel" id="inq-phone" class="form-control" required placeholder="+62 811-1889-3389">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Pilihan Program Diminati *</label>
-            <select class="form-control" id="inq-program-select">
-              <option value="Ausbildung (Sekolah Kejuruan D3)">Ausbildung / Sekolah Kejuruan (Setara D3)</option>
-              <option value="Duales Studium (Setara D4)">Duales Studium (Setara D4)</option>
-              <option value="Kemitraan Sekolah / Instansi">Kemitraan Sekolah Kejuruan / Instansi</option>
-            </select>
-          </div>
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;">Email Aktif* :</label>
+          <input type="email" id="inq-email" required placeholder="nama@gmail.com" style="width: 100%; padding: 0.65rem 0.9rem; border: 1px solid #94a3b8; border-radius: 4px; font-size: 0.95rem; box-sizing: border-box;">
         </div>
 
-        <div class="form-group">
-          <label class="form-label">Pendidikan Terakhir & Pesan Tambahan *</label>
-          <textarea id="inq-message" class="form-control" required placeholder="Tuliskan asal sekolah/diploma Anda dan pertanyaan seputar program..."></textarea>
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;">Nomor WhatsApp* :</label>
+          <input type="tel" id="inq-phone" required placeholder="+62 811-1889-3389" style="width: 100%; padding: 0.65rem 0.9rem; border: 1px solid #94a3b8; border-radius: 4px; font-size: 0.95rem; box-sizing: border-box;">
         </div>
 
-        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.9rem;"><i class="fab fa-whatsapp"></i> Kirim Formulir Konsultasi</button>
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;">Pilihan Program Diminati* :</label>
+          <select id="inq-program-select" required style="width: 100%; padding: 0.65rem 0.9rem; border: 1px solid #94a3b8; border-radius: 4px; font-size: 0.95rem; background: #fff; box-sizing: border-box;">
+            <option value="Ausbildung (Sekolah Kejuruan D3)">Ausbildung / Sekolah Kejuruan (Setara D3)</option>
+            <option value="Duales Studium (Setara D4)">Duales Studium (Setara D4)</option>
+            <option value="Kemitraan Sekolah / Instansi">Kemitraan Sekolah Kejuruan / Instansi</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 1.75rem;">
+          <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;">Pendidikan Terakhir & Pesan Tambahan* :</label>
+          <textarea id="inq-message" required rows="5" placeholder="Tuliskan asal sekolah/diploma Anda dan pertanyaan seputar program..." style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid #94a3b8; border-radius: 4px; font-size: 0.95rem; resize: vertical; box-sizing: border-box;"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold" style="width: 100%; padding: 0.85rem; font-size: 0.95rem; font-weight: 700; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 8px; border: none; cursor: pointer;">
+          <i class="fab fa-whatsapp"></i> Kirim Formulir Konsultasi
+        </button>
       </form>
     </div>
   </section>
