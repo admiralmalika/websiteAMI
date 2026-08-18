@@ -1,26 +1,26 @@
-/* Admiral Malika Design System - Global Trade & International Theme */
+/* Admiral Malika Design System - Premium Dark Navy & Gold Theme */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary-navy: #0b1e36;         /* Deep International Navy */
-  --secondary-navy: #061325;       /* Darkest Midnight Navy */
-  --navy-light: #162c4a;           /* Medium Navy Accent */
-  --accent-gold: #c59b27;          /* Premium Metallic Gold */
-  --accent-gold-hover: #a37f1c;    /* Rich Gold Hover */
-  --accent-blue: #0284c7;          /* Global Trade Ocean Blue */
-  --accent-blue-hover: #0369a1;    /* Deep Ocean Blue Hover */
-  --accent-emerald: #059669;       /* Fresh Green Accent */
-  --bg-slate: #f8fafc;             /* Crisp Light Grey Canvas */
+  --primary-navy: #091322;         /* Deep Midnight Navy */
+  --secondary-navy: #07101d;       /* Darkest Midnight */
+  --navy-card: #0e1c30;            /* Card Dark Navy */
+  --accent-gold: #c59b27;          /* Warm Metallic Gold */
+  --accent-gold-hover: #a37f1c;    /* Deep Gold Hover */
+  --accent-gold-light: #d4af37;    /* Bright Gold */
+  --accent-blue: #0284c7;          /* Ocean Blue Accent */
+  --accent-blue-hover: #0369a1;    /* Deep Blue Hover */
+  --bg-slate: #f8fafc;             /* Light Canvas for Content Sections */
   --bg-section-alt: #f1f5f9;       /* Alternating Section Canvas */
   --bg-card: #ffffff;              /* Pure White Card */
-  --text-dark: #0b1e36;            /* Deep Navy Black Text */
+  --text-dark: #091322;            /* Deep Navy Black Text */
   --text-muted: #64748b;          /* Muted Grey Text */
-  --text-light: #f8fafc;           /* Light Text for Dark Banners */
+  --text-light: #f8fafc;           /* Light Text */
   --border-color: #e2e8f0;         /* Soft Border Line */
   --border-gold: #c59b27;
-  --shadow-sm: 0 1px 3px rgba(11, 30, 54, 0.08);
-  --shadow-md: 0 4px 14px -2px rgba(11, 30, 54, 0.1), 0 2px 6px -1px rgba(11, 30, 54, 0.05);
-  --shadow-lg: 0 20px 40px -8px rgba(11, 30, 54, 0.15), 0 8px 16px -4px rgba(11, 30, 54, 0.08);
+  --shadow-sm: 0 1px 3px rgba(9, 19, 34, 0.08);
+  --shadow-md: 0 4px 14px -2px rgba(9, 19, 34, 0.12);
+  --shadow-lg: 0 20px 40px -8px rgba(9, 19, 34, 0.2);
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 24px;
@@ -52,7 +52,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(11, 30, 54, 0.96);
+  background: rgba(9, 19, 34, 0.96);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 2px solid var(--accent-gold);
@@ -80,7 +80,7 @@ a {
 .logo-badge {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, var(--primary-navy), var(--navy-light));
+  background: linear-gradient(135deg, #091322, #14253f);
   border: 2px solid var(--accent-gold);
   border-radius: var(--radius-md);
   display: flex;
@@ -137,15 +137,16 @@ a {
   margin-left: 1rem;
 }
 
+/* Button Component Styles */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 0.75rem 1.6rem;
+  padding: 0.8rem 1.6rem;
   font-weight: 700;
-  font-size: 0.9rem;
-  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  border-radius: 50px; /* Rounded pill style from mockup */
   transition: var(--transition);
   cursor: pointer;
   border: none;
@@ -153,26 +154,26 @@ a {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-hover));
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+  box-shadow: 0 4px 20px rgba(2, 132, 199, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+  box-shadow: 0 6px 25px rgba(2, 132, 199, 0.55);
 }
 
 .btn-gold {
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-hover));
-  color: var(--primary-navy);
-  box-shadow: 0 4px 14px rgba(197, 155, 39, 0.35);
+  background: linear-gradient(135deg, #c59b27 0%, #a37f1c 100%);
+  color: #091322;
+  box-shadow: 0 4px 20px rgba(197, 155, 39, 0.35);
   font-weight: 800;
 }
 
 .btn-gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.45);
+  box-shadow: 0 6px 25px rgba(197, 155, 39, 0.5);
 }
 
 .btn-outline {
@@ -182,42 +183,33 @@ a {
 }
 
 .btn-outline:hover {
-  background: var(--accent-gold);
-  color: var(--primary-navy);
+  background: rgba(197, 155, 39, 0.15);
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .btn-sm {
   padding: 0.45rem 1.1rem;
   font-size: 0.85rem;
+  border-radius: 12px;
 }
 
-/* Hero Section */
+/* Hero Section - Exact Match with Mockup */
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg, #0b1e36 0%, #061325 100%);
+  background: linear-gradient(135deg, #091322 0%, #060e1a 100%);
   color: var(--text-light);
-  padding: 5.5rem 2rem 6.5rem 2rem;
+  padding: 4.5rem 2rem 5.5rem 2rem;
   overflow: hidden;
   border-bottom: 3px solid var(--accent-gold);
 }
 
-.hero-bg-glow {
-  position: absolute;
-  top: -20%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(197, 155, 39, 0.15) 0%, rgba(2, 132, 199, 0.08) 50%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
 .hero-container {
-  max-width: 1320px;
+  max-width: 1380px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 3.5rem;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -227,102 +219,108 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(197, 155, 39, 0.15);
-  border: 1px solid var(--accent-gold);
-  color: var(--accent-gold);
-  padding: 0.45rem 1.2rem;
+  background: rgba(197, 155, 39, 0.1);
+  border: 1.5px solid var(--accent-gold);
+  color: var(--accent-gold-light);
+  padding: 0.4rem 1.1rem;
   border-radius: 50px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  backdrop-filter: blur(8px);
+  margin-bottom: 1.25rem;
 }
 
 .hero-title {
-  font-size: 3.1rem;
+  font-size: 3.2rem;
   font-weight: 800;
   line-height: 1.18;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   letter-spacing: -1px;
+  color: #ffffff;
 }
 
 .hero-title span {
-  background: linear-gradient(135deg, #ffffff 0%, var(--accent-gold) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent-gold);
 }
 
 .hero-subtitle {
-  font-size: 1.125rem;
-  color: #94a3b8;
+  font-size: 1.1rem;
+  color: #8a99ad;
   margin-bottom: 2.2rem;
-  max-width: 92%;
-  line-height: 1.75;
+  max-width: 90%;
+  line-height: 1.7;
 }
 
 .hero-btns {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 2.2rem;
 }
 
-/* Flag Network Badges Bar */
+/* Global Network Row (Exact Pill Style from Mockup) */
 .flags-row {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  gap: 1rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   flex-wrap: wrap;
 }
 
 .flags-label {
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.82rem;
+  font-weight: 800;
   color: var(--accent-gold);
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-
-.flags-list {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.flag-badge {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 0.35rem 0.75rem;
-  border-radius: 30px;
-  font-size: 0.85rem;
-  color: #ffffff;
-  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-/* Banner Frame Styling */
+.flags-list {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.flag-badge {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  color: #ffffff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.flag-code {
+  color: #94a3b8;
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+
+/* Right Column Banner Frame */
 .banner-frame {
   position: relative;
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 3px var(--accent-gold);
-  background: var(--primary-navy);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(197, 155, 39, 0.5);
+  background: #091322;
 }
 
 .banner-img {
   width: 100%;
-  height: 440px;
+  height: 100%;
+  max-height: 480px;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.banner-frame:hover .banner-img {
-  transform: scale(1.04);
 }
 
 /* Section Common */
@@ -399,7 +397,7 @@ a {
   left: 0;
 }
 
-.stripe-agraria { background: var(--accent-emerald); }
+.stripe-agraria { background: #059669; }
 .stripe-edu { background: var(--accent-blue); }
 .stripe-store { background: var(--accent-gold); }
 
@@ -414,9 +412,9 @@ a {
   margin-bottom: 1.5rem;
 }
 
-.icon-agraria { background: rgba(5, 150, 105, 0.15); color: #059669; }
-.icon-edu { background: rgba(2, 132, 199, 0.15); color: #0284c7; }
-.icon-store { background: rgba(197, 155, 39, 0.15); color: #c59b27; }
+.icon-agraria { background: rgba(5, 150, 105, 0.12); color: #059669; }
+.icon-edu { background: rgba(2, 132, 199, 0.12); color: #0284c7; }
+.icon-store { background: rgba(197, 155, 39, 0.12); color: #c59b27; }
 
 .pillar-title {
   font-size: 1.4rem;
@@ -511,13 +509,10 @@ a {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
   }
 }
 
