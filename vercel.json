@@ -5,12 +5,14 @@
   "trailingSlash": false,
   "routes": [
     {
-      "src": "/online-store/(.*)",
+      "src": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "store.admiralmalika.com"
+        }
+      ],
       "dest": "/online-store/$1"
-    },
-    {
-      "src": "/online-store",
-      "dest": "/online-store/index.html"
     },
     {
       "src": "/store/(.*)",
@@ -21,16 +23,12 @@
       "dest": "/online-store/index.html"
     },
     {
-      "src": "/css/store.css",
-      "dest": "/online-store/css/store.css"
+      "src": "/online-store/(.*)",
+      "dest": "/online-store/$1"
     },
     {
-      "src": "/js/store.js",
-      "dest": "/online-store/js/store.js"
-    },
-    {
-      "src": "/images/(.*)",
-      "dest": "/online-store/images/$1"
+      "src": "/online-store",
+      "dest": "/online-store/index.html"
     },
     {
       "src": "/(.*)",
