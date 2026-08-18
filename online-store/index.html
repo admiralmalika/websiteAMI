@@ -6,14 +6,13 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>Toko Online Resmi | PT Admiral Malika Internasional</title>
-  <link rel="stylesheet" href="/online-store/css/store.css">
-  <link rel="stylesheet" href="css/store.css">
+  <title>Admiral Malika Store | Toko Online Resmi</title>
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Header & Navbar (Exact Match to Reference Screenshot) -->
+  <!-- Header Navbar -->
   <header class="store-header">
     <div class="store-nav-container">
       <a href="index.html" class="store-brand">
@@ -28,22 +27,22 @@
 
       <ul class="store-nav-menu">
         <li><a href="#produk-unggulan" class="store-nav-link active">Produk</a></li>
-        <li><a href="../company-profile/about.html" class="store-nav-link">Tentang Kami</a></li>
-        <li><a href="../company-profile/contact.html" class="store-nav-link">Kontak</a></li>
+        <li><a href="https://admiralmalika.com/about" class="store-nav-link">Tentang Kami</a></li>
+        <li><a href="https://admiralmalika.com/contact" class="store-nav-link">Kontak</a></li>
       </ul>
 
       <div style="display: flex; align-items: center; gap: 1rem;">
         <a href="#produk-unggulan" class="btn-belanja">
           <i class="fas fa-shopping-bag"></i> Belanja
         </a>
-        <a href="../company-profile/index.html" style="font-size: 0.85rem; font-weight: 700; color: var(--primary-navy); text-decoration: none;" title="Kembali ke Portal Utama">
-          &larr; Beranda
+        <a href="https://admiralmalika.com" style="font-size: 0.85rem; font-weight: 700; color: var(--primary-navy); text-decoration: none;" title="Kembali ke Portal Utama">
+          &larr; Beranda Utama
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section with Attached User Banner Graphic -->
+  <!-- Hero Section with Attached User Banner Image -->
   <section class="store-hero">
     <div class="store-hero-container">
       <div>
@@ -62,9 +61,9 @@
         </div>
       </div>
 
-      <!-- Hero Banner Graphic (Exact User Attached Banner Image) -->
+      <!-- Hero Banner Graphic (User Attached Image) -->
       <div class="store-hero-banner-wrap">
-        <img src="images/store_banner.jpg" onerror="this.src='/online-store/images/store_banner.jpg'" alt="PT Admiral Malika Internasional Store Banner Showcase" class="store-hero-banner-img">
+        <img src="images/store_banner.jpg" alt="Admiral Malika Store Showcase Banner" class="store-hero-banner-img">
       </div>
     </div>
   </section>
@@ -101,7 +100,7 @@
   <!-- Category Filter Bar -->
   <div class="category-bar-section">
     <div class="category-pills" id="category-pills-container">
-      <!-- Rendered dynamically from store.js -->
+      <!-- Rendered dynamically -->
     </div>
   </div>
 
@@ -115,7 +114,7 @@
     </div>
 
     <div class="products-grid" id="products-catalog-grid">
-      <!-- Rendered dynamically from store.js -->
+      <!-- Rendered dynamically -->
     </div>
   </section>
 
@@ -191,13 +190,12 @@
         &copy; 2026 Admiral Malika Online Store | Support WA: +6281118893389
       </div>
       <div style="display: flex; gap: 1rem;">
-        <a href="../company-profile/index.html" style="color: var(--accent-gold); font-weight: 700;">&larr; Portal Utama</a>
-        <a href="admin/index.html" style="color: #94a3b8;"><i class="fas fa-lock"></i> Admin Store</a>
+        <a href="https://admiralmalika.com" style="color: var(--accent-gold); font-weight: 700;">&larr; Portal Utama</a>
       </div>
     </div>
   </footer>
 
-  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       renderCategories();
@@ -205,11 +203,10 @@
     });
 
     function renderCategories() {
-      const store = getStoreData();
       const container = document.getElementById('category-pills-container');
-      if (!container) return;
+      if (!container || typeof DEFAULT_CATEGORIES === 'undefined') return;
 
-      container.innerHTML = store.categories.map((cat, idx) => `
+      container.innerHTML = DEFAULT_CATEGORIES.map((cat, idx) => `
         <div class="category-pill ${idx === 0 ? 'active' : ''}" onclick="selectCategory(this, '${cat.id}')">
           <i class="fas ${cat.icon || 'fa-tag'}"></i> ${cat.name}
         </div>
@@ -223,13 +220,12 @@
     }
 
     function renderProducts(catId) {
-      const store = getStoreData();
       const container = document.getElementById('products-catalog-grid');
-      if (!container) return;
+      if (!container || typeof DEFAULT_PRODUCTS === 'undefined') return;
 
-      let filtered = store.products;
+      let filtered = DEFAULT_PRODUCTS;
       if (catId && catId !== 'cat-all') {
-        filtered = store.products.filter(p => p.categoryId === catId);
+        filtered = DEFAULT_PRODUCTS.filter(p => p.categoryId === catId);
       }
 
       if (filtered.length === 0) {
