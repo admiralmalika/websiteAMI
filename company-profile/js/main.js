@@ -73,12 +73,21 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = document.getElementById('inq-name').value;
       const email = document.getElementById('inq-email').value;
       const phone = document.getElementById('inq-phone').value;
-      const pillar = document.getElementById('inq-pillar').value;
+      
+      const checkedBoxes = Array.from(document.querySelectorAll('input[name="need_option"]:checked')).map(cb => cb.value);
+      const pillarEl = document.getElementById('inq-pillar');
+      const pillar = checkedBoxes.length > 0 ? checkedBoxes.join(', ') : (pillarEl ? pillarEl.value : 'Kebutuhan Umum');
+      
       const message = document.getElementById('inq-message').value;
 
       if (typeof submitInquiry === 'function') {
         submitInquiry({ name, email, phone, pillar, message });
-        alert('Terima kasih! Pesan Anda telah terdaftar dan tim Admiral Malika akan segera menghubungi Anda via Email/WhatsApp.');
+        
+        // Open Direct WhatsApp Chat to Admin
+        const waText = `Halo Admin Admiral Malika,\n\nSaya ingin mengajukan pertanyaan/inquiry:\n• *Nama:* ${name}\n• *Email:* ${email}\n• *HP/WA:* ${phone}\n• *Kebutuhan:* ${pillar}\n\n*Pesan Anda:* ${message}`;
+        window.open(`https://wa.me/6281118893389?text=${encodeURIComponent(waText)}`, '_blank');
+        
+        alert('Terima kasih! Pesan Anda telah terdaftar dan akan segera kami proses.');
         inquiryForm.reset();
       }
     });
