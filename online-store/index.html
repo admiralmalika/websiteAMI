@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admiral Store | store.admiralmalika.com</title>
+  <link rel="stylesheet" href="css/store.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="store-body">
+
+  <!-- Navbar -->
+  <nav class="store-navbar">
+    <div class="store-nav-container">
+      <a href="index.html" class="store-logo">
+        <div class="store-logo-badge">ADMIRAL</div>
+        <div style="font-weight: 800; font-size: 1.1rem; color: var(--store-navy);">STORE</div>
+      </a>
+
+      <div class="store-search-bar">
+        <i class="fas fa-search store-search-icon"></i>
+        <input type="text" id="store-search" class="store-search-input" placeholder="Cari produk agraria, gula semut, daun pisang...">
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="cart.html" class="store-cart-badge">
+          <i class="fas fa-shopping-cart" style="color: var(--store-emerald);"></i>
+          <span>Keranjang</span>
+          <span class="cart-count">0</span>
+        </a>
+        <a href="../company-profile/index.html" style="font-size: 0.85rem; font-weight: 600; color: var(--store-muted); text-decoration: none;">&larr; Portal Utama</a>
+        <a href="admin/index.html" style="font-size: 0.82rem; font-weight: 700; background: #f1f5f9; padding: 0.4rem 0.8rem; border-radius: 6px; color: var(--store-navy); text-decoration: none;"><i class="fas fa-cog"></i> StoreAdmin</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner Hero Store -->
+  <section style="background: linear-gradient(135deg, #0a192f, #059669); color: #fff; padding: 3rem 2rem; text-align: center;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <span style="background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 0.3rem 1rem; border-radius: 50px; font-weight: 700; font-size: 0.82rem; display: inline-block; margin-bottom: 1rem;">
+        <i class="fas fa-bolt"></i> OFFICIAL ADMIRAL MALIKA RETAIL STORE
+      </span>
+      <h1 style="font-size: 2.2rem; font-weight: 800; margin-bottom: 0.5rem;">Toko Online Produk Unggulan Indonesia</h1>
+      <p style="color: #e2e8f0; font-size: 1rem;">Nikmati kemudahan berbelanja retail & grosir dengan pengiriman aman dan metode pembayaran hybrid fleksibel.</p>
+    </div>
+  </section>
+
+  <!-- Dynamic Category Filter Bar -->
+  <div class="category-filter-bar">
+    <div class="category-filter-container" id="category-pills-container">
+      <!-- Rendered dynamically from store.js -->
+    </div>
+  </div>
+
+  <!-- Product Catalog Grid -->
+  <main class="product-grid" id="products-catalog-grid">
+    <!-- Rendered dynamically from store.js -->
+  </main>
+
+  <!-- Store Footer -->
+  <footer style="background: #0f172a; color: #fff; padding: 3rem 2rem; margin-top: 4rem; border-top: 1px solid #1e293b; text-align: center;">
+    <div style="max-width: 1280px; margin: 0 auto;">
+      <div style="font-weight: 800; font-size: 1.2rem; margin-bottom: 0.5rem;">store.admiralmalika.com</div>
+      <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 1.5rem;">Resmi dikelola oleh PT Admiral Malika | Support WhatsApp: +6281118893389</p>
+      <div style="font-size: 0.82rem; color: #64748b;">&copy; 2026 Admiral Store. Hybrid Payment System Enabled.</div>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCategories();
+      renderProducts('cat-all');
+
+      // Search functionality
+      const searchInput = document.getElementById('store-search');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase();
+          const store = getStoreData();
+          const filtered = store.products.filter(p => p.name.toLowerCase().includes(query) || p.description.toLowerCase().includes(query));
+          renderProductGrid(filtered);
+        });
+      }
+    });
+
+    function renderCategories() {
+      const store = getStoreData();
+      const container = document.getElementById('category-pills-container');
+      container.innerHTML = store.categories.map((cat, idx) => `
+        <div class="category-pill ${idx === 0 ? 'active' : ''}" onclick="selectCategory(this, '${cat.id}')">
+          <i class="fas ${cat.icon || 'fa-tag'}"></i> ${cat.name}
+        </div>
+      `).join('');
+    }
+
+    function selectCategory(el, catId) {
+      document.querySelectorAll('.category-pill').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      renderProducts(catId);
+    }
+
+    function renderProducts(catId) {
+      const store = getStoreData();
+      let list = store.products;
+      if (catId && catId !== 'cat-all') {
+        list = list.filter(p => p.category === catId);
+      }
+      renderProductGrid(list);
+    }
+
+    function renderProductGrid(products) {
+      const grid = document.getElementById('products-catalog-grid');
+      if (products.length === 0) {
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 4rem; color: #94a3b8;">Belum ada produk untuk kategori ini.</div>`;
+        return;
+      }
+
+      const store = getStoreData();
+      grid.innerHTML = products.map(p => {
+        const catObj = store.categories.find(c => c.id === p.category);
+        const catName = catObj ? catObj.name : 'Produk Retail';
+
+        return `
+          <div class="product-card">
+            <span class="product-category-tag">${catName}</span>
+            <div class="product-img-box">
+              <i class="fas ${p.icon || 'fa-box'}"></i>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">${p.name}</h3>
+              <p style="font-size:0.82rem; color:#64748b; margin-bottom: 0.8rem;">${p.description}</p>
+              <div class="product-price">${formatRupiah(p.price)} <span style="font-size:0.75rem; color:#94a3b8; font-weight:normal;">/ ${p.unit}</span></div>
+              <div style="font-size:0.75rem; color:#059669; font-weight:600; margin-bottom: 1rem;"><i class="fas fa-check-circle"></i> Stok Tersedia: ${p.stock}</div>
+              <div class="product-footer">
+                <button class="btn btn-primary btn-sm" style="flex:1;" onclick="addToCart('${p.id}')">
+                  <i class="fas fa-cart-plus"></i> + Keranjang
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+  </script>
+</body>
+</html>
