@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Pesanan Retail | StoreAdmin Panel</title>
+  <link rel="stylesheet" href="../css/store.css">
+  <link rel="stylesheet" href="../css/store-admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="store-admin-body">
+
+  <aside class="store-admin-sidebar">
+    <div class="store-admin-brand">
+      <div class="store-logo-badge">STORE</div>
+      <div>
+        <div style="font-weight: 800; font-size: 1rem; color: #fff;">STORE ADMIN</div>
+        <div style="font-size: 0.7rem; color: #10b981;">store.admiralmalika.com</div>
+      </div>
+    </div>
+    <nav class="store-admin-nav">
+      <a href="index.html" class="store-admin-link"><i class="fas fa-chart-line"></i> Store Overview</a>
+      <a href="categories.html" class="store-admin-link"><i class="fas fa-tags"></i> Kategori Produk Dinamis</a>
+      <a href="products.html" class="store-admin-link"><i class="fas fa-boxes"></i> Katalog Produk & Stok</a>
+      <a href="orders.html" class="store-admin-link active"><i class="fas fa-shopping-bag"></i> Pesan & Transaksi Retail</a>
+      <a href="payment-settings.html" class="store-admin-link"><i class="fas fa-credit-card"></i> Pengaturan Pembayaran</a>
+    </nav>
+  </aside>
+
+  <main class="store-admin-main">
+    <header class="store-admin-header">
+      <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a;">Manajemen Pesanan & Verifikasi Pembayaran</h3>
+    </header>
+
+    <div class="store-admin-content">
+      <div class="store-admin-card">
+        <h4 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 1.5rem;">Daftar Transaksi Pembeli Toko Online</h4>
+
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr style="background: #f8fafc; text-align: left;">
+              <th style="padding: 0.75rem 1rem; border-bottom: 1px solid #e2e8f0;">No. Pesanan</th>
+              <th style="padding: 0.75rem 1rem; border-bottom: 1px solid #e2e8f0;">Tanggal</th>
+              <th style="padding: 0.75rem 1rem; border-bottom: 1px solid #e2e8f0;">Nama Pembeli</th>
+              <th style="padding: 0.75rem 1rem; border-bottom: 1px solid #e2e8f0;">Total Tagihan</th>
+              <th style="padding: 0.75rem 1rem; border-bottom: 1px solid #e2e8f0;">Metode Bayar</th>
+              <th style="padding: 0.75rem 1rem; border-bottom: 1px solid #e2e8f0;">Status</th>
+            </tr>
+          </thead>
+          <tbody id="st-orders-tbody">
+            <!-- Rendered from store.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/store.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const store = getStoreData();
+      const tbody = document.getElementById('st-orders-tbody');
+
+      if (!store.orders || store.orders.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align:center; padding:3rem; color:#94a3b8;">Belum ada pesanan retail baru. Cobalah melakukan transaksi percobaan di storefront!</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = store.orders.map(o => `
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="font-weight: 800; color: #0f172a;"><code>${o.id}</code></td>
+          <td style="font-size: 0.8rem; color: #64748b;">${o.date}</td>
+          <td>
+            <strong>${o.customerName}</strong><br>
+            <span style="font-size:0.8rem; color:#059669;"><i class="fab fa-whatsapp"></i> ${o.customerPhone}</span>
+          </td>
+          <td style="font-weight: 800; color: #059669;">${formatRupiah(o.total)}</td>
+          <td style="font-size: 0.85rem;"><span class="badge-status badge-active" style="background:#fef3c7; color:#92400e;">${o.paymentMethod}</span></td>
+          <td><span class="badge-status badge-active">${o.status}</span></td>
+        </tr>
+      `).join('');
+    });
+  </script>
+</body>
+</html>
