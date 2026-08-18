@@ -46,7 +46,7 @@ const DEFAULT_CMS_DATA = {
     {
       id: 'ed-1',
       title: 'Program Sekolah Kejuruan / Ausbildung (Setara D3)',
-      partner: 'Kolaborasi PT. Elrafa Terang Sejahtera',
+      partner: 'Divisi Pendidikan Jerman PT. Admiral Malika',
       description: 'Program persiapan dan penyaluran lulusan SMA/SMK/Diploma untuk magang kejuruan berbayar di Jerman.',
       details: [
         'Uang saku bulanan €1.000 - €1.400 / bulan di Jerman',
@@ -57,7 +57,7 @@ const DEFAULT_CMS_DATA = {
     {
       id: 'ed-2',
       title: 'Program Duales Studium (Setara D4 / Applied Bachelor)',
-      partner: 'Kolaborasi PT. Elrafa Terang Sejahtera',
+      partner: 'Divisi Pendidikan Jerman PT. Admiral Malika',
       description: 'Program pendidikan tinggi terintegrasi (Kuliah D4 Terapan + Kerja Bergaji) di Universitas & Perusahaan Jerman.',
       details: [
         'Gaji kerja tahunan & bebas biaya kuliah di Jerman',
