@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami | PT Admiral Malika</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">AMI</div>
+        <div>
+          <div class="brand-name">ADMIRAL MALIKA</div>
+          <div class="brand-subtitle">PT. ADMIRAL MALIKA INTERNASIONAL</div>
+        </div>
+      </a>
+      <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="agraria.html" class="nav-link">Ekspor Agraria</a></li>
+        <li><a href="jerman-education.html" class="nav-link">Pendidikan Jerman</a></li>
+        <li><a href="../online-store/index.html" class="nav-link" style="color: var(--accent-gold); font-weight: 700;"><i class="fas fa-store"></i> Toko Online</a></li>
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="contact.html" class="nav-link active">Kontak</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="admin/index.html" class="btn btn-outline btn-sm"><i class="fas fa-user-shield"></i> Portal CMS ADMIN</a>
+      </div>
+    </div>
+  </header>
+
+  <section style="background: linear-gradient(135deg, #0a192f, #061121); color:#fff; padding: 4rem 2rem; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <span class="hero-tag">GET IN TOUCH</span>
+      <h1 style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0;">Hubungi Tim Admiral Malika</h1>
+      <p style="color: #94a3b8; font-size: 1.1rem;">Kami siap melayani kebutuhan informasi ekspor agraria, program pendidikan Jerman, dan kerjasama bisnis.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem;">
+      <!-- Contact Cards -->
+      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 1.2rem;">
+          <div style="width: 50px; height: 50px; background: rgba(5, 150, 105, 0.15); color: #059669; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-navy);">WhatsApp Direct Chat</h4>
+            <p style="color: #64748b; font-size: 0.9rem;">+62 811-1889-3389</p>
+            <a href="https://wa.me/6281118893389" target="_blank" style="color: var(--accent-emerald); font-weight: 700; font-size: 0.85rem;">Buka WhatsApp Direct &rarr;</a>
+          </div>
+        </div>
+
+        <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 1.2rem;">
+          <div style="width: 50px; height: 50px; background: rgba(245, 158, 11, 0.15); color: #f59e0b; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-navy);">Email Pertanyaan Umum & Ekspor</h4>
+            <p style="color: #64748b; font-size: 0.88rem;">hary.kristianto.info@gmail.com</p>
+            <p style="color: #64748b; font-size: 0.88rem;">malikamannacenter@gmail.com</p>
+          </div>
+        </div>
+
+        <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 1.2rem;">
+          <div style="width: 50px; height: 50px; background: rgba(37, 99, 235, 0.15); color: #2563eb; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-navy);">Mitra Pendidikan Jerman</h4>
+            <p style="color: #64748b; font-size: 0.88rem;">PT. Elrafa Terang Sejahtera & PT Admiral Malika</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- General Contact Form -->
+      <div style="background: #fff; padding: 2.5rem; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: var(--shadow-md);">
+        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--primary-navy); margin-bottom: 1.5rem;">Kirim Pesan Langsung</h3>
+        <form id="inquiry-form">
+          <div class="form-group">
+            <label class="form-label">Nama Anda *</label>
+            <input type="text" id="inq-name" class="form-control" required placeholder="Nama Lengkap">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label">Email *</label>
+              <input type="email" id="inq-email" class="form-control" required placeholder="nama@email.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nomor Phone / WA *</label>
+              <input type="tel" id="inq-phone" class="form-control" required placeholder="+6281118893389">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Topik Kebutuhan *</label>
+            <select class="form-control" id="inq-pillar">
+              <option value="Ekspor Produk Agraria">Ekspor Produk Agraria (Singkong, Kelapa, Daun Pisang Packaging)</option>
+              <option value="Pelatihan Jerman PT Elrafa">Pelatihan & Duales Studium Jerman (Kemitraan PT Elrafa)</option>
+              <option value="Kerjasama Bisnis & Lainnya">Kerjasama Bisnis & Lainnya</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Pesan Anda *</label>
+            <textarea id="inq-message" class="form-control" required placeholder="Tuliskan detail pertanyaan atau penawaran Anda..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <div class="brand-logo" style="margin-bottom: 1rem;">
+          <div class="logo-badge">AM</div>
+          <div style="color: #fff; font-weight: 800; font-size: 1.2rem;">ADMIRAL MALIKA</div>
+        </div>
+        <p style="color: #94a3b8; font-size: 0.9rem;">PT Admiral Malika & Ekosistem Bisnis.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
