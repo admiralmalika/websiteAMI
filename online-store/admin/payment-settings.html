@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengaturan Pembayaran | StoreAdmin Panel</title>
+  <link rel="stylesheet" href="../css/store.css">
+  <link rel="stylesheet" href="../css/store-admin.css">
+  <link rel="stylesheet" href="../../company-profile/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="store-admin-body">
+
+  <aside class="store-admin-sidebar">
+    <div class="store-admin-brand">
+      <div class="store-logo-badge">STORE</div>
+      <div>
+        <div style="font-weight: 800; font-size: 1rem; color: #fff;">STORE ADMIN</div>
+        <div style="font-size: 0.7rem; color: #10b981;">store.admiralmalika.com</div>
+      </div>
+    </div>
+    <nav class="store-admin-nav">
+      <a href="index.html" class="store-admin-link"><i class="fas fa-chart-line"></i> Store Overview</a>
+      <a href="categories.html" class="store-admin-link"><i class="fas fa-tags"></i> Kategori Produk Dinamis</a>
+      <a href="products.html" class="store-admin-link"><i class="fas fa-boxes"></i> Katalog Produk & Stok</a>
+      <a href="orders.html" class="store-admin-link"><i class="fas fa-shopping-bag"></i> Pesan & Transaksi Retail</a>
+      <a href="payment-settings.html" class="store-admin-link active"><i class="fas fa-credit-card"></i> Pengaturan Pembayaran</a>
+    </nav>
+  </aside>
+
+  <main class="store-admin-main">
+    <header class="store-admin-header">
+      <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a;">Pengaturan Rekening & Payment Gateway Hybrid</h3>
+    </header>
+
+    <div class="store-admin-content">
+      <div class="store-admin-card" style="max-width: 800px;">
+        <h4 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 1.5rem;">Konfigurasi Rekening Bank, WhatsApp & Payment Gateway</h4>
+
+        <form id="payment-settings-form">
+          <div class="form-group">
+            <label class="form-label">Nomor WhatsApp Admin Direct Order *</label>
+            <input type="text" id="pay-wa" class="form-control" required placeholder="+6281118893389">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label">Nama Bank Transfer *</label>
+              <input type="text" id="pay-bank" class="form-control" required placeholder="BCA (Bank Central Asia)">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nomor Rekening Bank *</label>
+              <input type="text" id="pay-account-num" class="form-control" required placeholder="8830-192-389">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Nama Pemilik Rekening *</label>
+            <input type="text" id="pay-account-holder" class="form-control" required placeholder="PT Admiral Malika">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">URL Gambar QRIS Statis (GoPay / OVO / ShopeePay)</label>
+            <input type="text" id="pay-qris" class="form-control" placeholder="https://via.placeholder.com/300x300.png?text=QRIS+ADMIRAL">
+          </div>
+
+          <div style="background: #f8fafc; padding: 1.2rem; border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 1.5rem;">
+            <h5 style="font-weight: 700; color: #2563eb; margin-bottom: 0.5rem;"><i class="fas fa-plug"></i> Integrasi Automated Payment Gateway (Midtrans / Xendit)</h5>
+            <p style="font-size: 0.82rem; color: #64748b; margin-bottom: 0.8rem;">
+              Masukkan Client Key / Server Key jika Anda ingin mengaktifkan pembayaran online otomatis via Virtual Account Bank & Credit Card.
+            </p>
+            <div class="form-group">
+              <label class="form-label">Midtrans / Xendit Client API Key</label>
+              <input type="text" class="form-control" placeholder="SB-Mid-client-XXXXX (Optional)">
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Simpan Pengaturan Pembayaran</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/store.js"></script>
+  <script src="../js/store-admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const store = getStoreData();
+      const ps = store.paymentSettings || {};
+
+      document.getElementById('pay-wa').value = ps.waNumber || '+6281118893389';
+      document.getElementById('pay-bank').value = ps.bankName || 'BCA';
+      document.getElementById('pay-account-num').value = ps.accountNumber || '8830-192-389';
+      document.getElementById('pay-account-holder').value = ps.accountHolder || 'PT Admiral Malika';
+      document.getElementById('pay-qris').value = ps.qrisImage || '';
+
+      document.getElementById('payment-settings-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        updatePaymentSettings({
+          waNumber: document.getElementById('pay-wa').value,
+          bankName: document.getElementById('pay-bank').value,
+          accountNumber: document.getElementById('pay-account-num').value,
+          accountHolder: document.getElementById('pay-account-holder').value,
+          qrisImage: document.getElementById('pay-qris').value
+        });
+        alert('Pengaturan Pembayaran & WhatsApp Direct berhasil diperbarui!');
+      });
+    });
+  </script>
+</body>
+</html>
