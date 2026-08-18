@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Hybrid | Admiral Store</title>
+  <link rel="stylesheet" href="css/store.css">
+  <link rel="stylesheet" href="../company-profile/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="store-body">
+
+  <nav class="store-navbar">
+    <div class="store-nav-container">
+      <a href="index.html" class="store-logo">
+        <div class="store-logo-badge">ADMIRAL</div>
+        <div style="font-weight: 800; font-size: 1.1rem; color: var(--store-navy);">STORE CHECKOUT</div>
+      </a>
+      <a href="cart.html" style="color: var(--store-muted); font-weight: 600; text-decoration: none;">&larr; Kembali Ke Keranjang</a>
+    </div>
+  </nav>
+
+  <main style="max-width: 1050px; margin: 3rem auto; padding: 0 1.5rem;">
+    <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2.5rem;">
+      
+      <!-- Customer Information & Hybrid Payment Selection -->
+      <div>
+        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--store-navy); margin-bottom: 1.25rem;">1. Data Pengiriman Pembeli</h3>
+        <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--store-border); margin-bottom: 2rem;">
+          <div class="form-group">
+            <label class="form-label">Nama Lengkap Pembeli *</label>
+            <input type="text" id="cust-name" class="form-control" placeholder="Nama Anda" required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label class="form-label">Nomor WhatsApp *</label>
+              <input type="tel" id="cust-phone" class="form-control" placeholder="+6281118893389" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Pembeli *</label>
+              <input type="email" id="cust-email" class="form-control" placeholder="email@domain.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Alamat Lengkap Pengiriman *</label>
+            <textarea id="cust-address" class="form-control" placeholder="Nama jalan, Nomor rumah, RT/RW, Kecamatan, Kota, Kode Pos..." required></textarea>
+          </div>
+        </div>
+
+        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--store-navy); margin-bottom: 1.25rem;">2. Pilih Metode Pembayaran (Sistem Hybrid)</h3>
+        
+        <!-- Option 1: WhatsApp Checkout -->
+        <div class="checkout-option-card selected" id="opt-wa-card" onclick="selectPaymentMethod('wa')">
+          <input type="radio" name="payment_method" id="pay_wa" checked class="checkout-radio">
+          <div style="flex:1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+              <h4 style="font-weight: 800; color: #059669; font-size: 1.05rem;"><i class="fab fa-whatsapp"></i> Order & Diskusi via WhatsApp</h4>
+              <span class="badge-status badge-active" style="background:#d1fae5; color:#065f46;">0% Biaya Admin</span>
+            </div>
+            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">
+              Pesanan otomatis terformat ke WhatsApp Admin (<b>+6281118893389</b>). Admin mengirimkan nomor rekening / QRIS untuk transfer.
+            </p>
+          </div>
+        </div>
+
+        <!-- Option 2: Automatic Direct Payment -->
+        <div class="checkout-option-card" id="opt-gateway-card" onclick="selectPaymentMethod('gateway')">
+          <input type="radio" name="payment_method" id="pay_gateway" class="checkout-radio">
+          <div style="flex:1;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+              <h4 style="font-weight: 800; color: #2563eb; font-size: 1.05rem;"><i class="fas fa-qrcode"></i> Bayar Otomatis (QRIS / Bank VA / Credit Card)</h4>
+              <span class="badge-status badge-new" style="background:#dbeafe; color:#1e40af;">Instant 24/7</span>
+            </div>
+            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">
+              Pembayaran otomatis melalui QRIS (GoPay, OVO, ShopeePay), Virtual Account Bank (BCA, Mandiri, BRI), atau Kartu Kredit.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Order Summary Sidebar -->
+      <div>
+        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--store-navy); margin-bottom: 1.25rem;">Ringkasan Pesanan</h3>
+        <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--store-border); box-shadow: var(--shadow-md);">
+          <div id="checkout-summary-list">
+            <!-- Items rendered from store.js -->
+          </div>
+
+          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 2px dashed #e2e8f0;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem;">
+              <span>Subtotal Produk:</span>
+              <span id="summary-subtotal" style="font-weight: 700;">Rp 0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">
+              <span>Estimasi Ongkir:</span>
+              <span style="color: #059669; font-weight: 700;">Dihitung Admin</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 800; color: var(--store-navy); margin-bottom: 1.5rem;">
+              <span>Total Tagihan:</span>
+              <span id="summary-total" style="color: var(--store-emerald);">Rp 0</span>
+            </div>
+
+            <button class="btn btn-primary" id="btn-submit-order" onclick="processOrder()" style="width: 100%; padding: 0.9rem; font-size: 1rem;">
+              <i class="fab fa-whatsapp"></i> Selesaikan Pesanan (WA Checkout)
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/store.js"></script>
+  <script>
+    let selectedMethod = 'wa';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCheckoutSummary();
+    });
+
+    function selectPaymentMethod(method) {
+      selectedMethod = method;
+      document.getElementById('opt-wa-card').classList.remove('selected');
+      document.getElementById('opt-gateway-card').classList.remove('selected');
+
+      const btn = document.getElementById('btn-submit-order');
+
+      if (method === 'wa') {
+        document.getElementById('opt-wa-card').classList.add('selected');
+        document.getElementById('pay_wa').checked = true;
+        btn.innerHTML = `<i class="fab fa-whatsapp"></i> Selesaikan Pesanan (WA Direct Order)`;
+        btn.className = 'btn btn-gold';
+      } else {
+        document.getElementById('opt-gateway-card').classList.add('selected');
+        document.getElementById('pay_gateway').checked = true;
+        btn.innerHTML = `<i class="fas fa-lock"></i> Bayar Otomatis (QRIS / VA / Card)`;
+        btn.className = 'btn btn-primary';
+      }
+    }
+
+    function renderCheckoutSummary() {
+      const cart = getCart();
+      const container = document.getElementById('checkout-summary-list');
+      const subtotalEl = document.getElementById('summary-subtotal');
+      const totalEl = document.getElementById('summary-total');
+
+      if (cart.length === 0) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      let total = 0;
+      container.innerHTML = cart.map(item => {
+        const sub = item.price * item.qty;
+        total += sub;
+        return `
+          <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.8rem;">
+            <div>
+              <strong>${item.name}</strong> <span style="color:#64748b;">x${item.qty}</span>
+            </div>
+            <div style="font-weight: 700; color: #334155;">${formatRupiah(sub)}</div>
+          </div>
+        `;
+      }).join('');
+
+      subtotalEl.textContent = formatRupiah(total);
+      totalEl.textContent = formatRupiah(total);
+    }
+
+    function processOrder() {
+      const name = document.getElementById('cust-name').value;
+      const phone = document.getElementById('cust-phone').value;
+      const email = document.getElementById('cust-email').value;
+      const address = document.getElementById('cust-address').value;
+
+      if (!name || !phone || !email || !address) {
+        alert('Mohon lengkapi semua Data Pengiriman Pembeli terlebih dahulu!');
+        return;
+      }
+
+      const cart = getCart();
+      const store = getStoreData();
+      const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+
+      // Save Order Record to store.orders
+      const newOrder = {
+        id: 'ORD-' + Date.now().toString().slice(-6),
+        date: new Date().toLocaleString('id-ID'),
+        customerName: name,
+        customerPhone: phone,
+        customerEmail: email,
+        address: address,
+        items: cart,
+        total: total,
+        paymentMethod: selectedMethod === 'wa' ? 'WhatsApp Direct Order' : 'Direct Payment Gateway / QRIS',
+        status: 'Menunggu Pembayaran'
+      };
+
+      store.orders.unshift(newOrder);
+      saveStoreData(store);
+
+      if (selectedMethod === 'wa') {
+        // Format WhatsApp Message
+        let msg = `*HALO ADMIRAL STORE (PESANAN BARU)*\n\n`;
+        msg += `*No. Pesanan:* ${newOrder.id}\n`;
+        msg += `*Nama Pembeli:* ${name}\n`;
+        msg += `*WhatsApp:* ${phone}\n`;
+        msg += `*Alamat:* ${address}\n\n`;
+        msg += `*RINCIAN BARANG:*\n`;
+        cart.forEach(i => {
+          msg += `- ${i.name} (x${i.qty}) : ${formatRupiah(i.price * i.qty)}\n`;
+        });
+        msg += `\n*TOTAL TAGIHAN:* ${formatRupiah(total)}\n`;
+        msg += `*Mohon dikirimkan nomor rekening bank / QRIS untuk pembayaran.* Terima kasih!`;
+
+        saveCart([]); // Empty cart
+        const waUrl = `https://wa.me/6281118893389?text=${encodeURIComponent(msg)}`;
+        window.open(waUrl, '_blank');
+        alert('Pesanan Anda terdaftar! Anda diarahkan ke WhatsApp Admin (+6281118893389) untuk konfirmasi pembayaran.');
+        window.location.href = 'index.html';
+      } else {
+        // Automated Payment Gateway Simulation
+        saveCart([]); // Empty cart
+        alert(`[SIMULASI PAYMENT GATEWAY]\n\nNo Pesanan: ${newOrder.id}\nTotal: ${formatRupiah(total)}\n\nRekening Transfer: BCA 8830-192-389 (a.n PT Admiral Malika)\nQRIS: QRIS All Payment Available\n\nStatus Pesanan telah diperbarui di StoreAdmin!`);
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+</body>
+</html>
