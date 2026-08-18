@@ -15,20 +15,18 @@
       "dest": "/online-store/$1"
     },
     {
-      "src": "/store/(.*)",
-      "dest": "/online-store/$1"
+      "src": "/online-store(.*)",
+      "status": 301,
+      "headers": {
+        "Location": "https://store.admiralmalika.com"
+      }
     },
     {
-      "src": "/store",
-      "dest": "/online-store/index.html"
-    },
-    {
-      "src": "/online-store/(.*)",
-      "dest": "/online-store/$1"
-    },
-    {
-      "src": "/online-store",
-      "dest": "/online-store/index.html"
+      "src": "/store(.*)",
+      "status": 301,
+      "headers": {
+        "Location": "https://store.admiralmalika.com"
+      }
     },
     {
       "src": "/(.*)",
