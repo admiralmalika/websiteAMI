@@ -1,15 +1,14 @@
-/* Admiral Malika Design System - Premium Dark Navy & Gold Theme */
+/* Admiral Malika Design System - Full Banner Hero Theme */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --primary-navy: #091322;         /* Deep Midnight Navy */
-  --secondary-navy: #07101d;       /* Darkest Midnight */
+  --secondary-navy: #060e1a;       /* Darkest Midnight */
   --navy-card: #0e1c30;            /* Card Dark Navy */
   --accent-gold: #c59b27;          /* Warm Metallic Gold */
   --accent-gold-hover: #a37f1c;    /* Deep Gold Hover */
   --accent-gold-light: #d4af37;    /* Bright Gold */
   --accent-blue: #0284c7;          /* Ocean Blue Accent */
-  --accent-blue-hover: #0369a1;    /* Deep Blue Hover */
   --bg-slate: #f8fafc;             /* Light Canvas for Content Sections */
   --bg-section-alt: #f1f5f9;       /* Alternating Section Canvas */
   --bg-card: #ffffff;              /* Pure White Card */
@@ -52,7 +51,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(9, 19, 34, 0.96);
+  background: rgba(9, 19, 34, 0.98);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 2px solid var(--accent-gold);
@@ -61,7 +60,7 @@ a {
 }
 
 .nav-container {
-  max-width: 1320px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -137,16 +136,15 @@ a {
   margin-left: 1rem;
 }
 
-/* Button Component Styles */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 0.8rem 1.6rem;
+  padding: 0.75rem 1.5rem;
   font-weight: 700;
-  font-size: 0.92rem;
-  border-radius: 50px; /* Rounded pill style from mockup */
+  font-size: 0.9rem;
+  border-radius: 50px;
   transition: var(--transition);
   cursor: pointer;
   border: none;
@@ -156,24 +154,24 @@ a {
 .btn-primary {
   background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   color: #ffffff;
-  box-shadow: 0 4px 20px rgba(2, 132, 199, 0.4);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(2, 132, 199, 0.55);
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55);
 }
 
 .btn-gold {
   background: linear-gradient(135deg, #c59b27 0%, #a37f1c 100%);
   color: #091322;
-  box-shadow: 0 4px 20px rgba(197, 155, 39, 0.35);
+  box-shadow: 0 4px 14px rgba(197, 155, 39, 0.35);
   font-weight: 800;
 }
 
 .btn-gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(197, 155, 39, 0.5);
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.5);
 }
 
 .btn-outline {
@@ -185,7 +183,6 @@ a {
 .btn-outline:hover {
   background: rgba(197, 155, 39, 0.15);
   color: #ffffff;
-  border-color: #ffffff;
 }
 
 .btn-sm {
@@ -194,133 +191,57 @@ a {
   border-radius: 12px;
 }
 
-/* Hero Section - Exact Match with Mockup */
-.hero-section {
-  position: relative;
-  background: linear-gradient(135deg, #091322 0%, #060e1a 100%);
-  color: var(--text-light);
-  padding: 4.5rem 2rem 5.5rem 2rem;
+/* Full Hero Banner Section (Exact Match to User Image) */
+.hero-banner-section {
+  background: #091322;
+  padding: 0;
+  width: 100%;
   overflow: hidden;
   border-bottom: 3px solid var(--accent-gold);
 }
 
-.hero-container {
-  max-width: 1380px;
+.hero-banner-wrap {
+  max-width: 1440px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 3rem;
-  align-items: center;
   position: relative;
-  z-index: 2;
-}
-
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(197, 155, 39, 0.1);
-  border: 1.5px solid var(--accent-gold);
-  color: var(--accent-gold-light);
-  padding: 0.4rem 1.1rem;
-  border-radius: 50px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-}
-
-.hero-title {
-  font-size: 3.2rem;
-  font-weight: 800;
-  line-height: 1.18;
-  margin-bottom: 1.2rem;
-  letter-spacing: -1px;
-  color: #ffffff;
-}
-
-.hero-title span {
-  color: var(--accent-gold);
-}
-
-.hero-subtitle {
-  font-size: 1.1rem;
-  color: #8a99ad;
-  margin-bottom: 2.2rem;
-  max-width: 90%;
-  line-height: 1.7;
-}
-
-.hero-btns {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.2rem;
-}
-
-/* Global Network Row (Exact Pill Style from Mockup) */
-.flags-row {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  flex-wrap: wrap;
-}
-
-.flags-label {
-  font-size: 0.82rem;
-  font-weight: 800;
-  color: var(--accent-gold);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.flags-list {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-.flag-badge {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 0.35rem 0.85rem;
-  border-radius: 50px;
-  font-size: 0.82rem;
-  color: #ffffff;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.flag-code {
-  color: #94a3b8;
-  font-weight: 800;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  margin-right: 2px;
-}
-
-/* Right Column Banner Frame */
-.banner-frame {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(197, 155, 39, 0.5);
-  background: #091322;
-}
-
-.banner-img {
   width: 100%;
-  height: 100%;
-  max-height: 480px;
-  object-fit: cover;
+}
+
+.hero-full-img {
+  width: 100%;
+  height: auto;
   display: block;
+}
+
+/* Hotspot Link Overlays over the 3 Buttons on the Banner */
+.hero-link-overlay {
+  position: absolute;
+  top: 59%;
+  height: 12%;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-edu {
+  left: 2%;
+  width: 17%;
+}
+
+.link-agraria {
+  left: 19.5%;
+  width: 14.5%;
+}
+
+.link-store {
+  left: 34.5%;
+  width: 10.5%;
+}
+
+.hero-link-overlay:hover {
+  box-shadow: 0 0 20px rgba(197, 155, 39, 0.6);
+  transform: scale(1.02);
 }
 
 /* Section Common */
@@ -508,20 +429,22 @@ a {
   font-size: 0.85rem;
 }
 
-/* Media Queries */
-@media (max-width: 1100px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
+/* Mobile Toggle & Responsive */
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
   }
-  .hero-title {
-    font-size: 2.2rem;
+  .mobile-toggle {
+    display: block;
   }
   .footer-container {
     grid-template-columns: 1fr;
