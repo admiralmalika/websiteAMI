@@ -3,7 +3,7 @@
 Platform digital untuk **Admiral Malika**, terdiri dari:
 1. **Website Utama (Company Profile & CMS)**: `www.admiralmalika.com`
    - **Pilar 1**: Ekspor Produk Agraria (Singkong, Kelapa, Daun Pisang Food-Grade Packaging).
-   - **Pilar 2**: Pelatihan Kerja & Duales Studium Jerman (Kemitraan PT. Elrafa Terang Sejahtera - Jalur D3 Sekolah Kejuruan & D4 Duales Studium).
+   - **Pilar 2**: Pelatihan Kerja & Duales Studium Jerman (Jalur D3 Sekolah Kejuruan & D4 Duales Studium).
    - **Pilar 3**: Showcase Admiral Store.
    - **CMS Admin**: Pengelola konten halaman, katalog ekspor, program pelatihan, dan pesan masuk.
 2. **Toko Online (E-Commerce & StoreAdmin)**: `store.admiralmalika.com`
