@@ -1,6 +1,6 @@
 /* Admiral Malika - CMS State Engine */
 
-const CMS_STORAGE_KEY = 'admiral_malika_cms_v3';
+const CMS_STORAGE_KEY = 'admiral_malika_cms_v4';
 
 const DEFAULT_CMS_DATA = {
   hero: {
@@ -46,7 +46,7 @@ const DEFAULT_CMS_DATA = {
     {
       id: 'ed-1',
       title: 'Program Sekolah Kejuruan / Ausbildung (Setara D3)',
-      partner: 'Divisi Pendidikan Jerman PT. Admiral Malika Internasional',
+      partner: '',
       description: 'Program persiapan dan penyaluran lulusan SMA/SMK/Diploma untuk magang kejuruan berbayar di Jerman.',
       details: [
         'Uang saku bulanan €1.000 - €1.400 / bulan di Jerman',
@@ -57,7 +57,7 @@ const DEFAULT_CMS_DATA = {
     {
       id: 'ed-2',
       title: 'Program Duales Studium (Setara D4 / Applied Bachelor)',
-      partner: 'Divisi Pendidikan Jerman PT. Admiral Malika Internasional',
+      partner: '',
       description: 'Program pendidikan tinggi terintegrasi (Kuliah D4 Terapan + Kerja Bergaji) di Universitas & Perusahaan Jerman.',
       details: [
         'Gaji kerja tahunan & bebas biaya kuliah di Jerman',
@@ -69,10 +69,11 @@ const DEFAULT_CMS_DATA = {
   inquiries: []
 };
 
-// Initialize CMS Data & Purge Legacy Caches
+// Initialize CMS Data & Clear All Legacy Caches
 function getCMSData() {
   localStorage.removeItem('admiral_malika_cms_data');
   localStorage.removeItem('admiral_malika_cms_v2');
+  localStorage.removeItem('admiral_malika_cms_v3');
 
   const data = localStorage.getItem(CMS_STORAGE_KEY);
   if (!data) {
@@ -82,16 +83,10 @@ function getCMSData() {
   
   try {
     let parsed = JSON.parse(data);
-    let updated = false;
     if (parsed.education) {
       parsed.education.forEach(item => {
-        if (!item.partner || item.partner.includes('Elrafa') || item.partner.includes('Kolaborasi')) {
-          item.partner = 'Divisi Pendidikan Jerman PT. Admiral Malika Internasional';
-          updated = true;
-        }
+        item.partner = '';
       });
-    }
-    if (updated) {
       localStorage.setItem(CMS_STORAGE_KEY, JSON.stringify(parsed));
     }
     return parsed;
