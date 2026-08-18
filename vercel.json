@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/online-store",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/online-store/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/store",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/store/:path*",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
