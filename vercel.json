@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "admiral-malika",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    {
+      "src": "/store/(.*)",
+      "dest": "/online-store/$1"
+    },
+    {
+      "src": "/store",
+      "dest": "/online-store/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/company-profile/$1"
+    }
+  ]
+}
