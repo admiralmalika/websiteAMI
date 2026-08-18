@@ -1,29 +1,23 @@
-/* Admiral Malika Design System - Full Banner Hero Theme */
+/* Admiral Malika Design System - Exact Match Dark Navy & Gold Theme */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary-navy: #091322;         /* Deep Midnight Navy */
-  --secondary-navy: #060e1a;       /* Darkest Midnight */
-  --navy-card: #0e1c30;            /* Card Dark Navy */
-  --accent-gold: #c59b27;          /* Warm Metallic Gold */
-  --accent-gold-hover: #a37f1c;    /* Deep Gold Hover */
-  --accent-gold-light: #d4af37;    /* Bright Gold */
-  --accent-blue: #0284c7;          /* Ocean Blue Accent */
-  --bg-slate: #f8fafc;             /* Light Canvas for Content Sections */
-  --bg-section-alt: #f1f5f9;       /* Alternating Section Canvas */
-  --bg-card: #ffffff;              /* Pure White Card */
-  --text-dark: #091322;            /* Deep Navy Black Text */
-  --text-muted: #64748b;          /* Muted Grey Text */
-  --text-light: #f8fafc;           /* Light Text */
-  --border-color: #e2e8f0;         /* Soft Border Line */
-  --border-gold: #c59b27;
-  --shadow-sm: 0 1px 3px rgba(9, 19, 34, 0.08);
-  --shadow-md: 0 4px 14px -2px rgba(9, 19, 34, 0.12);
-  --shadow-lg: 0 20px 40px -8px rgba(9, 19, 34, 0.2);
+  --primary-navy: #091424;         /* Exact Dark Navy from Mockup */
+  --secondary-navy: #060e1a;
+  --accent-gold: #b88a2e;          /* Gold Accent */
+  --accent-gold-text: #c29938;     /* Heading Gold Text */
+  --accent-blue: #0077c5;          /* Button Blue */
+  --bg-slate: #f8fafc;
+  --bg-section-alt: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-dark: #091424;
+  --text-muted: #64748b;
+  --text-light: #ffffff;
+  --border-color: #e2e8f0;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 24px;
-  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: all 0.3s ease;
 }
 
 * {
@@ -46,21 +40,18 @@ a {
   color: inherit;
 }
 
-/* Header & Nav */
+/* Header & Nav Bar */
 .header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(9, 19, 34, 0.98);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: #091424;
   border-bottom: 2px solid var(--accent-gold);
   padding: 0.95rem 2rem;
-  transition: var(--transition);
 }
 
 .nav-container {
-  max-width: 1400px;
+  max-width: 1360px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -79,7 +70,7 @@ a {
 .logo-badge {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, #091322, #14253f);
+  background: #091424;
   border: 2px solid var(--accent-gold);
   border-radius: var(--radius-md);
   display: flex;
@@ -88,7 +79,6 @@ a {
   color: var(--accent-gold);
   font-weight: 800;
   font-size: 1.2rem;
-  box-shadow: var(--shadow-md);
 }
 
 .brand-name {
@@ -133,56 +123,57 @@ a {
   align-items: center;
   gap: 1rem;
   flex-shrink: 0;
-  margin-left: 1rem;
 }
 
+/* Button Component Styles */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.6rem;
   font-weight: 700;
-  font-size: 0.9rem;
-  border-radius: 50px;
+  font-size: 0.92rem;
+  border-radius: 14px;
   transition: var(--transition);
   cursor: pointer;
   border: none;
   white-space: nowrap;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+.btn-blue {
+  background: linear-gradient(135deg, #0077c5 0%, #005696 100%);
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+  box-shadow: 0 4px 18px rgba(0, 119, 197, 0.4);
 }
 
-.btn-primary:hover {
+.btn-blue:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.55);
+  box-shadow: 0 6px 24px rgba(0, 119, 197, 0.55);
 }
 
 .btn-gold {
-  background: linear-gradient(135deg, #c59b27 0%, #a37f1c 100%);
-  color: #091322;
-  box-shadow: 0 4px 14px rgba(197, 155, 39, 0.35);
+  background: linear-gradient(135deg, #b88a2e 0%, #8f6716 100%);
+  color: #091424;
+  box-shadow: 0 4px 18px rgba(184, 138, 46, 0.35);
   font-weight: 800;
 }
 
 .btn-gold:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.5);
+  box-shadow: 0 6px 24px rgba(184, 138, 46, 0.5);
 }
 
 .btn-outline {
-  border: 1.5px solid var(--accent-gold);
-  color: var(--accent-gold);
-  background: transparent;
+  background: rgba(9, 20, 36, 0.6);
+  border: 1.5px solid #b88a2e;
+  color: #b88a2e;
+  box-shadow: none;
 }
 
 .btn-outline:hover {
-  background: rgba(197, 155, 39, 0.15);
-  color: #ffffff;
+  background: #b88a2e;
+  color: #091424;
 }
 
 .btn-sm {
@@ -191,57 +182,141 @@ a {
   border-radius: 12px;
 }
 
-/* Full Hero Banner Section (Exact Match to User Image) */
-.hero-banner-section {
-  background: #091322;
-  padding: 0;
-  width: 100%;
-  overflow: hidden;
-  border-bottom: 3px solid var(--accent-gold);
-}
-
-.hero-banner-wrap {
-  max-width: 1440px;
-  margin: 0 auto;
+/* Hero Section - Exact Match with Attached Image */
+.hero-section {
+  background: #091424;
+  padding: 3.5rem 2rem 4rem 2rem;
   position: relative;
-  width: 100%;
+  overflow: hidden;
+  border-bottom: 3px solid #b88a2e;
 }
 
-.hero-full-img {
-  width: 100%;
-  height: auto;
-  display: block;
+.hero-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: center;
 }
 
-/* Hotspot Link Overlays over the 3 Buttons on the Banner */
-.hero-link-overlay {
-  position: absolute;
-  top: 59%;
-  height: 12%;
+.hero-content {
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(184, 138, 46, 0.1);
+  border: 1.5px solid #b88a2e;
+  color: #d4af37;
+  padding: 0.4rem 1.1rem;
   border-radius: 50px;
-  cursor: pointer;
-  z-index: 10;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
 }
 
-.link-edu {
-  left: 2%;
-  width: 17%;
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.16;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+  letter-spacing: -0.5px;
 }
 
-.link-agraria {
-  left: 19.5%;
-  width: 14.5%;
+.hero-title .gold-text {
+  color: #c29938;
 }
 
-.link-store {
-  left: 34.5%;
-  width: 10.5%;
+.hero-subtitle {
+  color: #8b9bb0;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  margin-bottom: 2.2rem;
+  max-width: 92%;
 }
 
-.hero-link-overlay:hover {
-  box-shadow: 0 0 20px rgba(197, 155, 39, 0.6);
-  transform: scale(1.02);
+.hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+/* Global Network Row */
+.global-net-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+
+.net-label {
+  color: #b88a2e;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.net-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.net-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.net-pill .code {
+  color: #94a3b8;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+/* Right Graphic Column: Seamless Right Half Showcase */
+.hero-graphic-col {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hero-graphic-img-wrap {
+  width: 100%;
+  height: 440px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.hero-graphic-img {
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+  margin-left: -100%;
 }
 
 /* Section Common */
@@ -306,7 +381,7 @@ a {
 
 .pillar-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 16px 32px -6px rgba(9, 20, 36, 0.12);
   border-color: var(--accent-gold);
 }
 
@@ -334,8 +409,8 @@ a {
 }
 
 .icon-agraria { background: rgba(5, 150, 105, 0.12); color: #059669; }
-.icon-edu { background: rgba(2, 132, 199, 0.12); color: #0284c7; }
-.icon-store { background: rgba(197, 155, 39, 0.12); color: #c59b27; }
+.icon-edu { background: rgba(0, 119, 197, 0.12); color: #0077c5; }
+.icon-store { background: rgba(184, 138, 46, 0.12); color: #b88a2e; }
 
 .pillar-title {
   font-size: 1.4rem;
@@ -439,12 +514,25 @@ a {
   cursor: pointer;
 }
 
+@media (max-width: 1100px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero-graphic-img-wrap {
+    height: 320px;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
   }
   .mobile-toggle {
     display: block;
+  }
+  .hero-title {
+    font-size: 2.2rem;
   }
   .footer-container {
     grid-template-columns: 1fr;
