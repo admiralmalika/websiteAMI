@@ -1,11 +1,11 @@
 /* Admiral Malika - CMS State Engine */
 
-const CMS_STORAGE_KEY = 'admiral_malika_cms_data';
+const CMS_STORAGE_KEY = 'admiral_malika_cms_v2';
 
 const DEFAULT_CMS_DATA = {
   hero: {
     tag: '⚡ PT. ADMIRAL MALIKA INTERNASIONAL',
-    title: 'Solusi Terpercaya <span>Ekspor Agraria & Pendidikan Jerman</span>',
+    title: 'Solusi Terpercaya <span>Agraria & Pendidikan Jerman</span>',
     subtitle: 'PT. Admiral Malika Internasional menghadirkan komoditas pertanian unggulan Indonesia ke pasar dunia serta membuka jalan karir & studi internasional di Jerman.'
   },
   agraria: [
@@ -69,14 +69,36 @@ const DEFAULT_CMS_DATA = {
   inquiries: []
 };
 
-// Initialize CMS Data
+// Initialize CMS Data & Auto-Purge Legacy Cache
 function getCMSData() {
+  // Clear any old v1 cache containing legacy references
+  localStorage.removeItem('admiral_malika_cms_data');
+
   const data = localStorage.getItem(CMS_STORAGE_KEY);
   if (!data) {
     localStorage.setItem(CMS_STORAGE_KEY, JSON.stringify(DEFAULT_CMS_DATA));
     return DEFAULT_CMS_DATA;
   }
-  return JSON.parse(data);
+  
+  try {
+    let parsed = JSON.parse(data);
+    let updated = false;
+    if (parsed.education) {
+      parsed.education.forEach(item => {
+        if (!item.partner || item.partner.includes('Elrafa') || item.partner.includes('Kolaborasi')) {
+          item.partner = 'Divisi Pendidikan Jerman PT. Admiral Malika';
+          updated = true;
+        }
+      });
+    }
+    if (updated) {
+      localStorage.setItem(CMS_STORAGE_KEY, JSON.stringify(parsed));
+    }
+    return parsed;
+  } catch (e) {
+    localStorage.setItem(CMS_STORAGE_KEY, JSON.stringify(DEFAULT_CMS_DATA));
+    return DEFAULT_CMS_DATA;
+  }
 }
 
 function saveCMSData(data) {
@@ -98,5 +120,4 @@ function submitInquiry(leadData) {
   };
   cms.inquiries.unshift(newLead);
   saveCMSData(cms);
-  return newLead;
 }
