@@ -53,8 +53,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <i class="fas fa-graduation-cap"></i>
           </div>
           <h3 class="pillar-title">${item.title}</h3>
-          <span style="color: #d97706; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.8rem; display: inline-block;">
-            <i class="fas fa-handshake"></i> ${item.partner}
+          <span style="color: #c59b27; font-weight: 700; font-size: 0.85rem; margin-bottom: 0.8rem; display: inline-block;">
+            <i class="fas fa-award"></i> ${item.partner}
           </span>
           <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1rem;">${item.description}</p>
           <ul class="pillar-list">
