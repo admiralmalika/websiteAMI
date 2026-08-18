@@ -1,6 +1,6 @@
 /* Admiral Malika - CMS State Engine */
 
-const CMS_STORAGE_KEY = 'admiral_malika_cms_v2';
+const CMS_STORAGE_KEY = 'admiral_malika_cms_v3';
 
 const DEFAULT_CMS_DATA = {
   hero: {
@@ -46,7 +46,7 @@ const DEFAULT_CMS_DATA = {
     {
       id: 'ed-1',
       title: 'Program Sekolah Kejuruan / Ausbildung (Setara D3)',
-      partner: 'Divisi Pendidikan Jerman PT. Admiral Malika',
+      partner: 'Divisi Pendidikan Jerman PT. Admiral Malika Internasional',
       description: 'Program persiapan dan penyaluran lulusan SMA/SMK/Diploma untuk magang kejuruan berbayar di Jerman.',
       details: [
         'Uang saku bulanan €1.000 - €1.400 / bulan di Jerman',
@@ -57,7 +57,7 @@ const DEFAULT_CMS_DATA = {
     {
       id: 'ed-2',
       title: 'Program Duales Studium (Setara D4 / Applied Bachelor)',
-      partner: 'Divisi Pendidikan Jerman PT. Admiral Malika',
+      partner: 'Divisi Pendidikan Jerman PT. Admiral Malika Internasional',
       description: 'Program pendidikan tinggi terintegrasi (Kuliah D4 Terapan + Kerja Bergaji) di Universitas & Perusahaan Jerman.',
       details: [
         'Gaji kerja tahunan & bebas biaya kuliah di Jerman',
@@ -69,10 +69,10 @@ const DEFAULT_CMS_DATA = {
   inquiries: []
 };
 
-// Initialize CMS Data & Auto-Purge Legacy Cache
+// Initialize CMS Data & Purge Legacy Caches
 function getCMSData() {
-  // Clear any old v1 cache containing legacy references
   localStorage.removeItem('admiral_malika_cms_data');
+  localStorage.removeItem('admiral_malika_cms_v2');
 
   const data = localStorage.getItem(CMS_STORAGE_KEY);
   if (!data) {
@@ -86,7 +86,7 @@ function getCMSData() {
     if (parsed.education) {
       parsed.education.forEach(item => {
         if (!item.partner || item.partner.includes('Elrafa') || item.partner.includes('Kolaborasi')) {
-          item.partner = 'Divisi Pendidikan Jerman PT. Admiral Malika';
+          item.partner = 'Divisi Pendidikan Jerman PT. Admiral Malika Internasional';
           updated = true;
         }
       });
