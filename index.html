@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PT. Admiral Malika Internasional | Parent Corporate Holding</title>
-  <meta name="description" content="Official Corporate Holding Headquarters Portal of PT. Admiral Malika Internasional governing agricultural trade export and German education pathways.">
+  <title>PT. Admiral Malika Internasional | Global Trade Aggregator & Exporter</title>
+  <meta name="description" content="Official Corporate Holding Profile of PT. Admiral Malika Internasional - Premier Indonesian Global Trade Aggregator & Agricultural Commodity Exporter.">
   
-  <!-- FontAwesome & Google Fonts -->
+  <!-- FontAwesome Icons & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navigation Bar (Clean Header) -->
+  <!-- Navigation Bar (Clean Header with Banner Language Switcher) -->
   <header class="header">
     <div class="nav-container">
       <a href="index.html" class="brand-logo">
@@ -29,14 +29,14 @@
 
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Beranda</a></li>
-        <li><a href="export.html" class="nav-link" data-i18n="nav_export">Subdomain Export</a></li>
-        <li><a href="edu.html" class="nav-link" data-i18n="nav_edu">Subdomain Education</a></li>
-        <li><a href="about.html" class="nav-link" data-i18n="nav_about">Tentang Kami</a></li>
-        <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Kontak Executive</a></li>
+        <li><a href="#about-section" class="nav-link" data-i18n="nav_about">Tentang Perusahaan</a></li>
+        <li><a href="#vision-section" class="nav-link" data-i18n="nav_vision">Visi & Misi</a></li>
+        <li><a href="#pillars-section" class="nav-link" data-i18n="nav_portfolio">Pilar Perdagangan</a></li>
+        <li><a href="#contact-section" class="nav-link" data-i18n="nav_contact">Kontak Bisnis</a></li>
       </ul>
 
       <div class="nav-actions">
-        <!-- Language Selector Buttons (EN | ID | DE) -->
+        <!-- Banner Language Switcher Buttons (EN | ID | DE) -->
         <div class="lang-selector-container">
           <button class="lang-btn active" onclick="setAppLang('id')">🇮🇩 ID</button>
           <button class="lang-btn" onclick="setAppLang('en')">🇬🇧 EN</button>
@@ -51,31 +51,31 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-container">
-      <!-- Left Column: Typography & Action Buttons -->
+      <!-- Left Column: Corporate Holding Overview & Tagline -->
       <div class="hero-content">
         <div class="hero-tag" id="hero-tag">
-          <i class="fas fa-bolt" style="color: #d4af37;"></i> <span data-i18n="hero_tag">PARENT CORPORATE HOLDING HEADQUARTERS</span>
+          <i class="fas fa-globe" style="color: #d4af37;"></i> <span data-i18n="hero_tag">ENTITAS INDUK KORPORAT & AGREGATOR PERDAGANGAN</span>
         </div>
         <h1 class="hero-title" id="hero-title">
-          <span data-i18n="hero_title_1">Solusi Terpercaya</span><br>
-          <span class="gold-text" data-i18n="hero_title_2">Agraria & Pendidikan Jerman</span>
+          <span data-i18n="hero_title_1">Agregator & Eksportir</span><br>
+          <span class="gold-text" data-i18n="hero_title_2">Perdagangan Global Indonesia</span>
         </h1>
         <p class="hero-subtitle" id="hero-subtitle" data-i18n="hero_desc">
-          PT. Admiral Malika Internasional menghadirkan komoditas pertanian unggulan Indonesia ke pasar dunia serta membuka jalan karir & studi internasional di Jerman.
+          PT. Admiral Malika Internasional adalah perusahaan korporat perdagangan dalam dan luar negeri yang mengumpulkan, mengolah, dan mengekspor komoditas unggulan Indonesia ke pasar dunia.
         </p>
 
         <div class="hero-btns">
-          <a href="export.html" class="btn btn-gold">
-            <i class="fas fa-seedling"></i> <span data-i18n="btn_export">Subdomain export.admiralmalika.com</span>
+          <a href="#pillars-section" class="btn btn-gold">
+            <i class="fas fa-boxes-stacked"></i> <span data-i18n="btn_explore">Jelajahi Pilar Perdagangan</span>
           </a>
-          <a href="edu.html" class="btn btn-blue">
-            <i class="fas fa-graduation-cap"></i> <span data-i18n="btn_edu">Subdomain edu.admiralmalika.com</span>
+          <a href="#contact-section" class="btn btn-blue">
+            <i class="fas fa-envelope"></i> <span data-i18n="btn_contact">Hubungi Tim Korporat</span>
           </a>
         </div>
 
-        <!-- Global Network Badges Row -->
+        <!-- Global Network Badges -->
         <div class="global-net-row">
-          <span class="net-label"><i class="fas fa-globe"></i> GLOBAL NETWORK:</span>
+          <span class="net-label"><i class="fas fa-network-wired"></i> GLOBAL TRADE NETWORK:</span>
           <div class="net-pills">
             <span class="net-pill"><strong class="code">DE</strong> Jerman</span>
             <span class="net-pill"><strong class="code">JP</strong> Jepang</span>
@@ -86,61 +86,200 @@
         </div>
       </div>
 
-      <!-- Right Column: High-Res Graphic Banner Composite (Seamless Gradient Masking) -->
+      <!-- Right Column: Graphic Showcase Banner (Seamless 4-Edge Masking, No Box) -->
       <div class="hero-graphic-col">
         <div class="hero-graphic-img-wrap">
-          <img src="images/hero_full_banner.jpg" alt="PT Admiral Malika Internasional Graphic Showcase" class="hero-graphic-img">
+          <img src="images/hero_full_banner.jpg" alt="PT Admiral Malika Internasional Trade Showcase" class="hero-graphic-img">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Business Group Portfolio Section -->
-  <section class="section">
+  <!-- Section 1: Who We Are (Tentang Perusahaan) -->
+  <section class="section" id="about-section">
     <div class="section-title-wrap">
-      <span class="section-badge" data-i18n="pillars_badge">UNIT BISNIS INDEPENDEN GRUP</span>
-      <h2 class="section-title" data-i18n="pillars_title">Ekosistem PT. Admiral Malika Internasional</h2>
-      <p class="section-desc" data-i18n="pillars_desc">Menggabungkan potensi kekuatan sumber daya alam Indonesia dan pengembangan sumber daya manusia menuju standar internasional melalui subdomain independen.</p>
+      <span class="section-badge" data-i18n="about_badge">PROFIL KORPORAT</span>
+      <h2 class="section-title" data-i18n="about_title">Siapa PT. Admiral Malika Internasional?</h2>
+      <p class="section-desc" data-i18n="about_desc">
+        PT. Admiral Malika Internasional beroperasi sebagai entitas induk (holding korporasi) perdagangan terpercaya yang mengintegrasikan rantai pasok agraria dan komoditas industri dari pelosok Nusantara langsung ke pasar mancanegara.
+      </p>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-top-stripe"></div>
+        <div class="pillar-icon-box"><i class="fas fa-building"></i></div>
+        <h3 class="pillar-title" data-i18n="about_card1_title">Holding Perdagangan Terpadu</h3>
+        <p style="color: var(--text-muted); font-size: 0.98rem;" data-i18n="about_card1_desc">
+          Menanungi beberapa unit bisnis independen yang bergerak di bidang pengadaan komoditas, pengolahan produk bernilai tambah, hingga logistik ekspor antarbenua.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-top-stripe"></div>
+        <div class="pillar-icon-box"><i class="fas fa-handshake"></i></div>
+        <h3 class="pillar-title" data-i18n="about_card2_title">Agregator Petani & Produsen</h3>
+        <p style="color: var(--text-muted); font-size: 0.98rem;" data-i18n="about_card2_desc">
+          Bermitra erat dengan jejaring petani, kelompok tani lokal, dan UMKM pengolah komoditas guna menjamin kontinuitas pasokan berstandar kualitas internasional.
+        </p>
+      </div>
+
+      <div class="pillar-card">
+        <div class="pillar-top-stripe"></div>
+        <div class="pillar-icon-box"><i class="fas fa-award"></i></div>
+        <h3 class="pillar-title" data-i18n="about_card3_title">Standar Mutu & Sertifikasi Ekspor</h3>
+        <p style="color: var(--text-muted); font-size: 0.98rem;" data-i18n="about_card3_desc">
+          Menerapkan standar ISO 22000, HACCP, sertifikasi Fitosainitari, Organic USDA/EU, serta penanganan logistik berstandar Incoterms (FOB/CIF).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Vision & Mission (Visi & Misi Korporasi) -->
+  <section class="section section-alt" id="vision-section">
+    <div class="section-title-wrap">
+      <span class="section-badge" data-i18n="vm_badge">ARAH STRATEGIS KORPORASI</span>
+      <h2 class="section-title" data-i18n="vm_title">Visi & Misi PT. Admiral Malika Internasional</h2>
+      <p class="section-desc" data-i18n="vm_desc">Komitmen berkelanjutan kami untuk menjadi jembatan utama perdagangan internasional yang unggul dan terpercaya.</p>
+    </div>
+
+    <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+      
+      <!-- Vision Card -->
+      <div class="pillar-card">
+        <div class="pillar-top-stripe"></div>
+        <div class="pillar-icon-box"><i class="fas fa-eye"></i></div>
+        <h3 class="pillar-title" data-i18n="vision_title">Visi Korporasi</h3>
+        <p style="color: #cbd5e1; font-size: 1.05rem; line-height: 1.7;" data-i18n="vision_text">
+          "Menjadi entitas induk agregator perdagangan dan eksportir komoditas terdepan dari Indonesia yang dikenal dunia atas integritas, kualitas produk unggulan, serta jaringan logistik global yang tangguh."
+        </p>
+      </div>
+
+      <!-- Mission Card -->
+      <div class="pillar-card">
+        <div class="pillar-top-stripe"></div>
+        <div class="pillar-icon-box"><i class="fas fa-bullseye"></i></div>
+        <h3 class="pillar-title" data-i18n="mission_title">Misi Korporasi</h3>
+        <ul class="pillar-list">
+          <li><i class="fas fa-check-circle"></i> <span data-i18n="m1">Mengagregasi komoditas pertanian & industri lokal berkualitas tinggi untuk memenuhi standar pasar ekspor global.</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-i18n="m2">Membangun kemitraan strategis yang saling menguntungkan dengan buyer internasional di Eropa, Amerika, dan Asia.</span></li>
+          <li><i class="fas fa-check-circle"></i> <span data-i18n="m3">Menjamin transparansi pengiriman, kepatuhan mutu fitosanitari, dan profesionalisme layanan perdagangan B2B.</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Portfolio Unit Bisnis & Pilar Perdagangan (Trade Portfolio) -->
+  <section class="section" id="pillars-section">
+    <div class="section-title-wrap">
+      <span class="section-badge" data-i18n="port_badge">PORTOFOLIO GRUP USAHA</span>
+      <h2 class="section-title" data-i18n="port_title">Pilar Perdagangan Komoditas Ekspor</h2>
+      <p class="section-desc" data-i18n="port_desc">Unit bisnis independen dalam naungan PT. Admiral Malika Internasional yang melayani permintaan komoditas pasar global.</p>
     </div>
 
     <div class="pillars-grid">
       
-      <!-- Business Unit 1: Agricultural Export -->
+      <!-- Pilar 1: Agricultural Commodities -->
       <div class="pillar-card">
-        <div class="pillar-top-stripe stripe-export"></div>
-        <div class="pillar-icon-box icon-export"><i class="fas fa-globe-asia"></i></div>
-        <div style="font-size:0.8rem; color:#10b981; font-weight:700; font-family:monospace; margin-bottom:0.5rem;">SUBDOMAIN: EXPORT.ADMIRALMALIKA.COM</div>
-        <h3 class="pillar-title" data-i18n="p1_title">Pilar 1: Ekspor Produk Agraria</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="p1_desc">Pasokan komoditas pertanian terbaik Indonesia untuk kebutuhan industri dan pasar ekspor luar negeri (Ditulis dalam Bahasa Inggris Penuh di Subdomain Export).</p>
+        <div class="pillar-top-stripe"></div>
+        <div class="pillar-icon-box"><i class="fas fa-seedling"></i></div>
+        <h3 class="pillar-title" data-i18n="p1_title">Pilar 1: Komoditas Agraria & Rempah</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="p1_desc">Pengadaan dan pengolahan komoditas pertanian terbaik Indonesia untuk kebutuhan industri pangan global.</p>
         <ul class="pillar-list">
-          <li><i class="fas fa-check-circle"></i> <strong>Fresh & Frozen Banana Leaves</strong> (Food Grade Packaging)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Organic Coconut Sugar</strong> (Low GI 35 Blossom Nectar)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Gourmet Planifolia Vanilla Pods</strong> (Grade A Cured)</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Fresh & Frozen Banana Leaves</strong> (Kemasan Vacuum Food Grade)</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Organic Coconut Palm Sugar</strong> (Low GI 35 Granulated)</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Gourmet Planifolia Vanilla Beans</strong> (Grade A Cured Pods)</li>
           <li><i class="fas fa-check-circle"></i> <strong>Specialty Sumatra Gayo Arabica Coffee Beans</strong></li>
         </ul>
-        <a href="export.html" class="btn btn-gold btn-sm" style="margin-top: auto; justify-content: center;">
-          <i class="fas fa-external-link-alt"></i> <span data-i18n="p1_btn">Kunjungi export.admiralmalika.com</span>
+        <a href="#contact-section" class="btn btn-gold btn-sm" style="margin-top: auto; justify-content: center;">
+          <i class="fas fa-paper-plane"></i> <span data-i18n="btn_inquire_p1">Minta Penawaran Komoditas</span>
         </a>
       </div>
 
-      <!-- Business Unit 2: Germany Education -->
+      <!-- Pilar 2: Natural Energy & Derivative Products -->
       <div class="pillar-card">
-        <div class="pillar-top-stripe stripe-edu"></div>
-        <div class="pillar-icon-box icon-edu"><i class="fas fa-award"></i></div>
-        <div style="font-size:0.8rem; color:#38bdf8; font-weight:700; font-family:monospace; margin-bottom:0.5rem;">SUBDOMAIN: EDU.ADMIRALMALIKA.COM</div>
-        <h3 class="pillar-title" data-i18n="p2_title">Pilar 2: Pelatihan & Studium Jerman</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="p2_desc">Mencetak lulusan profesional yang siap bekerja dan berkuliah di Jerman (Tersedia dalam 3 Bahasa: EN, ID, DE).</p>
+        <div class="pillar-top-stripe"></div>
+        <div class="pillar-icon-box"><i class="fas fa-fire"></i></div>
+        <h3 class="pillar-title" data-i18n="p2_title">Pilar 2: Produk Energi Alami & Turunannya</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="p2_desc">Pasokan produk olahan turunan kelapa dan hasil alam ramah lingkungan untuk industri energi dan manufaktur.</p>
         <ul class="pillar-list">
-          <li><i class="fas fa-check-circle"></i> <strong>Ausbildung Berbayar</strong> (Stipend €1.000 - €1.400/bulan)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Studienkolleg & Public Uni</strong> (Bebas Biaya Kuliah)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Akademi Bahasa Jerman</strong> (Level A1 - B2 Intensif)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Kalkulator Kelayakan Jalur & Pendampingan Visa</strong></li>
+          <li><i class="fas fa-check-circle"></i> <strong>Coconut Shell Charcoal Briquettes</strong> (Fixed Carbon Min 75%)</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Sapu Lidi Sawit & Nipah</strong> (Kering & Panjang 90-120cm)</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Tepung Mocaf & Olahan Singkong</strong> (Gluten Free Grade)</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Minyak Atsiri Alami / Essential Oils</strong></li>
         </ul>
-        <a href="edu.html" class="btn btn-blue btn-sm" style="margin-top: auto; justify-content: center;">
-          <i class="fas fa-external-link-alt"></i> <span data-i18n="p2_btn">Kunjungi edu.admiralmalika.com</span>
+        <a href="#contact-section" class="btn btn-gold btn-sm" style="margin-top: auto; justify-content: center;">
+          <i class="fas fa-paper-plane"></i> <span data-i18n="btn_inquire_p2">Minta Penawaran Produk</span>
         </a>
       </div>
 
+      <!-- Pilar 3: Trade Logistics & Compliance -->
+      <div class="pillar-card">
+        <div class="pillar-top-stripe"></div>
+        <div class="pillar-icon-box"><i class="fas fa-ship"></i></div>
+        <h3 class="pillar-title" data-i18n="p3_title">Pilar 3: Fasilitasi & Logistik Ekspor</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="p3_desc">Layanan profesional pengurusan dokumen ekspor, bea cukai, sertifikasi karantina, dan kargo laut internasional.</p>
+        <ul class="pillar-list">
+          <li><i class="fas fa-check-circle"></i> <strong>Dokumentasi Ekspor Complete:</strong> COO, Fitosainitari, Fumigasi</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Ketentuan Pengiriman Incoterms:</strong> FOB & CIF Ports</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Kemasan Ekspor Khusus:</strong> GrainPro, Vacuum & Custom OEM</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Jaringan Pelayaran Utama:</strong> Maersk, MSC, CMA CGM</li>
+        </ul>
+        <a href="#contact-section" class="btn btn-blue btn-sm" style="margin-top: auto; justify-content: center;">
+          <i class="fas fa-handshake"></i> <span data-i18n="btn_inquire_p3">Konsultasi Layanan Ekspor</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 4: Business Contact Form (Kontak Bisnis Resmi) -->
+  <section class="section section-alt" id="contact-section">
+    <div style="max-width: 860px; margin: 0 auto; background: #112238; padding: 3.5rem 3rem; border-radius: 24px; border: 1px solid var(--border-gold); box-shadow: var(--shadow-glow);">
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span class="section-badge" data-i18n="contact_badge">HUBUNGI KORPORASI</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #fff; margin-top:0.4rem;" data-i18n="contact_title">Kontak Bisnis & Inkuiri Ekspor</h2>
+        <p style="color: var(--text-muted); font-size: 0.98rem;" data-i18n="contact_desc">Kirimkan pesan inkuiri perdagangan B2B atau permintaan sampel komoditas langsung ke tim eksekutif PT. Admiral Malika Internasional.</p>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('Terima kasih. Pesan inkuiri perdagangan Anda telah diterima oleh tim eksekutif PT. Admiral Malika Internasional. Kami akan menghubungi Anda dalam 24 jam.');">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom:1.25rem;">
+          <div class="form-group">
+            <label class="form-label" data-i18n="lbl_name">Nama Lengkap / Nama Perusahaan *</label>
+            <input type="text" required class="form-control" placeholder="John Doe / PT. Importer Global">
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="lbl_email">Email Perusahaan *</label>
+            <input type="email" required class="form-control" placeholder="buyer@company.com">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom:1.25rem;">
+          <div class="form-group">
+            <label class="form-label" data-i18n="lbl_subject">Subjek Inkuiri Perdagangan *</label>
+            <select class="form-control" style="background:#070f1e;">
+              <option>Permintaan Penawaran Harga Ekspor (RFQ)</option>
+              <option>Permintaan Sampel Produk Komoditas</option>
+              <option>Kemitraan Pasokan Dalam Negeri</option>
+              <option>Kerjasama Agregator Perdagangan</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="lbl_country">Negara / Pelabuhan Tujuan *</label>
+            <input type="text" required class="form-control" placeholder="Contoh: Port of Rotterdam, Netherlands">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:2rem;">
+          <label class="form-label" data-i18n="lbl_msg">Detail Kebutuhan Komoditas & Spesifikasi Order *</label>
+          <textarea rows="4" required class="form-control" placeholder="Tentukan jenis komoditas, perkiraan volume tonase, ketentuan pengiriman (FOB/CIF), dan spesifikasi khusus..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; font-size:1.05rem; padding:1rem;">
+          <i class="fas fa-paper-plane"></i> <span data-i18n="btn_submit">Kirim Inkuiri Perdagangan Resmi</span>
+        </button>
+      </form>
     </div>
   </section>
 
@@ -152,74 +291,119 @@
           <div class="logo-badge">AMI</div>
           <div style="color: #fff; font-weight: 800; font-size: 1.2rem;">PT. ADMIRAL MALIKA INTERNASIONAL</div>
         </div>
-        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.8rem; max-width: 360px;">
-          Entitas induk korporat pelopor perdagangan komoditas agrikultur internasional dan jalur karir/studi Eropa.
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.8rem; max-width: 360px;" data-i18n="footer_brand_desc">
+          Entitas induk korporat agregator dan eksportir perdagangan komoditas Indonesia terpercaya untuk pasar global.
         </p>
       </div>
 
       <div>
-        <div class="footer-title">Subdomain Grup Usaha</div>
+        <div class="footer-title" data-i18n="footer_nav_title">Navigasi Utama</div>
         <ul class="footer-links">
-          <li><a href="index.html">🏢 Holding: admiralmalika.com</a></li>
-          <li><a href="export.html">🌾 Export: export.admiralmalika.com</a></li>
-          <li><a href="edu.html">🎓 Education: edu.admiralmalika.com</a></li>
-          <li><a href="about.html">Profil Perusahaan</a></li>
-          <li><a href="admin/index.html">Portal CMS ADMIN</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Beranda</a></li>
+          <li><a href="#about-section" data-i18n="nav_about">Tentang Perusahaan</a></li>
+          <li><a href="#vision-section" data-i18n="nav_vision">Visi & Misi</a></li>
+          <li><a href="#pillars-section" data-i18n="nav_portfolio">Pilar Perdagangan</a></li>
+          <li><a href="#contact-section" data-i18n="nav_contact">Kontak Bisnis</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="footer-title">Kontak Resmi Korporat</div>
+        <div class="footer-title" data-i18n="footer_contact_title">Kontak Resmi Korporat</div>
         <ul class="footer-links">
-          <li><i class="fas fa-envelope" style="color:#b88a2e; margin-right:8px;"></i> hary.kristianto.info@gmail.com</li>
-          <li><i class="fas fa-envelope" style="color:#b88a2e; margin-right:8px;"></i> malikamannacenter@gmail.com</li>
-          <li><i class="fab fa-whatsapp" style="color:#b88a2e; margin-right:8px;"></i> +6281118893389</li>
-          <li><i class="fas fa-map-marker-alt" style="color:#b88a2e; margin-right:8px;"></i> Indonesia (HQ) & Germany Network</li>
+          <li><i class="fas fa-envelope" style="color:var(--accent-gold); margin-right:8px;"></i> hary.kristianto.info@gmail.com</li>
+          <li><i class="fas fa-envelope" style="color:var(--accent-gold); margin-right:8px;"></i> malikamannacenter@gmail.com</li>
+          <li><i class="fab fa-whatsapp" style="color:var(--accent-gold); margin-right:8px;"></i> +6281118893389</li>
+          <li><i class="fas fa-map-marker-alt" style="color:var(--accent-gold); margin-right:8px;"></i> Indonesia (HQ) & Global Network</li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div>&copy; 2026 PT. Admiral Malika Internasional. All Rights Reserved.</div>
-      <div>Parent Holding Corporate Portal.</div>
+      <div>Official Corporate Holding & Global Trade Aggregator Portal.</div>
     </div>
   </footer>
 
-  <!-- Multilingual Translation Script -->
+  <!-- Multilingual Translation Script (ID | EN | DE) -->
   <script>
     const dictionary = {
       id: {
-        nav_home: "Beranda", nav_export: "Subdomain Export", nav_edu: "Subdomain Education", nav_about: "Tentang Kami", nav_contact: "Kontak Executive",
-        hero_tag: "PARENT CORPORATE HOLDING HEADQUARTERS",
-        hero_title_1: "Solusi Terpercaya", hero_title_2: "Agraria & Pendidikan Jerman",
-        hero_desc: "PT. Admiral Malika Internasional menghadirkan komoditas pertanian unggulan Indonesia ke pasar dunia serta membuka jalan karir & studi internasional di Jerman.",
-        btn_edu: "Subdomain edu.admiralmalika.com", btn_export: "Subdomain export.admiralmalika.com",
-        pillars_badge: "UNIT BISNIS INDEPENDEN GRUP", pillars_title: "Ekosistem PT. Admiral Malika Internasional",
-        pillars_desc: "Menggabungkan potensi kekuatan sumber daya alam Indonesia dan pengembangan sumber daya manusia menuju standar internasional melalui subdomain independen.",
-        p1_title: "Pilar 1: Ekspor Produk Agraria", p1_desc: "Pasokan komoditas pertanian terbaik Indonesia untuk kebutuhan industri dan pasar ekspor luar negeri (Ditulis dalam Bahasa Inggris Penuh di Subdomain Export).", p1_btn: "Kunjungi export.admiralmalika.com",
-        p2_title: "Pilar 2: Pelatihan & Studium Jerman", p2_desc: "Mencetak lulusan profesional yang siap bekerja dan berkuliah di Jerman (Tersedia dalam 3 Bahasa: EN, ID, DE).", p2_btn: "Kunjungi edu.admiralmalika.com"
+        nav_home: "Beranda", nav_about: "Tentang Perusahaan", nav_vision: "Visi & Misi", nav_portfolio: "Pilar Perdagangan", nav_contact: "Kontak Bisnis",
+        hero_tag: "ENTITAS INDUK KORPORAT & AGREGATOR PERDAGANGAN",
+        hero_title_1: "Agregator & Eksportir", hero_title_2: "Perdagangan Global Indonesia",
+        hero_desc: "PT. Admiral Malika Internasional adalah perusahaan korporat perdagangan dalam dan luar negeri yang mengumpulkan, mengolah, dan mengekspor komoditas unggulan Indonesia ke pasar dunia.",
+        btn_explore: "Jelajahi Pilar Perdagangan", btn_contact: "Hubungi Tim Korporat",
+        about_badge: "PROFIL KORPORAT", about_title: "Siapa PT. Admiral Malika Internasional?",
+        about_desc: "PT. Admiral Malika Internasional beroperasi sebagai entitas induk (holding korporasi) perdagangan terpercaya yang mengintegrasikan rantai pasok agraria dan komoditas industri dari pelosok Nusantara langsung ke pasar mancanegara.",
+        about_card1_title: "Holding Perdagangan Terpadu", about_card1_desc: "Menanungi beberapa unit bisnis independen yang bergerak di bidang pengadaan komoditas, pengolahan produk bernilai tambah, hingga logistik ekspor antarbenua.",
+        about_card2_title: "Agregator Petani & Produsen", about_card2_desc: "Bermitra erat dengan jejaring petani, kelompok tani lokal, dan UMKM pengolah komoditas guna menjamin kontinuitas pasokan berstandar kualitas internasional.",
+        about_card3_title: "Standar Mutu & Sertifikasi Ekspor", about_card3_desc: "Menerapkan standar ISO 22000, HACCP, sertifikasi Fitosainitari, Organic USDA/EU, serta penanganan logistik berstandar Incoterms (FOB/CIF).",
+        vm_badge: "ARAH STRATEGIS KORPORASI", vm_title: "Visi & Misi PT. Admiral Malika Internasional", vm_desc: "Komitmen berkelanjutan kami untuk menjadi jembatan utama perdagangan internasional yang unggul dan terpercaya.",
+        vision_title: "Visi Korporasi", vision_text: "\"Menjadi entitas induk agregator perdagangan dan eksportir komoditas terdepan dari Indonesia yang dikenal dunia atas integritas, kualitas produk unggulan, serta jaringan logistik global yang tangguh.\"",
+        mission_title: "Misi Korporasi",
+        m1: "Mengagregasi komoditas pertanian & industri lokal berkualitas tinggi untuk memenuhi standar pasar ekspor global.",
+        m2: "Membangun kemitraan strategic yang saling menguntungkan dengan buyer internasional di Eropa, Amerika, dan Asia.",
+        m3: "Menjamin transparansi pengiriman, kepatuhan mutu fitosanitari, dan profesionalisme layanan perdagangan B2B.",
+        port_badge: "PORTOFOLIO GRUP USAHA", port_title: "Pilar Perdagangan Komoditas Ekspor", port_desc: "Unit bisnis independen dalam naungan PT. Admiral Malika Internasional yang melayani permintaan komoditas pasar global.",
+        p1_title: "Pilar 1: Komoditas Agraria & Rempah", p1_desc: "Pengadaan dan pengolahan komoditas pertanian terbaik Indonesia untuk kebutuhan industri pangan global.", btn_inquire_p1: "Minta Penawaran Komoditas",
+        p2_title: "Pilar 2: Produk Energi Alami & Turunannya", p2_desc: "Pasokan produk olahan turunan kelapa dan hasil alam ramah lingkungan untuk industri energi dan manufaktur.", btn_inquire_p2: "Minta Penawaran Produk",
+        p3_title: "Pilar 3: Fasilitasi & Logistik Ekspor", p3_desc: "Layanan profesional pengurusan dokumen ekspor, bea cukai, sertifikasi karantina, dan kargo laut internasional.", btn_inquire_p3: "Konsultasi Layanan Ekspor",
+        contact_badge: "HUBUNGI KORPORASI", contact_title: "Kontak Bisnis & Inkuiri Ekspor", contact_desc: "Kirimkan pesan inkuiri perdagangan B2B atau permintaan sampel komoditas langsung ke tim eksekutif PT. Admiral Malika Internasional.",
+        lbl_name: "Nama Lengkap / Nama Perusahaan *", lbl_email: "Email Perusahaan *", lbl_subject: "Subjek Inkuiri Perdagangan *", lbl_country: "Negara / Pelabuhan Tujuan *", lbl_msg: "Detail Kebutuhan Komoditas & Spesifikasi Order *", btn_submit: "Kirim Inkuiri Perdagangan Resmi",
+        footer_brand_desc: "Entitas induk korporat agregator dan eksportir perdagangan komoditas Indonesia terpercaya untuk pasar global.",
+        footer_nav_title: "Navigasi Utama", footer_contact_title: "Kontak Resmi Korporat"
       },
       en: {
-        nav_home: "Home", nav_export: "Export Subdomain", nav_edu: "Education Subdomain", nav_about: "About Us", nav_contact: "Executive Contact",
-        hero_tag: "PARENT CORPORATE HOLDING HEADQUARTERS",
-        hero_title_1: "Trusted Global Solutions in", hero_title_2: "Agriculture & German Pathways",
-        hero_desc: "PT. Admiral Malika Internasional delivers Indonesia's premium agricultural commodities to global markets and opens pathways for international study & career in Germany.",
-        btn_edu: "Subdomain edu.admiralmalika.com", btn_export: "Subdomain export.admiralmalika.com",
-        pillars_badge: "INDEPENDENT BUSINESS UNITS", pillars_title: "PT. Admiral Malika Internasional Ecosystem",
-        pillars_desc: "Synergizing Indonesia's rich natural resources with world-class human capital development across dedicated subdomains.",
-        p1_title: "Pillar 1: Agricultural Export Trade", p1_desc: "Sourcing premium Indonesian agricultural commodities for global industrial buyers (Full English Subdomain).", p1_btn: "Visit export.admiralmalika.com",
-        p2_title: "Pillar 2: Germany Education & Career", p2_desc: "Preparing certified professionals for Ausbildung apprenticeships and higher education in Germany (Available in 3 Languages).", p2_btn: "Visit edu.admiralmalika.com"
+        nav_home: "Home", nav_about: "About Company", nav_vision: "Vision & Mission", nav_portfolio: "Trade Pillars", nav_contact: "Business Contact",
+        hero_tag: "PARENT CORPORATE HOLDING & TRADE AGGREGATOR",
+        hero_title_1: "Indonesia's Premier", hero_title_2: "Global Trade Aggregator & Exporter",
+        hero_desc: "PT. Admiral Malika Internasional is a corporate enterprise engaged in domestic and international trade, aggregating, processing, and exporting Indonesia's finest commodities to global markets.",
+        btn_explore: "Explore Trade Pillars", btn_contact: "Contact Corporate Team",
+        about_badge: "CORPORATE PROFILE", about_title: "Who is PT. Admiral Malika Internasional?",
+        about_desc: "PT. Admiral Malika Internasional operates as a trusted trade parent holding company integrating agricultural supply chains and industrial commodities from Indonesian producers directly to international markets.",
+        about_card1_title: "Integrated Trade Holding", about_card1_desc: "Governing independent business units engaged in commodity sourcing, value-added processing, and transcontinental export logistics.",
+        about_card2_title: "Farmer & Producer Aggregator", about_card2_desc: "Partnering closely with agricultural networks, local farmers, and processors to ensure continuous supply meeting international quality standards.",
+        about_card3_title: "Quality Standards & Export Certification", about_card3_desc: "Enforcing ISO 22000, HACCP, Phytosanitary certification, USDA/EU Organic standards, and Incoterms (FOB/CIF) logistics handling.",
+        vm_badge: "STRATEGIC DIRECTION", vm_title: "Vision & Mission of PT. Admiral Malika Internasional", vm_desc: "Our sustainable commitment to serving as the primary, trusted bridge for international trade.",
+        vision_title: "Corporate Vision", vision_text: "\"To be Indonesia's leading trade aggregator and commodity exporter recognized globally for integrity, premium product quality, and resilient global logistics network.\"",
+        mission_title: "Corporate Mission",
+        m1: "Aggregating high-quality agricultural & industrial commodities to meet global export market standards.",
+        m2: "Building mutually beneficial strategic partnerships with international buyers across Europe, America, and Asia.",
+        m3: "Ensuring shipment transparency, phytosanitary compliance, and professional B2B trade services.",
+        port_badge: "BUSINESS GROUP PORTFOLIO", port_title: "Export Commodity Trade Pillars", port_desc: "Independent business units under PT. Admiral Malika Internasional supplying global market commodity demands.",
+        p1_title: "Pillar 1: Agricultural & Spice Trade", p1_desc: "Sourcing and processing premium Indonesian agricultural commodities for global food industries.", btn_inquire_p1: "Request Commodity Quote",
+        p2_title: "Pillar 2: Natural Energy & Derivatives", p2_desc: "Supplying eco-friendly coconut derivative products and natural energy commodities for industrial manufacturing.", btn_inquire_p2: "Request Product Quote",
+        p3_title: "Pillar 3: Export Logistics & Facilitation", p3_desc: "Professional services covering export documentation, customs clearance, quarantine certificates, and ocean freight.", btn_inquire_p3: "Consult Export Services",
+        contact_badge: "CONTACT CORPORATE", contact_title: "Business Contact & Trade Inquiry", contact_desc: "Send B2B trade inquiries or commodity sample requests directly to the executive team of PT. Admiral Malika Internasional.",
+        lbl_name: "Full Name / Enterprise Name *", lbl_email: "Corporate Email *", lbl_subject: "Trade Inquiry Subject *", lbl_country: "Destination Country / Port *", lbl_msg: "Commodity Requirements & Order Specs *", btn_submit: "Submit Official Trade Inquiry",
+        footer_brand_desc: "Trusted corporate parent holding aggregator and exporter of Indonesian commodities for global markets.",
+        footer_nav_title: "Main Navigation", footer_contact_title: "Official Corporate Contact"
       },
       de: {
-        nav_home: "Startseite", nav_export: "Export Subdomain", nav_edu: "Bildung Subdomain", nav_about: "Über Uns", nav_contact: "Konzernkontakt",
-        hero_tag: "MUTTERGESELLSCHAFT / HOLDING HAUPTSITZ",
-        hero_title_1: "Vertrauenswürdige Lösungen in", hero_title_2: "Agrar & Bildung in Deutschland",
-        hero_desc: "PT. Admiral Malika Internasional liefert erstklassige indonesische Agrarprodukte auf globale Märkte und eröffnet Wege für Studium und Karriere in Deutschland.",
-        btn_edu: "Subdomain edu.admiralmalika.com", btn_export: "Subdomain export.admiralmalika.com",
-        pillars_badge: "UNABHÄNGIGE GESCHÄFTSBEREICHE", pillars_title: "Ökosystem PT. Admiral Malika Internasional",
-        pillars_desc: "Synergie von indonesischen Naturressourcen und internationaler Humankapitalentwicklung über dedizierte Subdomains.",
-        p1_title: "Säule 1: Agrarprodukte-Export", p1_desc: "Beschaffung bester indonesischer Agrarprodukte für die weltweite Industrie (Englische Subdomain).", p1_btn: "Besuchen Sie export.admiralmalika.com",
-        p2_title: "Säule 2: Ausbildung & Studium in Deutschland", p2_desc: "Qualifizierung von Fachkräften für Ausbildung und Hochschulbildung in Deutschland (Dreisprachig).", p2_btn: "Besuchen Sie edu.admiralmalika.com"
+        nav_home: "Startseite", nav_about: "Über das Unternehmen", nav_vision: "Vision & Mission", nav_portfolio: "Handelssäulen", nav_contact: "Geschäftskontakt",
+        hero_tag: "MUTTERGESELLSCHAFT & HANDELSAGGREGATOR",
+        hero_title_1: "Indonesiens Führender", hero_title_2: "Globaler Handelsaggregator & Exporteur",
+        hero_desc: "PT. Admiral Malika Internasional ist ein Handelsunternehmen im In- und Ausland, das erstklassige indonesische Rohstoffe bündelt, verarbeitet und auf globale Märkte exportiert.",
+        btn_explore: "Handelssäulen Erkunden", btn_contact: "Konzernteam Kontaktieren",
+        about_badge: "UNTERNEHMENSPROFIL", about_title: "Wer ist PT. Admiral Malika Internasional?",
+        about_desc: "PT. Admiral Malika Internasional agiert als vertrauenswürdige Handels-Holdinggesellschaft, die landwirtschaftliche Lieferketten und Industrierohstoffe aus Indonesien direkt in internationale Märkte integriert.",
+        about_card1_title: "Integrierte Handels-Holding", about_card1_desc: "Verwaltung unabhängiger Geschäftsbereiche für Rohstoffbeschaffung, Wertschöpfungsverarbeitung und interkontinentale Exportlogistik.",
+        about_card2_title: "Aggregator für Landwirte", about_card2_desc: "Enge Partnerschaft mit landwirtschaftlichen Netzwerken zur Sicherstellung kontinuierlicher Lieferungen nach internationalen Qualitätsstandards.",
+        about_card3_title: "Qualitätsstandards & Zertifikate", about_card3_desc: "Einhaltung von ISO 22000, HACCP, Pflanzenschutzzertifikaten, USDA/EU-Bio-Standards und Incoterms (FOB/CIF) Logistik.",
+        vm_badge: "STRATEGISCHE AUSRICHTUNG", vm_title: "Vision & Mission von PT. Admiral Malika Internasional", vm_desc: "Unser nachhaltiges Engagement als führende Brücke für den internationalen Handel.",
+        vision_title: "Unternehmensvision", vision_text: "\"Führender Handelsaggregator und Rohstoffexporteur Indonesiens zu sein, der weltweit für Integrität, erstklassige Produktqualität und ein starkes globales Logistiknetzwerk bekannt ist.\"",
+        mission_title: "Unternehmensmission",
+        m1: "Bündelung hochwertiger Agrar- und Industrieerzeugnisse zur Erfüllung globaler Exportstandards.",
+        m2: "Aufbau gegenseitig vorteilhafter strategischer Partnerschaften mit internationalen Käufern in Europa, Amerika und Asien.",
+        m3: "Gewährleistung von Transparenz, Pflanzenschutzkonformität und professionellem B2B-Handelsservice.",
+        port_badge: "GESCHÄFTSPORTFOLIO", port_title: "Handelssäulen für Exportrohstoffe", port_desc: "Unabhängige Geschäftsbereiche unter PT. Admiral Malika Internasional zur Deckung globaler Marktbedürfnisse.",
+        p1_title: "Säule 1: Agrar- & Gewürzhandel", p1_desc: "Beschaffung und Verarbeitung erstklassiger indonesischer Agrarprodukte für die globale Lebensmittelindustrie.", btn_inquire_p1: "Rohstoffangebot Anfordern",
+        p2_title: "Säule 2: Natürliche Energie & Derivate", p2_desc: "Lieferung umweltfreundlicher Kokosnussderivate und natürlicher Energierohstoffe für die Industrie.", btn_inquire_p2: "Produktangebot Anfordern",
+        p3_title: "Säule 3: Exportlogistik & Abwicklung", p3_desc: "Professioneller Service für Exportdokumentation, Zollabwicklung, Quarantänezertifikate und Seefracht.", btn_inquire_p3: "Exportberatung Anfordern",
+        contact_badge: "KONZERNKONTAKT", contact_title: "Geschäftskontakt & Handelsanfrage", contact_desc: "Senden Sie B2B-Handelsanfragen oder Produktprobenanforderungen direkt an das Führungsteam von PT. Admiral Malika Internasional.",
+        lbl_name: "Vollständiger Name / Firmenname *", lbl_email: "Firmen-E-Mail *", lbl_subject: "Betreff der Handelsanfrage *", lbl_country: "Zielland / Zielhafen *", lbl_msg: "Rohstoffbedarf & Bestellspezifikationen *", btn_submit: "Offizielle Handelsanfrage Senden",
+        footer_brand_desc: "Vertrauenswürdiger Handelsaggregator und Exporteur indonesischer Rohstoffe für globale Märkte.",
+        footer_nav_title: "Hauptnavigation", footer_contact_title: "Offizieller Konzernkontakt"
       }
     };
 
