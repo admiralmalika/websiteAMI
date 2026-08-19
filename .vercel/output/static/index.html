@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT. Admiral Malika Internasional - Corporate Holding & Global Divisions</title>
+  <meta name="description" content="Official Corporate Holding Portal of PT. Admiral Malika Internasional overseeing agricultural trade export and German education pathways.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- 1. TOP SUBDOMAIN SIMULATION ADDRESS BAR    -->
+  <!-- ========================================== -->
+  <div class="subdomain-bar">
+    <div class="browser-controls">
+      <div class="browser-dot dot-red"></div>
+      <div class="browser-dot dot-yellow"></div>
+      <div class="browser-dot dot-green"></div>
+      
+      <div class="url-display-box" id="url-box">
+        <span class="url-prefix">https://</span>
+        <span class="url-host" id="url-host-display">admiralmalika.com</span>
+      </div>
+    </div>
+
+    <!-- Subdomain Selector Tabs -->
+    <div class="domain-tabs">
+      <button class="domain-tab-btn active" data-subdomain="holding">
+        <span>🏢</span> admiralmalika.com
+      </button>
+      <button class="domain-tab-btn" data-subdomain="export">
+        <span>🌾</span> export.admiralmalika.com
+      </button>
+      <button class="domain-tab-btn" data-subdomain="edu">
+        <span>🎓</span> edu.admiralmalika.com
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 2. MAIN HEADER & LANGUAGE SWITCHER BANNER  -->
+  <!-- ========================================== -->
+  <header class="main-header">
+    <a href="#" class="brand-logo" onclick="switchSubdomain('holding')">
+      <div class="logo-icon">AM</div>
+      <div class="brand-text-container">
+        <span class="brand-title">ADMIRAL MALIKA</span>
+        <span class="brand-subtitle">INTERNASIONAL</span>
+      </div>
+    </a>
+
+    <!-- Language Selector (EN, ID, DE) -->
+    <div class="lang-selector-container" id="main-lang-bar">
+      <button class="lang-btn active" data-lang="en">
+        <span class="flag-icon">🇬🇧</span> EN
+      </button>
+      <button class="lang-btn" data-lang="id">
+        <span class="flag-icon">🇮🇩</span> ID
+      </button>
+      <button class="lang-btn" data-lang="de">
+        <span class="flag-icon">🇩🇪</span> DE
+      </button>
+    </div>
+  </header>
+
+  <!-- ================================================================= -->
+  <!-- PAGE A: MAIN HOLDING PORTAL (admiralmalika.com)                   -->
+  <!-- ================================================================= -->
+  <div id="page-holding" class="site-page active">
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-bg-glow"></div>
+      <div class="hero-content">
+        <div class="badge-tag">
+          <span>🏛️</span> <span data-i18n="holding_badge">Parent Holding Entity</span>
+        </div>
+        <h1 class="hero-title" data-i18n="holding_hero_title">
+          Empowering Global Synergies in Trade, Education & Industry
+        </h1>
+        <p class="hero-subtitle" data-i18n="holding_hero_sub">
+          PT. Admiral Malika Internasional is a premier holding corporation overseeing independent business units committed to global trade excellence, sustainable agriculture, and international education pathways.
+        </p>
+        <div class="cta-group">
+          <a href="#group-portfolio" class="btn-primary" data-i18n="btn_explore_units">Explore Business Units</a>
+          <button onclick="openModal('modal-corporate-contact')" class="btn-secondary" data-i18n="btn_corporate_contact">Corporate Contact</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+      <div class="container stats-grid">
+        <div>
+          <div class="stat-number">25+</div>
+          <div class="stat-label" data-i18n="stats_countries">Global Destination Countries</div>
+        </div>
+        <div>
+          <div class="stat-number">12,500+</div>
+          <div class="stat-label" data-i18n="stats_tonnage">Metric Tons Exported Annually</div>
+        </div>
+        <div>
+          <div class="stat-number">1,200+</div>
+          <div class="stat-label" data-i18n="stats_students">Students & Professionals Placed</div>
+        </div>
+        <div>
+          <div class="stat-number">85+</div>
+          <div class="stat-label" data-i18n="stats_partners">International University & Industry Partners</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="about_title">About PT. Admiral Malika Internasional</h2>
+        <p class="section-desc" data-i18n="about_desc">
+          Founded as a forward-thinking conglomerate, PT. Admiral Malika Internasional serves as the strategic umbrella governing high-growth subsidiaries across agricultural export trade and European education & career consulting.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="glass-card">
+          <div class="card-icon">👁️</div>
+          <h3 class="card-title" data-i18n="vision_title">Our Vision</h3>
+          <p class="card-text" data-i18n="vision_text">
+            To be an internationally recognized corporate holding benchmarked for excellence, integrity, and sustainable global impact across trade and education.
+          </p>
+        </div>
+
+        <div class="glass-card">
+          <div class="card-icon">🚀</div>
+          <h3 class="card-title" data-i18n="mission_title">Our Mission</h3>
+          <p class="card-text" data-i18n="mission_text">
+            Fostering strategic growth in our independent subsidiaries, maintaining uncompromising quality standards, and building resilient bridges between Indonesia and global markets.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Portfolio Section -->
+    <section id="group-portfolio" class="section-padding" style="background: rgba(2, 6, 23, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="group_portfolio_title">Business Group Portfolio</h2>
+          <p class="section-desc" data-i18n="group_portfolio_sub">
+            Our specialized independent divisions operating across global trade and international education.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          
+          <!-- Division 1: Export -->
+          <div class="portfolio-card">
+            <div class="portfolio-header">
+              <span class="subdomain-tag export-tag">export.admiralmalika.com</span>
+              <h3 class="card-title" data-i18n="export_unit_title">Admiral Agriculture & Commodity Export</h3>
+            </div>
+            <div class="portfolio-body">
+              <p class="card-text" data-i18n="export_unit_desc">
+                Full-scale international sourcing and export of premium Indonesian agricultural products including spices, coffee, cocoa, and essential oils.
+              </p>
+              <ul class="feature-list">
+                <li class="feature-item">Gourmet Organic Vanilla & Whole Cloves</li>
+                <li class="feature-item">Specialty Sumatra Gayo & Toraja Arabica Coffee</li>
+                <li class="feature-item">ISO 22000, HACCP & Organic Certified Export Standards</li>
+                <li class="feature-item">Global Containerized Freight & Incoterms Shipping</li>
+              </ul>
+            </div>
+            <div class="portfolio-footer">
+              <button onclick="switchSubdomain('export')" class="btn-emerald" style="width: 100%; justify-content: center;">
+                <span data-i18n="btn_visit_export">Visit export.admiralmalika.com</span> ➔
+              </button>
+            </div>
+          </div>
+
+          <!-- Division 2: Education -->
+          <div class="portfolio-card">
+            <div class="portfolio-header">
+              <span class="subdomain-tag">edu.admiralmalika.com</span>
+              <h3 class="card-title" data-i18n="edu_unit_title">Admiral Germany Education & Career Pathways</h3>
+            </div>
+            <div class="portfolio-body">
+              <p class="card-text" data-i18n="edu_unit_desc">
+                Comprehensive preparation, language academy, and placement services for higher education, Studienkolleg, and Ausbildung dual vocational programs in Germany.
+              </p>
+              <ul class="feature-list">
+                <li class="feature-item">Paid Ausbildung Dual Apprenticeship (€1,000 - €1,400/mo stipend)</li>
+                <li class="feature-item">Tuition-Free Public German University Admissions</li>
+                <li class="feature-item">Intensive A1-C1 German Language Academy & Telc Prep</li>
+                <li class="feature-item">End-to-End Visa, Blocked Account & On-Ground Support</li>
+              </ul>
+            </div>
+            <div class="portfolio-footer">
+              <button onclick="switchSubdomain('edu')" class="btn-primary" style="width: 100%; justify-content: center;">
+                <span data-i18n="btn_visit_edu">Visit edu.admiralmalika.com</span> ➔
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Corporate Contact Banner -->
+    <section class="section-padding container text-center">
+      <div class="glass-card" style="text-align: center; max-width: 800px; margin: 0 auto; border-color: var(--accent-gold);">
+        <h2 class="section-title" data-i18n="contact_title">Corporate Inquiries</h2>
+        <p class="section-desc" style="margin-bottom: 24px;" data-i18n="contact_sub">
+          Get in touch with PT. Admiral Malika Internasional holding executive team.
+        </p>
+        <button onclick="openModal('modal-corporate-contact')" class="btn-primary" data-i18n="btn_corporate_contact">
+          Contact Executive Office
+        </button>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- ================================================================= -->
+  <!-- PAGE B: AGRICULTURAL EXPORT SUBDOMAIN (export.admiralmalika.com)  -->
+  <!-- ================================================================= -->
+  <div id="page-export" class="site-page">
+    
+    <!-- Export Hero -->
+    <section class="hero-section" style="background: radial-gradient(circle at 50% 30%, rgba(5, 150, 105, 0.15) 0%, var(--bg-dark) 70%);">
+      <div class="hero-content">
+        <div class="badge-tag" style="border-color: rgba(16, 185, 129, 0.4); color: #10b981;">
+          <span>🌾</span> SUBDOMAIN: EXPORT.ADMIRALMALIKA.COM (FULL ENGLISH)
+        </div>
+        <h1 class="hero-title">
+          Premier Indonesian Agricultural Commodities for <span style="color: #34d399;">Global Markets</span>
+        </h1>
+        <p class="hero-subtitle">
+          Admiral Agricultural Export Division delivers sustainably harvested, high-purity Indonesian spices, coffee beans, cocoa, essential oils, and coconut derivatives directly to international buyers worldwide.
+        </p>
+        <div class="cta-group">
+          <a href="#commodities-section" class="btn-emerald">Explore Commodity Catalog</a>
+          <button onclick="openTradeInquiryModal()" class="btn-secondary">Request Sample / Bulk Quote</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Export Commodities Catalog -->
+    <section id="commodities-section" class="section-padding container">
+      <div class="section-header">
+        <h2 class="section-title">Global Export Commodity Portfolio</h2>
+        <p class="section-desc">
+          Strictly tested and certified commodities meeting USDA Organic, EU Organic, HACCP, ISO 22000, and Phytosanitary international standards.
+        </p>
+      </div>
+
+      <div class="grid-3" id="commodities-grid">
+        <!-- Rendered dynamically via js/export-catalog.js -->
+      </div>
+    </section>
+
+    <!-- Quality Control & Shipping Specs -->
+    <section class="section-padding" style="background: rgba(15, 23, 42, 0.6);">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">International Shipping & Compliance</h2>
+          <p class="section-desc">We manage end-to-end export documentation, freight logistics, and quality assurance.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="glass-card">
+            <div class="card-icon" style="color: #10b981; border-color: rgba(16, 185, 129, 0.3);">📜</div>
+            <h3 class="card-title">Export Certifications</h3>
+            <p class="card-text">Every shipment is accompanied by Phytosanitary Certificate, Certificate of Origin (Form E/COO), Fumigation, COA, and Halal Certification.</p>
+          </div>
+          <div class="glass-card">
+            <div class="card-icon" style="color: #10b981; border-color: rgba(16, 185, 129, 0.3);">🚢</div>
+            <h3 class="card-title">Incoterms & Ports</h3>
+            <p class="card-text">Flexible trade terms: FOB Tanjong Priok (Jakarta), FOB Tanjung Perak (Surabaya), CIF, and CFR options with leading container lines (Maersk, MSC, CMA CGM).</p>
+          </div>
+          <div class="glass-card">
+            <div class="card-icon" style="color: #10b981; border-color: rgba(16, 185, 129, 0.3);">📦</div>
+            <h3 class="card-title">Custom Packaging</h3>
+            <p class="card-text">Vacuum-sealed food-grade bags, GrainPro lined jute bags, heavy-duty 25kg paper sacks, UN steel drums, and private label OEM packaging.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- ================================================================= -->
+  <!-- PAGE C: GERMANY EDUCATION SUBDOMAIN (edu.admiralmalika.com)       -->
+  <!-- ================================================================= -->
+  <div id="page-edu" class="site-page">
+    
+    <!-- Edu Hero -->
+    <section class="hero-section" style="background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.15) 0%, var(--bg-dark) 70%);">
+      <div class="hero-content">
+        <div class="badge-tag">
+          <span>🎓</span> SUBDOMAIN: EDU.ADMIRALMALIKA.COM (EN | ID | DE)
+        </div>
+        <h1 class="hero-title" data-i18n="edu_hero_title">
+          Your Gateway to Academic & Career Excellence in Germany
+        </h1>
+        <p class="hero-subtitle" data-i18n="edu_hero_sub">
+          We provide end-to-end guidance, intensive German language training (A1-C1), Studienkolleg preparation, and paid Ausbildung apprenticeship placement in Germany.
+        </p>
+        <div class="cta-group">
+          <button onclick="openModal('modal-edu-apply')" class="btn-primary" data-i18n="btn_apply_now">Apply Now / Free Consultation</button>
+          <a href="#edu-programs" class="btn-secondary" data-i18n="btn_explore_programs">Explore Programs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Programs -->
+    <section id="edu-programs" class="section-padding container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="edu_programs_title">Our Education & Work Pathways in Germany</h2>
+        <p class="section-desc" data-i18n="edu_programs_sub">Structured programs tailored for high school graduates, university students, and skilled professionals.</p>
+      </div>
+
+      <div class="grid-3">
+        
+        <!-- Program 1: Ausbildung -->
+        <div class="edu-program-card">
+          <span class="edu-badge">Paid Stipend €1,000+</span>
+          <div class="card-icon">🛠️</div>
+          <h3 class="card-title" data-i18n="prog_ausbildung_title">Ausbildung (Paid Dual Vocational Program)</h3>
+          <p class="card-text" data-i18n="prog_ausbildung_desc">
+            Work and study simultaneously in Germany. Receive a monthly stipend (€1,000 - €1,400/month) with zero tuition fees in fields like Nursing, IT, Mechatronics, and Hotel Management.
+          </p>
+          <button onclick="openModal('modal-edu-apply')" class="btn-primary" style="width: 100%; justify-content: center; font-size: 0.85rem;">Apply for Ausbildung</button>
+        </div>
+
+        <!-- Program 2: Studienkolleg & University -->
+        <div class="edu-program-card">
+          <span class="edu-badge" style="background: linear-gradient(135deg, #2563eb, #1d4ed8);">Tuition-Free Public Uni</span>
+          <div class="card-icon">🏛️</div>
+          <h3 class="card-title" data-i18n="prog_studienkolleg_title">Studienkolleg & University Admissions</h3>
+          <p class="card-text" data-i18n="prog_studienkolleg_desc">
+            Direct preparation for T-Kurs, M-Kurs, W-Kurs entrance exams for prestigious public German universities with tuition-free education.
+          </p>
+          <button onclick="openModal('modal-edu-apply')" class="btn-primary" style="width: 100%; justify-content: center; font-size: 0.85rem;">Apply for Studienkolleg</button>
+        </div>
+
+        <!-- Program 3: Professional Placement -->
+        <div class="edu-program-card">
+          <span class="edu-badge" style="background: linear-gradient(135deg, #059669, #047857);">Direct Employment</span>
+          <div class="card-icon">💼</div>
+          <h3 class="card-title" data-i18n="prog_work_title">Direct Professional Work Placement (Direkte Arbeitsaufnahme)</h3>
+          <p class="card-text" data-i18n="prog_work_desc">
+            Fast-track career placement for qualified Indonesian engineers, nurses, and IT specialists into leading German companies.
+          </p>
+          <button onclick="openModal('modal-edu-apply')" class="btn-primary" style="width: 100%; justify-content: center; font-size: 0.85rem;">Apply for Professional Placement</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Eligibility Screener -->
+    <section class="section-padding" style="background: rgba(10, 25, 47, 0.8);">
+      <div class="container">
+        <div class="glass-card" style="max-width: 800px; margin: 0 auto; border-color: var(--accent-gold);">
+          <h2 class="section-title" style="text-align: center; margin-bottom: 8px;">Germany Pathway Eligibility Screener</h2>
+          <p class="section-desc" style="text-align: center; margin-bottom: 24px;">Find your optimal academic or career track in 30 seconds.</p>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+            <div>
+              <label class="form-label">Current Education Level</label>
+              <select id="screener-edu" class="form-select">
+                <option value="sma">SMA / SMK Graduate</option>
+                <option value="diploma">Diploma (D3 / D4)</option>
+                <option value="bachelor">Bachelor Degree (S1)</option>
+                <option value="master">Master Degree (S2)</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">German Language Proficiency</label>
+              <select id="screener-lang" class="form-select">
+                <option value="a0">Beginner / No German Yet</option>
+                <option value="a1">A1 Level Completed</option>
+                <option value="a2">A2 Level Completed</option>
+                <option value="b1">B1 Level Certified</option>
+                <option value="b2">B2 Level / C1 Certified</option>
+              </select>
+            </div>
+          </div>
+
+          <button onclick="runEduScreener()" class="btn-primary" style="width: 100%; justify-content: center;">
+            Calculate My Germany Pathway 🔍
+          </button>
+
+          <div id="screener-result" style="margin-top: 20px; display: none;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-Step Journey Pathway -->
+    <section class="section-padding container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="pathway_title">Your 5-Step Journey to Germany</h2>
+      </div>
+
+      <div style="max-width: 900px; margin: 0 auto;">
+        
+        <div class="pathway-step glass-card">
+          <div class="step-num">1</div>
+          <div>
+            <h4 class="card-title" data-i18n="path_1_title">1. Free Counseling & Assessment</h4>
+            <p class="card-text" data-i18n="path_1_desc">Academic transcript evaluation and custom pathway planning.</p>
+          </div>
+        </div>
+
+        <div class="pathway-step glass-card">
+          <div class="step-num">2</div>
+          <div>
+            <h4 class="card-title" data-i18n="path_2_title">2. Intensive German Language Preparation</h4>
+            <p class="card-text" data-i18n="path_2_desc">A1 to B2/C1 mastery at our state-of-the-art academy.</p>
+          </div>
+        </div>
+
+        <div class="pathway-step glass-card">
+          <div class="step-num">3</div>
+          <div>
+            <h4 class="card-title" data-i18n="path_3_title">3. Application & Contract Matching</h4>
+            <p class="card-text" data-i18n="path_3_desc">Direct pairing with German schools, hospitals, and enterprise partners.</p>
+          </div>
+        </div>
+
+        <div class="pathway-step glass-card">
+          <div class="step-num">4</div>
+          <div>
+            <h4 class="card-title" data-i18n="path_4_title">4. Visa & Blocked Account Setup</h4>
+            <p class="card-text" data-i18n="path_4_desc">Complete embassy document legalisation and visa approval support.</p>
+          </div>
+        </div>
+
+        <div class="pathway-step glass-card">
+          <div class="step-num">5</div>
+          <div>
+            <h4 class="card-title" data-i18n="path_5_title">5. Arrival & On-Ground Support</h4>
+            <p class="card-text" data-i18n="path_5_desc">Airport pickup, accommodation assistance, and registration in Germany.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- MODALS (Corporate Contact, Trade, Edu)     -->
+  <!-- ========================================== -->
+  
+  <!-- Modal 1: Holding Corporate Contact -->
+  <div id="modal-corporate-contact" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-corporate-contact')">✕</button>
+      <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.5rem; margin-bottom: 6px;">
+        PT. Admiral Malika Internasional
+      </h3>
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 20px;">Holding Corporate Headquarters Inquiry</p>
+      
+      <form onsubmit="handleInquirySubmit(event)">
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_name">Full Name / Enterprise Name</label>
+          <input type="text" required class="form-input" placeholder="e.g. John Doe / Global Enterprises Ltd.">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_email">Corporate Email Address</label>
+          <input type="email" required class="form-input" placeholder="name@company.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_subject">Inquiry Category</label>
+          <select class="form-select">
+            <option>General Corporate Inquiry</option>
+            <option>Investment & Partnership</option>
+            <option>Agricultural Trade Division</option>
+            <option>Education Division</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_msg">Message / Proposal</label>
+          <textarea rows="4" required class="form-textarea" placeholder="How can our executive team assist you?"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;" data-i18n="btn_submit_inquiry">
+          Submit Inquiry
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 2: Trade Quotation Request -->
+  <div id="modal-trade" class="modal-overlay">
+    <div class="modal-content" style="border-color: #10b981;">
+      <button class="modal-close" onclick="closeModal('modal-trade')">✕</button>
+      <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.5rem; margin-bottom: 6px;">
+        Agricultural Export Quotation Request
+      </h3>
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 20px;">Subdomain: export.admiralmalika.com</p>
+      
+      <form onsubmit="handleInquirySubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Target Commodity</label>
+          <input type="text" id="trade-product" class="form-input" placeholder="Vanilla / Coffee / Spices / Cocoa" value="Gourmet Planifolia Vanilla Beans">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Target Volume & Packaging (Metric Tons)</label>
+          <input type="text" required class="form-input" placeholder="e.g. 5 Metric Tons / FOB Term">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Destination Country & Port</label>
+          <input type="text" required class="form-input" placeholder="e.g. Port of Rotterdam, Netherlands">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Buyer Email / WhatsApp</label>
+          <input type="email" required class="form-input" placeholder="buyer@importer.com">
+        </div>
+        <button type="submit" class="btn-emerald" style="width: 100%; justify-content: center;">
+          Submit Trade Inquiry
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 3: Education & Germany Consultation -->
+  <div id="modal-edu-apply" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('modal-edu-apply')">✕</button>
+      <h3 style="font-family: var(--font-heading); color: #fff; font-size: 1.5rem; margin-bottom: 6px;">
+        Germany Education & Career Consultation
+      </h3>
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 20px;">Subdomain: edu.admiralmalika.com</p>
+      
+      <form onsubmit="handleInquirySubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" required class="form-input" placeholder="e.g. Admiral Applicant">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Target Program</label>
+          <select class="form-select">
+            <option>Ausbildung (Paid Apprenticeship)</option>
+            <option>Studienkolleg & Public University</option>
+            <option>Direct Professional Placement (Engineers/Nurses/IT)</option>
+            <option>German Language Academy Only (A1-C1)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address & Phone (WhatsApp)</label>
+          <input type="text" required class="form-input" placeholder="student@email.com / +628123456789">
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+          Book Free Personal Counseling
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4 class="footer-col-title">PT. Admiral Malika Internasional</h4>
+        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px;">
+          Leading corporate holding driving international agriculture commodity trade & European education career pathways.
+        </p>
+        <p style="color: var(--accent-gold); font-size: 0.85rem; font-family: monospace;">
+          Headquarters: Jakarta, Indonesia
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Corporate Subdomains</h4>
+        <ul class="footer-links">
+          <li><a href="#" onclick="switchSubdomain('holding')">🏢 Holding: admiralmalika.com</a></li>
+          <li><a href="#" onclick="switchSubdomain('export')">🌾 Export: export.admiralmalika.com</a></li>
+          <li><a href="#" onclick="switchSubdomain('edu')">🎓 Education: edu.admiralmalika.com</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Business Divisions</h4>
+        <ul class="footer-links">
+          <li><a href="#" onclick="switchSubdomain('export')">Organic Spices & Vanilla Beans</a></li>
+          <li><a href="#" onclick="switchSubdomain('export')">Specialty Coffee & Cocoa Trade</a></li>
+          <li><a href="#" onclick="switchSubdomain('edu')">Ausbildung Apprenticeship Germany</a></li>
+          <li><a href="#" onclick="switchSubdomain('edu')">Studienkolleg & Uni Admission</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 PT. Admiral Malika Internasional. All Rights Reserved. Managed under Holding Corporate Governance.
+    </div>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/export-catalog.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
