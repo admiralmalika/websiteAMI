@@ -2,14 +2,6 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/export", "destination": "/export.html" },
-    { "source": "/edu", "destination": "/edu.html" },
-    { "source": "/agraria", "destination": "/export.html" },
-    { "source": "/agraria.html", "destination": "/export.html" },
-    { "source": "/jerman-education", "destination": "/edu.html" },
-    { "source": "/jerman-education.html", "destination": "/edu.html" }
-  ],
   "redirects": [
     {
       "source": "/online-store",
@@ -17,7 +9,17 @@
       "permanent": true
     },
     {
+      "source": "/online-store/:path*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/store",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/store/:path*",
       "destination": "/",
       "permanent": true
     }

@@ -3,38 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PT. Admiral Malika Internasional | Parent Corporate Holding</title>
-  <meta name="description" content="Official Corporate Holding Headquarters Portal of PT. Admiral Malika Internasional governing agricultural trade export and German education pathways.">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+  <title>PT. Admiral Malika Internasional | Ekspor Agraria & Pendidikan Jerman</title>
+  <meta name="description" content="PT. Admiral Malika Internasional - Perusahaan Global: Ekspor Produk Agraria dan Pelatihan Ausbildung D3 & Duales Studium D4 di Jerman.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Subdomain Navigation Bar -->
-  <div class="subdomain-bar">
-    <div class="browser-controls">
-      <div class="browser-dot dot-red"></div>
-      <div class="browser-dot dot-yellow"></div>
-      <div class="browser-dot dot-green"></div>
-      <div class="url-display-box">
-        <span style="color:#94a3b8;">https://</span>
-        <span style="color:#ffffff; font-weight:700;">admiralmalika.com</span>
-      </div>
-    </div>
-
-    <div class="domain-tabs">
-      <a href="index.html" class="domain-tab-btn active">🏢 admiralmalika.com (Holding)</a>
-      <a href="export.html" class="domain-tab-btn">🌾 export.admiralmalika.com</a>
-      <a href="edu.html" class="domain-tab-btn">🎓 edu.admiralmalika.com</a>
-    </div>
-  </div>
-
-  <!-- Header Navigation -->
+  <!-- Navigation Bar -->
   <header class="header">
     <div class="nav-container">
       <a href="index.html" class="brand-logo">
@@ -44,49 +20,42 @@
           <div class="brand-subtitle">PT. ADMIRAL MALIKA INTERNASIONAL</div>
         </div>
       </a>
-
+      <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Beranda</a></li>
-        <li><a href="export.html" class="nav-link" data-i18n="nav_export">Subdomain Export</a></li>
-        <li><a href="edu.html" class="nav-link" data-i18n="nav_edu">Subdomain Education</a></li>
-        <li><a href="about.html" class="nav-link" data-i18n="nav_about">Tentang Kami</a></li>
-        <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Kontak Executive</a></li>
+        <li><a href="index.html" class="nav-link active">Beranda</a></li>
+        <li><a href="agraria.html" class="nav-link">Ekspor Agraria</a></li>
+        <li><a href="jerman-education.html" class="nav-link">Pendidikan Jerman</a></li>
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="contact.html" class="nav-link">Kontak</a></li>
       </ul>
-
       <div class="nav-actions">
-        <!-- Language Selector Buttons (EN | ID | DE) -->
-        <div class="lang-selector-container">
-          <button class="lang-btn active" onclick="setAppLang('id')">🇮🇩 ID</button>
-          <button class="lang-btn" onclick="setAppLang('en')">🇬🇧 EN</button>
-          <button class="lang-btn" onclick="setAppLang('de')">🇩🇪 DE</button>
-        </div>
-
         <a href="admin/index.html" class="btn btn-outline btn-sm"><i class="fas fa-user-shield"></i> Portal CMS ADMIN</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Exact Pixel-Perfect Match with User Mockup Image) -->
   <section class="hero-section">
     <div class="hero-container">
+      <!-- Left Column: Native Crisp HTML Typography & Interactive Buttons -->
       <div class="hero-content">
-        <div class="hero-tag">
-          <i class="fas fa-bolt" style="color: #d4af37;"></i> <span data-i18n="hero_tag">PARENT CORPORATE HOLDING HEADQUARTERS</span>
+        <div class="hero-tag" id="hero-tag">
+          <i class="fas fa-bolt" style="color: #d4af37;"></i> PT. ADMIRAL MALIKA INTERNASIONAL
         </div>
-        <h1 class="hero-title">
-          <span data-i18n="hero_title_1">Solusi Terpercaya</span><br>
-          <span class="gold-text" data-i18n="hero_title_2">Agraria & Pendidikan Jerman</span>
+        <h1 class="hero-title" id="hero-title">
+          Solusi Terpercaya<br>
+          <span class="gold-text">Agraria & Pendidikan Jerman</span>
         </h1>
-        <p class="hero-subtitle" data-i18n="hero_desc">
+        <p class="hero-subtitle" id="hero-subtitle">
           PT. Admiral Malika Internasional menghadirkan komoditas pertanian unggulan Indonesia ke pasar dunia serta membuka jalan karir & studi internasional di Jerman.
         </p>
 
         <div class="hero-btns">
-          <a href="export.html" class="btn btn-gold">
-            <i class="fas fa-seedling"></i> <span data-i18n="btn_export">Subdomain export.admiralmalika.com</span>
+          <a href="jerman-education.html" class="btn btn-blue">
+            <i class="fas fa-graduation-cap"></i> Program Pendidikan Jerman
           </a>
-          <a href="edu.html" class="btn btn-blue">
-            <i class="fas fa-graduation-cap"></i> <span data-i18n="btn_edu">Subdomain edu.admiralmalika.com</span>
+          <a href="agraria.html" class="btn btn-gold">
+            <i class="fas fa-seedling"></i> Jelajahi Ekspor Agraria
           </a>
         </div>
 
@@ -103,7 +72,7 @@
         </div>
       </div>
 
-      <!-- Right Column: High-Res Graphic Banner Composite -->
+      <!-- Right Column: Seamless High-Res Graphic Composite Showcase -->
       <div class="hero-graphic-col">
         <div class="hero-graphic-img-wrap">
           <img src="images/hero_full_banner.jpg" alt="PT Admiral Malika Internasional Graphic Showcase" class="hero-graphic-img">
@@ -112,52 +81,44 @@
     </div>
   </section>
 
-  <!-- Business Group Portfolio Section -->
+  <!-- Pillars Section -->
   <section class="section">
     <div class="section-title-wrap">
-      <span class="section-badge" data-i18n="pillars_badge">UNIT BISNIS INDEPENDEN GRUP</span>
-      <h2 class="section-title" data-i18n="pillars_title">Ekosistem PT. Admiral Malika Internasional</h2>
-      <p class="section-desc" data-i18n="pillars_desc">Menggabungkan potensi kekuatan sumber daya alam Indonesia dan pengembangan sumber daya manusia menuju standar internasional melalui subdomain independen.</p>
+      <span class="section-badge">PILAR BISNIS UTAMA</span>
+      <h2 class="section-title">Ekosistem PT. Admiral Malika Internasional</h2>
+      <p class="section-desc">Menggabungkan potensi kekuatan sumber daya alam Indonesia dan pengembangan sumber daya manusia menuju standar internasional.</p>
     </div>
 
-    <div class="pillars-grid">
-      
-      <!-- Business Unit 1: Agricultural Export -->
+    <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+      <!-- Pillar 1 -->
       <div class="pillar-card">
-        <div class="pillar-top-stripe stripe-export"></div>
-        <div class="pillar-icon-box icon-export"><i class="fas fa-globe-asia"></i></div>
-        <div style="font-size:0.8rem; color:#10b981; font-weight:700; font-family:monospace; margin-bottom:0.5rem;">SUBDOMAIN: EXPORT.ADMIRALMALIKA.COM</div>
-        <h3 class="pillar-title" data-i18n="p1_title">Pilar 1: Ekspor Produk Agraria</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="p1_desc">Pasokan komoditas pertanian terbaik Indonesia untuk kebutuhan industri dan pasar ekspor luar negeri (Ditulis dalam Bahasa Inggris Penuh di Subdomain Export).</p>
+        <div class="pillar-top-stripe stripe-agraria"></div>
+        <div class="pillar-icon-box icon-agraria"><i class="fas fa-globe-asia"></i></div>
+        <h3 class="pillar-title">Pilar 1: Ekspor Produk Agraria</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Pasokan komoditas pertanian terbaik Indonesia untuk kebutuhan industri dan pasar ekspor luar negeri.</p>
         <ul class="pillar-list">
-          <li><i class="fas fa-check-circle"></i> <strong>Fresh & Frozen Banana Leaves</strong> (Food Grade Packaging)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Organic Coconut Sugar</strong> (Low GI 35 Blossom Nectar)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Gourmet Planifolia Vanilla Pods</strong> (Grade A Cured)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Specialty Sumatra Gayo Arabica Coffee Beans</strong></li>
+          <li><i class="fas fa-check-circle"></i> <strong>Daun Pisang Packaging</strong> (Fresh & Frozen Vacuum Packaging)</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Gula Semut Organik</strong> (Organic Coconut Sugar)</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Singkong & Turunannya</strong> (Mocaf, Chips, Starch)</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Sapu Lidi & Arang Bathok</strong> (Palm Broom & Charcoal)</li>
         </ul>
-        <a href="export.html" class="btn btn-emerald btn-sm" style="margin-top: auto; justify-content: center;">
-          <i class="fas fa-external-link-alt"></i> <span data-i18n="p1_btn">Kunjungi export.admiralmalika.com</span>
-        </a>
+        <a href="agraria.html" class="btn btn-primary btn-sm" style="margin-top: auto;"><i class="fas fa-arrow-right"></i> Detail Ekspor Agraria</a>
       </div>
 
-      <!-- Business Unit 2: Germany Education -->
+      <!-- Pillar 2 -->
       <div class="pillar-card">
         <div class="pillar-top-stripe stripe-edu"></div>
         <div class="pillar-icon-box icon-edu"><i class="fas fa-award"></i></div>
-        <div style="font-size:0.8rem; color:#38bdf8; font-weight:700; font-family:monospace; margin-bottom:0.5rem;">SUBDOMAIN: EDU.ADMIRALMALIKA.COM</div>
-        <h3 class="pillar-title" data-i18n="p2_title">Pilar 2: Pelatihan & Studium Jerman</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem;" data-i18n="p2_desc">Mencetak lulusan profesional yang siap bekerja dan berkuliah di Jerman (Tersedia dalam 3 Bahasa: EN, ID, DE).</p>
+        <h3 class="pillar-title">Pilar 2: Pelatihan & Studium Jerman</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Mencetak lulusan profesional yang siap bekerja dan berkuliah di Jerman.</p>
         <ul class="pillar-list">
-          <li><i class="fas fa-check-circle"></i> <strong>Ausbildung Berbayar</strong> (Stipend €1.000 - €1.400/bulan)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Studienkolleg & Public Uni</strong> (Bebas Biaya Kuliah)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Akademi Bahasa Jerman</strong> (Level A1 - B2 Intensif)</li>
-          <li><i class="fas fa-check-circle"></i> <strong>Kalkulator Kelayakan Jalur & Pendampingan Visa</strong></li>
+          <li><i class="fas fa-check-circle"></i> <strong>Jalur Sekolah Kejuruan (D3)</strong> / Ausbildung Berbayar</li>
+          <li><i class="fas fa-check-circle"></i> <strong>Jalur Duales Studium (D4)</strong> Applied Bachelor + Kerja</li>
+          <li><i class="fas fa-check-circle"></i> Kursus Bahasa Jerman Intensif (Level A1 - B2)</li>
+          <li><i class="fas fa-check-circle"></i> Pendampingan Visa, Kontrak Kerja & Akomodasi</li>
         </ul>
-        <a href="edu.html" class="btn btn-blue btn-sm" style="margin-top: auto; justify-content: center;">
-          <i class="fas fa-external-link-alt"></i> <span data-i18n="p2_btn">Kunjungi edu.admiralmalika.com</span>
-        </a>
+        <a href="jerman-education.html" class="btn btn-gold btn-sm" style="margin-top: auto;"><i class="fas fa-arrow-right"></i> Detail Program Jerman</a>
       </div>
-
     </div>
   </section>
 
@@ -169,89 +130,38 @@
           <div class="logo-badge">AMI</div>
           <div style="color: #fff; font-weight: 800; font-size: 1.2rem;">PT. ADMIRAL MALIKA INTERNASIONAL</div>
         </div>
-        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.8rem; max-width: 360px;">
-          Entitas induk korporat pelopor perdagangan komoditas agrikultur internasional dan jalur karir/studi Eropa.
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.5rem; max-width: 340px;">
+          Mitra terpercaya ekspor produk pertanian Indonesia dan lembaga pelatihan tenaga kerja ke Jerman.
         </p>
       </div>
 
       <div>
-        <div class="footer-title">Subdomain Grup Usaha</div>
+        <div class="footer-title">Navigasi Cepat</div>
         <ul class="footer-links">
-          <li><a href="index.html">🏢 Holding: admiralmalika.com</a></li>
-          <li><a href="export.html">🌾 Export: export.admiralmalika.com</a></li>
-          <li><a href="edu.html">🎓 Education: edu.admiralmalika.com</a></li>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="agraria.html">Ekspor Produk Agraria</a></li>
+          <li><a href="jerman-education.html">Pelatihan & Duales Studium Jerman</a></li>
           <li><a href="about.html">Profil Perusahaan</a></li>
           <li><a href="admin/index.html">Portal CMS ADMIN</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="footer-title">Kontak Resmi Korporat</div>
+        <div class="footer-title">Kontak Resmi</div>
         <ul class="footer-links">
-          <li><i class="fas fa-envelope" style="color:#b88a2e; margin-right:8px;"></i> hary.kristianto.info@gmail.com</li>
-          <li><i class="fas fa-envelope" style="color:#b88a2e; margin-right:8px;"></i> malikamannacenter@gmail.com</li>
-          <li><i class="fab fa-whatsapp" style="color:#b88a2e; margin-right:8px;"></i> +6281118893389</li>
-          <li><i class="fas fa-map-marker-alt" style="color:#b88a2e; margin-right:8px;"></i> Indonesia (HQ) & Germany Network</li>
+          <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> hary.kristianto.info@gmail.com</li>
+          <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> malikamannacenter@gmail.com</li>
+          <li><i class="fab fa-whatsapp" style="margin-right: 8px;"></i> +6281118893389</li>
+          <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Indonesia (HQ) & Germany Network</li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div>&copy; 2026 PT. Admiral Malika Internasional. All Rights Reserved.</div>
-      <div>Parent Holding Corporate Portal.</div>
+      <div>Professional Grey Theme & High-End Design System.</div>
     </div>
   </footer>
-
-  <!-- Multilingual Translation Script -->
-  <script>
-    const dictionary = {
-      id: {
-        nav_home: "Beranda", nav_export: "Subdomain Export", nav_edu: "Subdomain Education", nav_about: "Tentang Kami", nav_contact: "Kontak Executive",
-        hero_tag: "PARENT CORPORATE HOLDING HEADQUARTERS",
-        hero_title_1: "Solusi Terpercaya", hero_title_2: "Agraria & Pendidikan Jerman",
-        hero_desc: "PT. Admiral Malika Internasional menghadirkan komoditas pertanian unggulan Indonesia ke pasar dunia serta membuka jalan karir & studi internasional di Jerman.",
-        btn_edu: "Subdomain edu.admiralmalika.com", btn_export: "Subdomain export.admiralmalika.com",
-        pillars_badge: "UNIT BISNIS INDEPENDEN GRUP", pillars_title: "Ekosistem PT. Admiral Malika Internasional",
-        pillars_desc: "Menggabungkan potensi kekuatan sumber daya alam Indonesia dan pengembangan sumber daya manusia menuju standar internasional melalui subdomain independen.",
-        p1_title: "Pilar 1: Ekspor Produk Agraria", p1_desc: "Pasokan komoditas pertanian terbaik Indonesia untuk kebutuhan industri dan pasar ekspor luar negeri (Ditulis dalam Bahasa Inggris Penuh di Subdomain Export).", p1_btn: "Kunjungi export.admiralmalika.com",
-        p2_title: "Pilar 2: Pelatihan & Studium Jerman", p2_desc: "Mencetak lulusan profesional yang siap bekerja dan berkuliah di Jerman (Tersedia dalam 3 Bahasa: EN, ID, DE).", p2_btn: "Kunjungi edu.admiralmalika.com"
-      },
-      en: {
-        nav_home: "Home", nav_export: "Export Subdomain", nav_edu: "Education Subdomain", nav_about: "About Us", nav_contact: "Executive Contact",
-        hero_tag: "PARENT CORPORATE HOLDING HEADQUARTERS",
-        hero_title_1: "Trusted Global Solutions in", hero_title_2: "Agriculture & German Pathways",
-        hero_desc: "PT. Admiral Malika Internasional delivers Indonesia's premium agricultural commodities to global markets and opens pathways for international study & career in Germany.",
-        btn_edu: "Subdomain edu.admiralmalika.com", btn_export: "Subdomain export.admiralmalika.com",
-        pillars_badge: "INDEPENDENT BUSINESS UNITS", pillars_title: "PT. Admiral Malika Internasional Ecosystem",
-        pillars_desc: "Synergizing Indonesia's rich natural resources with world-class human capital development across dedicated subdomains.",
-        p1_title: "Pillar 1: Agricultural Export Trade", p1_desc: "Sourcing premium Indonesian agricultural commodities for global industrial buyers (Full English Subdomain).", p1_btn: "Visit export.admiralmalika.com",
-        p2_title: "Pillar 2: Germany Education & Career", p2_desc: "Preparing certified professionals for Ausbildung apprenticeships and higher education in Germany (Available in 3 Languages).", p2_btn: "Visit edu.admiralmalika.com"
-      },
-      de: {
-        nav_home: "Startseite", nav_export: "Export Subdomain", nav_edu: "Bildung Subdomain", nav_about: "Über Uns", nav_contact: "Konzernkontakt",
-        hero_tag: "MUTTERGESELLSCHAFT / HOLDING HAUPTSITZ",
-        hero_title_1: "Vertrauenswürdige Lösungen in", hero_title_2: "Agrar & Bildung in Deutschland",
-        hero_desc: "PT. Admiral Malika Internasional liefert erstklassige indonesische Agrarprodukte auf globale Märkte und eröffnet Wege für Studium und Karriere in Deutschland.",
-        btn_edu: "Subdomain edu.admiralmalika.com", btn_export: "Subdomain export.admiralmalika.com",
-        pillars_badge: "UNABHÄNGIGE GESCHÄFTSBEREICHE", pillars_title: "Ökosystem PT. Admiral Malika Internasional",
-        pillars_desc: "Synergie von indonesischen Naturressourcen und internationaler Humankapitalentwicklung über dedizierte Subdomains.",
-        p1_title: "Säule 1: Agrarprodukte-Export", p1_desc: "Beschaffung bester indonesischer Agrarprodukte für die weltweite Industrie (Englische Subdomain).", p1_btn: "Besuchen Sie export.admiralmalika.com",
-        p2_title: "Säule 2: Ausbildung & Studium in Deutschland", p2_desc: "Qualifizierung von Fachkräften für Ausbildung und Hochschulbildung in Deutschland (Dreisprachig).", p2_btn: "Besuchen Sie edu.admiralmalika.com"
-      }
-    };
-
-    function setAppLang(lang) {
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('onclick').includes(lang));
-      });
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (dictionary[lang] && dictionary[lang][key]) {
-          el.innerText = dictionary[lang][key];
-        }
-      });
-    }
-  </script>
 
   <script src="js/cms.js"></script>
   <script src="js/main.js"></script>
