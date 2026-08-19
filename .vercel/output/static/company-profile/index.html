@@ -5,10 +5,146 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PT. Admiral Malika Internasional | Ekspor Agraria & Pendidikan Jerman</title>
   <meta name="description" content="PT. Admiral Malika Internasional - Perusahaan Global: Ekspor Produk Agraria dan Pelatihan Ausbildung D3 & Duales Studium D4 di Jerman.">
-  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- FontAwesome & Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Production Fallback CSS */
+    :root {
+      --primary-navy: #091424;
+      --secondary-navy: #060e1a;
+      --accent-gold: #b88a2e;
+      --accent-gold-text: #c29938;
+      --accent-blue: #0077c5;
+      --bg-slate: #091424;
+      --bg-section-alt: #0c1a2e;
+      --bg-card: #112238;
+      --text-dark: #ffffff;
+      --text-muted: #94a3b8;
+      --border-color: rgba(184, 138, 46, 0.25);
+      --radius-md: 14px;
+      --radius-lg: 24px;
+      --transition: all 0.3s ease;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #091424; color: #ffffff; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    
+    .subdomain-bar { background: #020617; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 8px 16px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1001; font-size: 0.85rem; }
+    .browser-controls { display: flex; align-items: center; gap: 8px; }
+    .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-red { background: #ef4444; } .dot-yellow { background: #f59e0b; } .dot-green { background: #10b981; }
+    .url-display-box { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(184, 138, 46, 0.3); border-radius: 20px; padding: 4px 16px; display: flex; align-items: center; gap: 8px; color: #b88a2e; font-family: monospace; font-size: 0.85rem; }
+    .domain-tabs { display: flex; align-items: center; gap: 6px; }
+    .domain-tab-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #94a3b8; padding: 5px 14px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: 600; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+    .domain-tab-btn:hover { background: rgba(184, 138, 46, 0.15); color: #fff; border-color: #b88a2e; }
+    .domain-tab-btn.active { background: #b88a2e; color: #091424; border-color: #b88a2e; font-weight: 700; }
+    
+    .header { position: sticky; top: 39px; z-index: 1000; background: #091424; border-bottom: 2px solid #b88a2e; padding: 0.95rem 2rem; }
+    .nav-container { max-width: 1360px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+    .brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+    .logo-badge { width: 44px; height: 44px; background: #091424; border: 2px solid #b88a2e; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #b88a2e; font-weight: 800; font-size: 1.2rem; }
+    .brand-name { color: #ffffff; font-size: 1.25rem; font-weight: 800; letter-spacing: -0.5px; }
+    .brand-subtitle { color: #b88a2e; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+    .nav-menu { display: flex; align-items: center; gap: 1.5rem; list-style: none; margin: 0; padding: 0; }
+    .nav-link { color: #cbd5e1; font-weight: 500; font-size: 0.92rem; transition: var(--transition); white-space: nowrap; }
+    .nav-link:hover, .nav-link.active { color: #b88a2e; font-weight: 700; }
+    .nav-actions { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
+    
+    .lang-selector-container { display: flex; align-items: center; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(184, 138, 46, 0.3); padding: 3px; border-radius: 30px; }
+    .lang-btn { background: transparent; border: none; color: #94a3b8; padding: 4px 10px; border-radius: 20px; cursor: pointer; font-size: 0.78rem; font-weight: 700; display: flex; align-items: center; gap: 4px; transition: var(--transition); }
+    .lang-btn:hover { color: #ffffff; }
+    .lang-btn.active { background: linear-gradient(135deg, #b88a2e, #8f6716); color: #091424; font-weight: 800; }
+    
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0.8rem 1.6rem; font-weight: 700; font-size: 0.92rem; border-radius: 14px; transition: var(--transition); cursor: pointer; border: none; white-space: nowrap; text-decoration: none; }
+    .btn-blue { background: linear-gradient(135deg, #0077c5 0%, #005696 100%); color: #ffffff !important; box-shadow: 0 4px 18px rgba(0, 119, 197, 0.4); }
+    .btn-blue:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0, 119, 197, 0.55); }
+    .btn-gold { background: linear-gradient(135deg, #b88a2e 0%, #8f6716 100%); color: #091424 !important; box-shadow: 0 4px 18px rgba(184, 138, 46, 0.35); font-weight: 800; }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(184, 138, 46, 0.5); }
+    .btn-outline { background: rgba(9, 20, 36, 0.6); border: 1.5px solid #b88a2e; color: #b88a2e !important; }
+    .btn-outline:hover { background: #b88a2e; color: #091424 !important; }
+    .btn-sm { padding: 0.45rem 1.1rem; font-size: 0.85rem; border-radius: 12px; }
+    
+    .hero-section { background: #091424; padding: 3.5rem 2rem 4rem 2rem; position: relative; overflow: hidden; border-bottom: 3px solid #b88a2e; }
+    .hero-container { max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 2rem; align-items: center; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(184, 138, 46, 0.1); border: 1.5px solid #b88a2e; color: #d4af37; padding: 0.4rem 1.1rem; border-radius: 50px; font-size: 0.82rem; font-weight: 700; margin-bottom: 1.25rem; }
+    .hero-title { font-size: 3.2rem; font-weight: 800; line-height: 1.16; margin-bottom: 1.25rem; color: #ffffff; letter-spacing: -0.5px; }
+    .hero-title .gold-text { color: #c29938; }
+    .hero-subtitle { color: #94a3b8; font-size: 1.08rem; line-height: 1.65; margin-bottom: 2.2rem; max-width: 92%; }
+    .hero-btns { display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    
+    .global-net-row { display: flex; align-items: center; gap: 1rem; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.1); flex-wrap: wrap; }
+    .net-label { color: #b88a2e; font-size: 0.8rem; font-weight: 800; letter-spacing: 1px; display: flex; align-items: center; gap: 6px; }
+    .net-pills { display: flex; align-items: center; gap: 0.55rem; flex-wrap: wrap; }
+    .net-pill { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.14); color: #ffffff; padding: 0.35rem 0.85rem; border-radius: 50px; font-size: 0.82rem; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+    .net-pill .code { color: #94a3b8; font-size: 0.72rem; font-weight: 800; }
+    
+    .hero-graphic-col { width: 100%; height: 100%; display: flex; align-items: center; justify-content: flex-end; position: relative; }
+    .hero-graphic-img-wrap { width: 100%; height: 480px; position: relative; overflow: hidden; }
+    .hero-graphic-img { width: 200%; height: 100%; object-fit: cover; object-position: right center; display: block; margin-left: -100%; }
+    
+    .section { padding: 6rem 2rem; background-color: #091424; }
+    .section-title-wrap { text-align: center; max-width: 780px; margin: 0 auto 4rem auto; }
+    .section-badge { display: inline-block; color: #b88a2e; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.5rem; }
+    .section-title { font-size: 2.25rem; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; margin-bottom: 1rem; }
+    .section-desc { color: #94a3b8; font-size: 1.05rem; }
+    
+    .pillars-grid { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+    .pillar-card { background: #112238; border-radius: 24px; border: 1px solid rgba(184, 138, 46, 0.25); padding: 2.5rem 2rem; transition: var(--transition); display: flex; flex-direction: column; position: relative; overflow: hidden; }
+    .pillar-top-stripe { height: 6px; width: 100%; position: absolute; top: 0; left: 0; }
+    .stripe-agraria { background: #059669; } .stripe-edu { background: #0077c5; }
+    .pillar-icon-box { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; }
+    .icon-agraria { background: rgba(5, 150, 105, 0.2); color: #10b981; } .icon-edu { background: rgba(0, 119, 197, 0.2); color: #38bdf8; }
+    .pillar-title { font-size: 1.4rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem; }
+    .pillar-list { list-style: none; margin: 1.5rem 0 2rem 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+    .pillar-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: #cbd5e1; }
+    .pillar-list i { color: #b88a2e; font-size: 1.1rem; margin-top: 2px; }
+    
+    .footer { background: #060e1a; color: #94a3b8; padding: 5rem 2rem 2rem 2rem; border-top: 3px solid #b88a2e; }
+    .footer-container { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr repeat(2, 1fr); gap: 3.5rem; margin-bottom: 4rem; }
+    .footer-title { color: #ffffff; font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+    .footer-links a { color: #94a3b8; font-size: 0.9rem; transition: var(--transition); text-decoration: none; }
+    .footer-links a:hover { color: #b88a2e; padding-left: 4px; }
+    .footer-bottom { max-width: 1320px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; }
+  </style>
 </head>
 <body>
+
+  <!-- ========================================== -->
+  <!-- 1. TOP SUBDOMAIN NAVIGATION SIMULATOR BAR  -->
+  <!-- ========================================== -->
+  <div class="subdomain-bar">
+    <div class="browser-controls">
+      <div class="browser-dot dot-red"></div>
+      <div class="browser-dot dot-yellow"></div>
+      <div class="browser-dot dot-green"></div>
+      
+      <div class="url-display-box" id="url-box">
+        <span style="color: #94a3b8;">https://</span>
+        <span style="color: #ffffff; font-weight: 700;" id="url-host-display">admiralmalika.com</span>
+      </div>
+    </div>
+
+    <!-- Subdomain Selector Tabs -->
+    <div class="domain-tabs">
+      <a href="index.html" class="domain-tab-btn active">
+        <span>🏢</span> admiralmalika.com (Holding)
+      </a>
+      <a href="agraria.html" class="domain-tab-btn">
+        <span>🌾</span> export.admiralmalika.com
+      </a>
+      <a href="jerman-education.html" class="domain-tab-btn">
+        <span>🎓</span> edu.admiralmalika.com
+      </a>
+    </div>
+  </div>
 
   <!-- Navigation Bar -->
   <header class="header">
@@ -21,41 +157,50 @@
         </div>
       </a>
       <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+      
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link active">Beranda</a></li>
-        <li><a href="agraria.html" class="nav-link">Ekspor Agraria</a></li>
-        <li><a href="jerman-education.html" class="nav-link">Pendidikan Jerman</a></li>
-        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
-        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+        <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Beranda</a></li>
+        <li><a href="agraria.html" class="nav-link" data-i18n="nav_export">Ekspor Agraria</a></li>
+        <li><a href="jerman-education.html" class="nav-link" data-i18n="nav_edu">Pendidikan Jerman</a></li>
+        <li><a href="about.html" class="nav-link" data-i18n="nav_about">Tentang Kami</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Kontak</a></li>
       </ul>
+
       <div class="nav-actions">
+        <!-- Language Selector Buttons (EN | ID | DE) -->
+        <div class="lang-selector-container">
+          <button class="lang-btn active" onclick="setAppLang('id')">🇮🇩 ID</button>
+          <button class="lang-btn" onclick="setAppLang('en')">🇬🇧 EN</button>
+          <button class="lang-btn" onclick="setAppLang('de')">🇩🇪 DE</button>
+        </div>
+
         <a href="admin/index.html" class="btn btn-outline btn-sm"><i class="fas fa-user-shield"></i> Portal CMS ADMIN</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section (Exact Pixel-Perfect Match with User Mockup Image) -->
+  <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-container">
-      <!-- Left Column: Native Crisp HTML Typography & Interactive Buttons -->
+      <!-- Left Column: Typography & Action Buttons -->
       <div class="hero-content">
         <div class="hero-tag" id="hero-tag">
-          <i class="fas fa-bolt" style="color: #d4af37;"></i> PT. ADMIRAL MALIKA INTERNASIONAL
+          <i class="fas fa-bolt" style="color: #d4af37;"></i> <span data-i18n="hero_tag">PT. ADMIRAL MALIKA INTERNASIONAL</span>
         </div>
         <h1 class="hero-title" id="hero-title">
-          Solusi Terpercaya<br>
-          <span class="gold-text">Agraria & Pendidikan Jerman</span>
+          <span data-i18n="hero_title_1">Solusi Terpercaya</span><br>
+          <span class="gold-text" data-i18n="hero_title_2">Agraria & Pendidikan Jerman</span>
         </h1>
-        <p class="hero-subtitle" id="hero-subtitle">
+        <p class="hero-subtitle" id="hero-subtitle" data-i18n="hero_desc">
           PT. Admiral Malika Internasional menghadirkan komoditas pertanian unggulan Indonesia ke pasar dunia serta membuka jalan karir & studi internasional di Jerman.
         </p>
 
         <div class="hero-btns">
           <a href="jerman-education.html" class="btn btn-blue">
-            <i class="fas fa-graduation-cap"></i> Program Pendidikan Jerman
+            <i class="fas fa-graduation-cap"></i> <span data-i18n="btn_edu">Program Pendidikan Jerman</span>
           </a>
           <a href="agraria.html" class="btn btn-gold">
-            <i class="fas fa-seedling"></i> Jelajahi Ekspor Agraria
+            <i class="fas fa-seedling"></i> <span data-i18n="btn_export">Jelajahi Ekspor Agraria</span>
           </a>
         </div>
 
@@ -72,7 +217,7 @@
         </div>
       </div>
 
-      <!-- Right Column: Seamless High-Res Graphic Composite Showcase -->
+      <!-- Right Column: High-Res Graphic Banner Composite -->
       <div class="hero-graphic-col">
         <div class="hero-graphic-img-wrap">
           <img src="images/hero_full_banner.jpg" alt="PT Admiral Malika Internasional Graphic Showcase" class="hero-graphic-img">
@@ -84,41 +229,47 @@
   <!-- Pillars Section -->
   <section class="section">
     <div class="section-title-wrap">
-      <span class="section-badge">PILAR BISNIS UTAMA</span>
-      <h2 class="section-title">Ekosistem PT. Admiral Malika Internasional</h2>
-      <p class="section-desc">Menggabungkan potensi kekuatan sumber daya alam Indonesia dan pengembangan sumber daya manusia menuju standar internasional.</p>
+      <span class="section-badge" data-i18n="pillars_badge">PILAR BISNIS UTAMA</span>
+      <h2 class="section-title" data-i18n="pillars_title">Ekosistem PT. Admiral Malika Internasional</h2>
+      <p class="section-desc" data-i18n="pillars_desc">Menggabungkan potensi kekuatan sumber daya alam Indonesia dan pengembangan sumber daya manusia menuju standar internasional.</p>
     </div>
 
     <div class="pillars-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-      <!-- Pillar 1 -->
+      
+      <!-- Pillar 1: Export -->
       <div class="pillar-card">
         <div class="pillar-top-stripe stripe-agraria"></div>
         <div class="pillar-icon-box icon-agraria"><i class="fas fa-globe-asia"></i></div>
-        <h3 class="pillar-title">Pilar 1: Ekspor Produk Agraria</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem;">Pasokan komoditas pertanian terbaik Indonesia untuk kebutuhan industri dan pasar ekspor luar negeri.</p>
+        <h3 class="pillar-title" data-i18n="p1_title">Pilar 1: Ekspor Produk Agraria</h3>
+        <p style="color: #94a3b8; font-size: 0.95rem;" data-i18n="p1_desc">Pasokan komoditas pertanian terbaik Indonesia untuk kebutuhan industri dan pasar ekspor luar negeri.</p>
         <ul class="pillar-list">
           <li><i class="fas fa-check-circle"></i> <strong>Daun Pisang Packaging</strong> (Fresh & Frozen Vacuum Packaging)</li>
           <li><i class="fas fa-check-circle"></i> <strong>Gula Semut Organik</strong> (Organic Coconut Sugar)</li>
           <li><i class="fas fa-check-circle"></i> <strong>Singkong & Turunannya</strong> (Mocaf, Chips, Starch)</li>
           <li><i class="fas fa-check-circle"></i> <strong>Sapu Lidi & Arang Bathok</strong> (Palm Broom & Charcoal)</li>
         </ul>
-        <a href="agraria.html" class="btn btn-primary btn-sm" style="margin-top: auto;"><i class="fas fa-arrow-right"></i> Detail Ekspor Agraria</a>
+        <a href="agraria.html" class="btn btn-gold btn-sm" style="margin-top: auto;">
+          <i class="fas fa-arrow-right"></i> <span data-i18n="p1_btn">export.admiralmalika.com</span>
+        </a>
       </div>
 
-      <!-- Pillar 2 -->
+      <!-- Pillar 2: Germany Education -->
       <div class="pillar-card">
         <div class="pillar-top-stripe stripe-edu"></div>
         <div class="pillar-icon-box icon-edu"><i class="fas fa-award"></i></div>
-        <h3 class="pillar-title">Pilar 2: Pelatihan & Studium Jerman</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem;">Mencetak lulusan profesional yang siap bekerja dan berkuliah di Jerman.</p>
+        <h3 class="pillar-title" data-i18n="p2_title">Pilar 2: Pelatihan & Studium Jerman</h3>
+        <p style="color: #94a3b8; font-size: 0.95rem;" data-i18n="p2_desc">Mencetak lulusan profesional yang siap bekerja dan berkuliah di Jerman.</p>
         <ul class="pillar-list">
           <li><i class="fas fa-check-circle"></i> <strong>Jalur Sekolah Kejuruan (D3)</strong> / Ausbildung Berbayar</li>
           <li><i class="fas fa-check-circle"></i> <strong>Jalur Duales Studium (D4)</strong> Applied Bachelor + Kerja</li>
           <li><i class="fas fa-check-circle"></i> Kursus Bahasa Jerman Intensif (Level A1 - B2)</li>
           <li><i class="fas fa-check-circle"></i> Pendampingan Visa, Kontrak Kerja & Akomodasi</li>
         </ul>
-        <a href="jerman-education.html" class="btn btn-gold btn-sm" style="margin-top: auto;"><i class="fas fa-arrow-right"></i> Detail Program Jerman</a>
+        <a href="jerman-education.html" class="btn btn-blue btn-sm" style="margin-top: auto;">
+          <i class="fas fa-arrow-right"></i> <span data-i18n="p2_btn">edu.admiralmalika.com</span>
+        </a>
       </div>
+
     </div>
   </section>
 
@@ -139,8 +290,8 @@
         <div class="footer-title">Navigasi Cepat</div>
         <ul class="footer-links">
           <li><a href="index.html">Beranda</a></li>
-          <li><a href="agraria.html">Ekspor Produk Agraria</a></li>
-          <li><a href="jerman-education.html">Pelatihan & Duales Studium Jerman</a></li>
+          <li><a href="agraria.html">Ekspor Produk Agraria (export.admiralmalika.com)</a></li>
+          <li><a href="jerman-education.html">Pelatihan & Duales Studium Jerman (edu.admiralmalika.com)</a></li>
           <li><a href="about.html">Profil Perusahaan</a></li>
           <li><a href="admin/index.html">Portal CMS ADMIN</a></li>
         </ul>
@@ -159,9 +310,60 @@
 
     <div class="footer-bottom">
       <div>&copy; 2026 PT. Admiral Malika Internasional. All Rights Reserved.</div>
-      <div>Professional Grey Theme & High-End Design System.</div>
+      <div>Professional Dark Navy & Gold High-End Design System.</div>
     </div>
   </footer>
+
+  <!-- Multilingual Translation Script -->
+  <script>
+    const dictionary = {
+      id: {
+        nav_home: "Beranda", nav_export: "Ekspor Agraria", nav_edu: "Pendidikan Jerman", nav_about: "Tentang Kami", nav_contact: "Kontak",
+        hero_tag: "PT. ADMIRAL MALIKA INTERNASIONAL",
+        hero_title_1: "Solusi Terpercaya", hero_title_2: "Agraria & Pendidikan Jerman",
+        hero_desc: "PT. Admiral Malika Internasional menghadirkan komoditas pertanian unggulan Indonesia ke pasar dunia serta membuka jalan karir & studi internasional di Jerman.",
+        btn_edu: "Program Pendidikan Jerman", btn_export: "Jelajahi Ekspor Agraria",
+        pillars_badge: "PILAR BISNIS UTAMA", pillars_title: "Ekosistem PT. Admiral Malika Internasional",
+        pillars_desc: "Menggabungkan potensi kekuatan sumber daya alam Indonesia dan pengembangan sumber daya manusia menuju standar internasional.",
+        p1_title: "Pilar 1: Ekspor Produk Agraria", p1_desc: "Pasokan komoditas pertanian terbaik Indonesia untuk kebutuhan industri dan pasar ekspor luar negeri.", p1_btn: "export.admiralmalika.com",
+        p2_title: "Pilar 2: Pelatihan & Studium Jerman", p2_desc: "Mencetak lulusan profesional yang siap bekerja dan berkuliah di Jerman.", p2_btn: "edu.admiralmalika.com"
+      },
+      en: {
+        nav_home: "Home", nav_export: "Agricultural Export", nav_edu: "Germany Education", nav_about: "About Us", nav_contact: "Contact",
+        hero_tag: "PT. ADMIRAL MALIKA INTERNASIONAL",
+        hero_title_1: "Trusted Solutions in", hero_title_2: "Agriculture & German Education",
+        hero_desc: "PT. Admiral Malika Internasional delivers Indonesia's premium agricultural commodities to global markets and opens pathways for international study & career in Germany.",
+        btn_edu: "Germany Education Pathways", btn_export: "Explore Agricultural Exports",
+        pillars_badge: "CORE BUSINESS PILLARS", pillars_title: "PT. Admiral Malika Internasional Ecosystem",
+        pillars_desc: "Synergizing Indonesia's rich natural resources with world-class human capital development.",
+        p1_title: "Pillar 1: Agricultural Export Trade", p1_desc: "Sourcing premium Indonesian agricultural commodities for global industrial & commercial buyers.", p1_btn: "export.admiralmalika.com",
+        p2_title: "Pillar 2: Germany Education & Career", p2_desc: "Preparing certified professionals for Ausbildung apprenticeships and higher education in Germany.", p2_btn: "edu.admiralmalika.com"
+      },
+      de: {
+        nav_home: "Startseite", nav_export: "Agrar-Export", nav_edu: "Bildung Deutschland", nav_about: "Über Uns", nav_contact: "Kontakt",
+        hero_tag: "PT. ADMIRAL MALIKA INTERNASIONAL",
+        hero_title_1: "Vertrauenswürdige Lösungen in", hero_title_2: "Agrar & Bildung in Deutschland",
+        hero_desc: "PT. Admiral Malika Internasional liefert erstklassige indonesische Agrarprodukte auf globale Märkte und eröffnet Wege für Studium und Karriere in Deutschland.",
+        btn_edu: "Bildungsprogramme Deutschland", btn_export: "Agrar-Export Erkunden",
+        pillars_badge: "HAUPTGESCHÄFTSFELDER", pillars_title: "Ökosystem PT. Admiral Malika Internasional",
+        pillars_desc: "Synergie von indonesischen Naturressourcen und internationaler Humankapitalentwicklung.",
+        p1_title: "Säule 1: Agrarprodukte-Export", p1_desc: "Beschaffung bester indonesischer Agrarprodukte für die weltweite Industrie.", p1_btn: "export.admiralmalika.com",
+        p2_title: "Säule 2: Ausbildung & Studium in Deutschland", p2_desc: "Qualifizierung von Fachkräften für Ausbildung und Hochschulbildung in Deutschland.", p2_btn: "edu.admiralmalika.com"
+      }
+    };
+
+    function setAppLang(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes(lang));
+      });
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dictionary[lang] && dictionary[lang][key]) {
+          el.innerText = dictionary[lang][key];
+        }
+      });
+    }
+  </script>
 
   <script src="js/cms.js"></script>
   <script src="js/main.js"></script>

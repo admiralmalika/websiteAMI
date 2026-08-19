@@ -1,132 +1,206 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ekspor Produk Agraria | PT Admiral Malika</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Agricultural Export Division | PT Admiral Malika Internasional</title>
+  <meta name="description" content="Admiral Agricultural Export Division (export.admiralmalika.com) - Premium Indonesian Vanilla Beans, Coffee Beans, Organic Coconut Sugar, Cloves, and Essential Oils.">
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --primary-navy: #091424;
+      --accent-gold: #b88a2e;
+      --accent-emerald: #059669;
+      --bg-card: #112238;
+      --text-muted: #94a3b8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #091424; color: #ffffff; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    .subdomain-bar { background: #020617; border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 8px 16px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1001; font-size: 0.85rem; }
+    .url-display-box { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 20px; padding: 4px 16px; display: flex; align-items: center; gap: 8px; color: #10b981; font-family: monospace; }
+    .domain-tab-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #94a3b8; padding: 5px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
+    .domain-tab-btn.active { background: #059669; color: #fff; border-color: #10b981; font-weight: 700; }
+    .header { position: sticky; top: 39px; z-index: 1000; background: #091424; border-bottom: 2px solid #059669; padding: 0.95rem 2rem; }
+    .nav-container { max-width: 1360px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .brand-logo { display: flex; align-items: center; gap: 12px; }
+    .logo-badge { width: 44px; height: 44px; background: #091424; border: 2px solid #10b981; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #10b981; font-weight: 800; }
+    .nav-menu { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-link { color: #cbd5e1; font-weight: 500; } .nav-link.active { color: #10b981; font-weight: 700; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 0.8rem 1.6rem; font-weight: 700; border-radius: 14px; border: none; cursor: pointer; }
+    .btn-emerald { background: linear-gradient(135deg, #059669, #047857); color: #fff !important; }
+    .btn-gold { background: linear-gradient(135deg, #b88a2e, #8f6716); color: #091424 !important; }
+    .btn-outline { background: rgba(9, 20, 36, 0.6); border: 1.5px solid #10b981; color: #10b981 !important; }
+    .section { padding: 5rem 2rem; background: #091424; }
+    .pillars-grid { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
+    .pillar-card { background: #112238; border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.3); padding: 2.5rem 2rem; }
+    .footer { background: #060e1a; color: #94a3b8; padding: 4rem 2rem 2rem 2rem; border-top: 3px solid #059669; }
+    .footer-container { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr repeat(2, 1fr); gap: 3rem; }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Subdomain Bar -->
+  <div class="subdomain-bar">
+    <div class="browser-controls" style="display:flex; gap:8px; align-items:center;">
+      <div style="width:10px; height:10px; border-radius:50%; background:#ef4444;"></div>
+      <div style="width:10px; height:10px; border-radius:50%; background:#f59e0b;"></div>
+      <div style="width:10px; height:10px; border-radius:50%; background:#10b981;"></div>
+      <div class="url-display-box">
+        <span style="color:#94a3b8;">https://</span>
+        <span style="color:#ffffff; font-weight:700;">export.admiralmalika.com</span>
+      </div>
+    </div>
+
+    <div style="display:flex; gap:6px;">
+      <a href="index.html" class="domain-tab-btn">🏢 admiralmalika.com (Holding)</a>
+      <a href="agraria.html" class="domain-tab-btn active">🌾 export.admiralmalika.com</a>
+      <a href="jerman-education.html" class="domain-tab-btn">🎓 edu.admiralmalika.com</a>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
   <header class="header">
     <div class="nav-container">
       <a href="index.html" class="brand-logo">
-        <div class="logo-badge">AMI</div>
+        <div class="logo-badge">AM</div>
         <div>
-          <div class="brand-name">ADMIRAL MALIKA</div>
-          <div class="brand-subtitle">PT. ADMIRAL MALIKA INTERNASIONAL</div>
+          <div style="color:#fff; font-weight:800; font-size:1.2rem;">ADMIRAL AGRICULTURAL EXPORT</div>
+          <div style="color:#10b981; font-size:0.7rem; font-weight:700; letter-spacing:1px;">SUBDOMAIN: EXPORT.ADMIRALMALIKA.COM (ENGLISH)</div>
         </div>
       </a>
-      <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Beranda</a></li>
-        <li><a href="agraria.html" class="nav-link active">Ekspor Agraria</a></li>
-        <li><a href="jerman-education.html" class="nav-link">Pendidikan Jerman</a></li>
-        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
-        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+        <li><a href="index.html" class="nav-link">Corporate Holding</a></li>
+        <li><a href="agraria.html" class="nav-link active">Export Commodities</a></li>
+        <li><a href="#rfq-form-section" class="nav-link">Trade RFQ Inquiry</a></li>
+        <li><a href="contact.html" class="nav-link">Contact Sales</a></li>
       </ul>
-      <div class="nav-actions">
-        <a href="admin/index.html" class="btn btn-outline btn-sm"><i class="fas fa-user-shield"></i> Portal CMS ADMIN</a>
+
+      <div>
+        <a href="admin/index.html" class="btn btn-outline" style="font-size:0.85rem; padding:0.45rem 1rem;"><i class="fas fa-user-shield"></i> Admin Portal</a>
       </div>
     </div>
   </header>
 
-  <!-- Page Header -->
-  <section style="background: linear-gradient(135deg, #0a192f, #061121); color:#fff; padding: 4rem 2rem; text-align: center;">
-    <div style="max-width: 800px; margin: 0 auto;">
-      <span class="hero-tag"><i class="fas fa-seedling"></i> PILAR 1 BISNIS UTAMA</span>
-      <h1 style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0;">Ekspor Produk Agraria Unggulan</h1>
-      <p style="color: #94a3b8; font-size: 1.1rem;">Menyediakan komoditas pertanian terbaik Indonesia dengan standar mutu ekspor internasional, kemasan aman, dan ketersediaan berkelanjutan.</p>
+  <!-- Hero Header -->
+  <section style="background: linear-gradient(135deg, #062e1e, #091424); padding: 4.5rem 2rem; text-align: center; border-bottom: 2px solid #10b981;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <span style="display:inline-flex; align-items:center; gap:8px; background:rgba(16,185,129,0.15); border:1px solid #10b981; color:#34d399; padding:0.4rem 1.2rem; border-radius:50px; font-weight:700; font-size:0.85rem; margin-bottom:1rem;">
+        <i class="fas fa-seedling"></i> OFFICIAL AGRICULTURAL EXPORT DIVISION
+      </span>
+      <h1 style="font-size: 2.8rem; font-weight: 800; margin: 0.8rem 0; color:#fff;">
+        Premier Indonesian <span style="color:#34d399;">Agricultural Commodities</span>
+      </h1>
+      <p style="color: #94a3b8; font-size: 1.15rem; line-height:1.7;">
+        Sourcing, processing, and exporting food-grade Indonesian spices, coffee beans, organic coconut sugar, cassava derivatives, and essential oils under ISO 22000 & HACCP international quality standards.
+      </p>
     </div>
   </section>
 
-  <!-- Product Catalog Grid Section -->
+  <!-- B2B Commodity Catalog -->
   <section class="section">
-    <div class="section-title-wrap">
-      <span class="section-badge">KATALOG KOMODITAS B2B</span>
-      <h2 class="section-title">Produk Ekspor Agraria Admiral Malika</h2>
-      <p class="section-desc">Pilihlah komoditas di bawah ini dan ajukan Request for Quotation (RFQ) secara langsung ke tim ekspor kami.</p>
+    <div style="text-align:center; max-width:800px; margin:0 auto 4rem auto;">
+      <span style="color:#10b981; font-weight:800; font-size:0.85rem; text-transform:uppercase; letter-spacing:1.5px;">INTERNATIONAL B2B COMMODITY PORTFOLIO</span>
+      <h2 style="font-size: 2.2rem; font-weight:800; color:#fff; margin-top:0.5rem;">Export Product Specification Catalog</h2>
+      <p style="color:#94a3b8;">Select your target agricultural commodity below and submit a formal Request for Quotation (RFQ) directly to our international trade team.</p>
     </div>
 
-    <div class="pillars-grid" id="agraria-catalog-grid">
-      <!-- Dynamic Catalog Loaded from cms.js -->
-    </div>
-  </section>
-
-  <!-- Special Spotlight: Daun Pisang Food-Grade Packaging -->
-  <section style="background: #f1f5f9; padding: 5rem 2rem;">
-    <div style="max-width: 1100px; margin: 0 auto; background: #fff; border-radius: 20px; border: 1px solid #e2e8f0; padding: 3rem; box-shadow: var(--shadow-lg); display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-      <div>
-        <span class="section-badge"><i class="fas fa-leaf"></i> SPECIAL EXPORT SPOTLIGHT</span>
-        <h2 style="font-size: 2rem; font-weight: 800; color: var(--primary-navy); margin: 0.5rem 0 1rem 0;">Daun Pisang Packaging (Food Grade)</h2>
-        <p style="color: #475569; margin-bottom: 1.5rem;">
-          Solusi pembungkus makanan ramah lingkungan (*eco-friendly food packaging*) standar ekspor kuliner dan industri manufaktur makanan mancanegara.
-        </p>
-        <ul class="pillar-list" style="margin-bottom: 2rem;">
-          <li><i class="fas fa-check-circle"></i> <strong>Pilihan Segar (Fresh) & Pembekuan (Frozen Vacuum-Sealed)</strong></li>
-          <li><i class="fas fa-check-circle"></i> Bebas bahan kimia pestisida, diproses secara higienis</li>
-          <li><i class="fas fa-check-circle"></i> Kemasan Vacuum Bag 500g, 1kg & Master Carton Export Load</li>
-          <li><i class="fas fa-check-circle"></i> Sertifikasi Phytosanitary & Certificate of Analysis (CoA)</li>
+    <div class="pillars-grid">
+      
+      <!-- Product 1: Banana Leaves -->
+      <div class="pillar-card">
+        <div style="font-size:0.8rem; color:#34d399; font-weight:700; font-family:monospace; margin-bottom:0.5rem;">FOOD-GRADE PACKAGING</div>
+        <h3 style="font-size:1.4rem; font-weight:800; color:#fff; margin-bottom:0.75rem;"><i class="fas fa-leaf" style="color:#10b981;"></i> Fresh & Frozen Banana Leaves</h3>
+        <p style="color:#94a3b8; font-size:0.95rem; margin-bottom:1rem;">Pesticide-free, hygienically washed & cut. Vacuum sealed in 500g, 1kg bags or master export cartons for global food manufacturing.</p>
+        <ul style="list-style:none; color:#cbd5e1; font-size:0.9rem; margin-bottom:1.5rem; display:flex; flex-direction:column; gap:6px;">
+          <li><i class="fas fa-check-circle" style="color:#10b981;"></i> <strong>Specs:</strong> Fresh Cut / Vacuum Frozen (-18°C)</li>
+          <li><i class="fas fa-check-circle" style="color:#10b981;"></i> <strong>Certification:</strong> Phytosanitary & CoA</li>
+          <li><i class="fas fa-check-circle" style="color:#10b981;"></i> <strong>Freight:</strong> Reefer Container Load</li>
         </ul>
-        <a href="contact.html?subject=RFQ: Daun Pisang Food Grade Packaging" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Penawaran Harga Daun Pisang</a>
+        <a href="#rfq-form-section" class="btn btn-emerald" style="margin-top:auto; font-size:0.85rem; text-align:center;"><i class="fas fa-paper-plane"></i> Request Banana Leaf RFQ</a>
       </div>
-      <div style="background: linear-gradient(135deg, #059669, #10b981); border-radius: 16px; padding: 2.5rem; color: #fff; text-align: center;">
-        <i class="fas fa-box-open" style="font-size: 4rem; margin-bottom: 1.5rem; opacity: 0.9;"></i>
-        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">Ketersediaan Volume Besar</h3>
-        <p style="opacity: 0.9; font-size: 0.95rem; margin-bottom: 1.5rem;">Kapasitas pengiriman rutin mingguan & bulanan via Container Reefer (Cooler Load).</p>
-        <div style="background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 10px; font-weight: 700; font-size: 0.9rem;">
-          Email Direct: hary.kristianto.info@gmail.com
-        </div>
+
+      <!-- Product 2: Organic Coconut Sugar -->
+      <div class="pillar-card">
+        <div style="font-size:0.8rem; color:#34d399; font-weight:700; font-family:monospace; margin-bottom:0.5rem;">NATURAL SWEETENER</div>
+        <h3 style="font-size:1.4rem; font-weight:800; color:#fff; margin-bottom:0.75rem;"><i class="fas fa-cubes" style="color:#10b981;"></i> Organic Coconut Palm Sugar</h3>
+        <p style="color:#94a3b8; font-size:0.95rem; margin-bottom:1rem;">Unrefined 14-18 mesh granulated coconut sugar crafted from fresh blossom nectar. Low Glycemic Index (GI 35).</p>
+        <ul style="list-style:none; color:#cbd5e1; font-size:0.9rem; margin-bottom:1.5rem; display:flex; flex-direction:column; gap:6px;">
+          <li><i class="fas fa-check-circle" style="color:#10b981;"></i> <strong>Purity:</strong> 100% Pure Coconut Blossom Nectar</li>
+          <li><i class="fas fa-check-circle" style="color:#10b981;"></i> <strong>Certification:</strong> USDA Organic, EU Organic & Halal</li>
+          <li><i class="fas fa-check-circle" style="color:#10b981;"></i> <strong>Packaging:</strong> 25kg Kraft Paper Bags / OEM Pouches</li>
+        </ul>
+        <a href="#rfq-form-section" class="btn btn-emerald" style="margin-top:auto; font-size:0.85rem; text-align:center;"><i class="fas fa-paper-plane"></i> Request Coconut Sugar RFQ</a>
       </div>
+
+      <!-- Product 3: Vanilla Beans -->
+      <div class="pillar-card">
+        <div style="font-size:0.8rem; color:#34d399; font-weight:700; font-family:monospace; margin-bottom:0.5rem;">GOURMET SPICES</div>
+        <h3 style="font-size:1.4rem; font-weight:800; color:#fff; margin-bottom:0.75rem;"><i class="fas fa-seedling" style="color:#10b981;"></i> Gourmet Planifolia Vanilla Beans</h3>
+        <p style="color:#94a3b8; font-size:0.95rem; margin-bottom:1rem;">Prime Black Grade A cured vanilla pods. High vanillin concentration (2.0%+), rich buttery aroma, 30-35% moisture.</p>
+        <ul style="list-style:none; color:#cbd5e1; font-size:0.9rem; margin-bottom:1.5rem; display:flex; flex-direction:column; gap:6px;">
+          <li><i class="fas fa-check-circle" style="color:#10b981;"></i> <strong>Length:</strong> 16cm - 20cm Pods</li>
+          <li><i class="fas fa-check-circle" style="color:#10b981;"></i> <strong>Vanillin:</strong> 2.0% - 2.4%</li>
+          <li><i class="fas fa-check-circle" style="color:#10b981;"></i> <strong>Packaging:</strong> Vacuum Sealed Foil Bags</li>
+        </ul>
+        <a href="#rfq-form-section" class="btn btn-emerald" style="margin-top:auto; font-size:0.85rem; text-align:center;"><i class="fas fa-paper-plane"></i> Request Vanilla Pods RFQ</a>
+      </div>
+
     </div>
   </section>
 
-  <!-- B2B RFQ Form Section -->
-  <section class="section" id="rfq-form-section">
-    <div style="max-width: 800px; margin: 0 auto; background: #fff; padding: 3rem; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: var(--shadow-md);">
+  <!-- B2B RFQ Form -->
+  <section class="section" id="rfq-form-section" style="background:#0c1a2e;">
+    <div style="max-width: 800px; margin: 0 auto; background: #112238; padding: 3rem; border-radius: 20px; border: 1px solid rgba(16,185,129,0.3);">
       <div style="text-align: center; margin-bottom: 2rem;">
-        <span class="section-badge">REQUEST FOR QUOTATION (RFQ)</span>
-        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary-navy);">Form Penawaran Harga Ekspor B2B</h2>
-        <p style="color: #64748b; font-size: 0.95rem;">Isi formulir di bawah ini untuk meminta spesifikasi teknis, harga FOB/CIF, dan sampel produk.</p>
+        <span style="color:#10b981; font-weight:800; font-size:0.85rem; letter-spacing:1px;">INTERNATIONAL TRADE INQUIRY</span>
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-top:0.3rem;">B2B Request for Quotation (RFQ)</h2>
+        <p style="color: #94a3b8; font-size: 0.95rem;">Fill out the trade inquiry form below to receive FOB/CIF pricing, technical CoA specs, and product samples.</p>
       </div>
 
-      <form id="inquiry-form">
-        <input type="hidden" id="inq-pillar" value="Ekspor Agraria B2B">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-          <div class="form-group">
-            <label class="form-label">Nama Lengkap / Perusahaan *</label>
-            <input type="text" id="inq-name" class="form-control" required placeholder="Contoh: John Doe / Global Foods Ltd">
+      <form onsubmit="event.preventDefault(); alert('Thank you for your RFQ submission. Admiral Agricultural Export team will send your quotation within 24 hours.');">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom:1rem;">
+          <div>
+            <label style="color:#cbd5e1; font-size:0.88rem; display:block; margin-bottom:6px;">Full Name / Company Name *</label>
+            <input type="text" required style="width:100%; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.15); border-radius:10px; color:#fff;" placeholder="John Doe / Global Importers Inc.">
           </div>
-          <div class="form-group">
-            <label class="form-label">Email Perusahaan *</label>
-            <input type="email" id="inq-email" class="form-control" required placeholder="name@company.com">
+          <div>
+            <label style="color:#cbd5e1; font-size:0.88rem; display:block; margin-bottom:6px;">Corporate Email Address *</label>
+            <input type="email" required style="width:100%; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.15); border-radius:10px; color:#fff;" placeholder="buyer@importer.com">
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-          <div class="form-group">
-            <label class="form-label">Nomor WhatsApp / Phone *</label>
-            <input type="tel" id="inq-phone" class="form-control" required placeholder="+62 811-1889-3389">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Komoditas Yang Diminati *</label>
-            <select class="form-control" id="inq-subject-select">
-              <option value="Daun Pisang Food Grade Packaging">Daun Pisang Food Grade Packaging</option>
-              <option value="Gula Semut Organik">Gula Semut Organik (Organic Coconut Sugar)</option>
-              <option value="Singkong & Turunannya (Mocaf/Chips)">Singkong & Turunannya (Mocaf/Chips)</option>
-              <option value="Sapu Lidi & Arang Bathok">Sapu Lidi & Arang Bathok</option>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom:1rem;">
+          <div>
+            <label style="color:#cbd5e1; font-size:0.88rem; display:block; margin-bottom:6px;">Target Commodity *</label>
+            <select style="width:100%; padding:0.75rem; background:#091424; border:1px solid rgba(255,255,255,0.15); border-radius:10px; color:#fff;">
+              <option>Fresh / Frozen Food-Grade Banana Leaves</option>
+              <option>Organic Coconut Palm Sugar</option>
+              <option>Gourmet Planifolia Vanilla Beans</option>
+              <option>Specialty Sumatra Arabica Coffee Beans</option>
+              <option>Whole Cloves & Nutmeg</option>
             </select>
           </div>
+          <div>
+            <label style="color:#cbd5e1; font-size:0.88rem; display:block; margin-bottom:6px;">Destination Port & Country *</label>
+            <input type="text" required style="width:100%; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.15); border-radius:10px; color:#fff;" placeholder="e.g. Port of Rotterdam, Netherlands">
+          </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label">Rincian Permintaan / Kuantitas Target / Pelabuhan Tujuan *</label>
-          <textarea id="inq-message" class="form-control" required placeholder="Sebutkan estimasi tonase, pelabuhan tujuan (CIF/FOB), dan kebutuhan kemasan..."></textarea>
+        <div style="margin-bottom:1.5rem;">
+          <label style="color:#cbd5e1; font-size:0.88rem; display:block; margin-bottom:6px;">Order Quantity & Packaging Specifications *</label>
+          <textarea rows="4" required style="width:100%; padding:0.75rem; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.15); border-radius:10px; color:#fff;" placeholder="Specify target volume in metric tons, FOB/CIF terms, and custom packaging requirements..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem;"><i class="fas fa-paper-plane"></i> Kirim Permintaan Penawaran (RFQ)</button>
+        <button type="submit" class="btn btn-emerald" style="width: 100%; justify-content: center;"><i class="fas fa-paper-plane"></i> Submit International RFQ</button>
       </form>
     </div>
   </section>
@@ -137,17 +211,17 @@
       <div>
         <div class="brand-logo" style="margin-bottom: 1rem;">
           <div class="logo-badge">AM</div>
-          <div style="color: #fff; font-weight: 800; font-size: 1.2rem;">ADMIRAL MALIKA</div>
+          <div style="color: #fff; font-weight: 800; font-size: 1.2rem;">ADMIRAL AGRICULTURAL EXPORT</div>
         </div>
-        <p style="color: #94a3b8; font-size: 0.9rem;">Divisi Ekspor Agraria PT Admiral Malika.</p>
+        <p style="color: #94a3b8; font-size: 0.9rem;">Official Agricultural Commodity Export Division of PT Admiral Malika Internasional.</p>
       </div>
 
-      <div class="footer-col">
-        <h4>Kontak Ekspor</h4>
-        <ul class="footer-contact-list">
-          <li><i class="fas fa-envelope"></i> hary.kristianto.info@gmail.com</li>
-          <li><i class="fas fa-envelope"></i> malikamannacenter@gmail.com</li>
-          <li><i class="fab fa-whatsapp"></i> +6281118893389</li>
+      <div>
+        <div style="color:#fff; font-weight:700; margin-bottom:1rem;">Direct Export Sales Desk</div>
+        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+          <li><i class="fas fa-envelope" style="color:#10b981;"></i> hary.kristianto.info@gmail.com</li>
+          <li><i class="fas fa-envelope" style="color:#10b981;"></i> malikamannacenter@gmail.com</li>
+          <li><i class="fab fa-whatsapp" style="color:#10b981;"></i> +6281118893389</li>
         </ul>
       </div>
     </div>
