@@ -2,26 +2,32 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
+  "rewrites": [
     {
-      "source": "/online-store",
-      "destination": "/",
-      "permanent": true
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "export.admiralmalika.com"
+        }
+      ],
+      "destination": "/export.html"
     },
     {
-      "source": "/online-store/:path*",
-      "destination": "/",
-      "permanent": true
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "edu.admiralmalika.com"
+        }
+      ],
+      "destination": "/edu.html"
     },
-    {
-      "source": "/store",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/store/:path*",
-      "destination": "/",
-      "permanent": true
-    }
+    { "source": "/export", "destination": "/export.html" },
+    { "source": "/edu", "destination": "/edu.html" },
+    { "source": "/agraria", "destination": "/export.html" },
+    { "source": "/agraria.html", "destination": "/export.html" },
+    { "source": "/jerman-education", "destination": "/edu.html" },
+    { "source": "/jerman-education.html", "destination": "/edu.html" }
   ]
 }
