@@ -228,24 +228,29 @@ a {
 
 /* Hero Section - Compact Proportional Fit */
 .hero-section {
-  background: radial-gradient(circle at 50% 30%, rgba(15, 27, 48, 0.9) 0%, var(--primary-navy) 75%);
-  padding: 3rem 1.5rem 3.8rem 1.5rem;
+  background-color: var(--primary-navy);
+  background: radial-gradient(circle at 75% 50%, #0c182c 0%, var(--primary-navy) 80%);
+  padding: 4.5rem 1.5rem 5rem 1.5rem;
   position: relative;
   overflow: hidden;
   border-bottom: 3px solid var(--accent-gold);
-}
-
-.hero-container {
-  max-width: 1240px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 1.8rem;
+  min-height: 520px;
+  display: flex;
   align-items: center;
 }
 
-.hero-content {
+.hero-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
   z-index: 2;
+}
+
+.hero-content {
+  max-width: 640px;
+  position: relative;
+  z-index: 3;
 }
 
 .hero-tag {
@@ -340,72 +345,68 @@ a {
   font-weight: 800;
 }
 
-/* Right Graphic Column: Seamless 4-Edge Masking */
-.hero-graphic-col {
-  width: 100%;
+/* Panoramic Hero Graphic Overlay: Large, Full Height, Seamless Gradient Blend, No Box */
+.hero-graphic-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
   height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: relative;
-  background: transparent !important;
-  border: none !important;
-}
-
-.hero-graphic-img-wrap {
-  width: 100%;
-  height: 420px;
-  position: relative;
-  overflow: hidden;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
-  -webkit-mask-image: radial-gradient(ellipse at 65% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0.3) 75%, transparent 100%),
-                      linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 80%, transparent 100%),
-                      linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, transparent 100%);
-  mask-image: radial-gradient(ellipse at 65% 50%, rgba(0,0,0,1) 30%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0.3) 75%, transparent 100%),
-              linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 80%, transparent 100%),
-              linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
-}
-
-.hero-graphic-img-wrap::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(to right, #070f1e 0%, rgba(7, 15, 30, 0.85) 30%, rgba(7, 15, 30, 0.35) 65%, transparent 100%);
-  z-index: 5;
-  pointer-events: none;
-}
-
-.hero-graphic-img-wrap::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #070f1e 0%, transparent 25%, transparent 75%, #070f1e 100%),
-              linear-gradient(to left, #070f1e 0%, transparent 20%);
-  z-index: 5;
-  pointer-events: none;
 }
 
 .hero-graphic-img {
-  width: 200%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: right center;
   display: block;
-  margin-left: -100%;
   border: none !important;
   border-radius: 0 !important;
   box-shadow: none !important;
+
+  /* Wide multi-directional gradient mask for ultra-smooth edge blending */
+  -webkit-mask-image: 
+    linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 15%, rgba(0,0,0,0.85) 35%, rgba(0,0,0,1) 60%, rgba(0,0,0,0.95) 88%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 88%, transparent 100%);
+  mask-image: 
+    linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 15%, rgba(0,0,0,0.85) 35%, rgba(0,0,0,1) 60%, rgba(0,0,0,0.95) 88%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 88%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  filter: brightness(1.08) contrast(1.05);
+}
+
+/* Gradient Overlay pseudo-element to guarantee seamless blending into Navy background */
+.hero-graphic-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to right, 
+      var(--primary-navy) 0%, 
+      rgba(7, 15, 30, 0.94) 20%, 
+      rgba(7, 15, 30, 0.55) 45%, 
+      rgba(7, 15, 30, 0.15) 75%, 
+      transparent 100%),
+    linear-gradient(to bottom, 
+      var(--primary-navy) 0%, 
+      transparent 12%, 
+      transparent 88%, 
+      var(--primary-navy) 100%),
+    linear-gradient(to left,
+      var(--primary-navy) 0%,
+      transparent 10%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* SECTION & CARDS */
@@ -631,11 +632,22 @@ a {
 }
 
 @media (max-width: 1024px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .hero-section {
+    padding: 3.5rem 1.25rem;
+    min-height: 460px;
   }
-  .hero-graphic-img-wrap {
-    height: 320px;
+  .hero-content {
+    max-width: 100%;
+  }
+  .hero-graphic-bg {
+    width: 100%;
+    opacity: 0.35;
+  }
+  .hero-graphic-bg::before {
+    background: 
+      linear-gradient(to bottom, 
+        var(--primary-navy) 0%, 
+        rgba(7, 15, 30, 0.6) 50%, 
+        var(--primary-navy) 100%);
   }
 }
