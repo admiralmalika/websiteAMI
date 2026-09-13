@@ -1,11 +1,11 @@
 /* Admiral Malika - CMS State Engine */
 
-const CMS_STORAGE_KEY = 'admiral_malika_cms_v4';
+const CMS_STORAGE_KEY = 'admiral_malika_cms_v5';
 
 const DEFAULT_CMS_DATA = {
   hero: {
     tag: '⚡ PT. ADMIRAL MALIKA INTERNASIONAL',
-    title: 'Solusi Terpercaya <span>Agraria & Pendidikan Jerman</span>',
+    title: 'Solusi Terpercaya <span>Agraria</span>',
     subtitle: 'PT. Admiral Malika Internasional menghadirkan komoditas pertanian unggulan Indonesia ke pasar dunia serta membuka jalan karir & studi internasional di Jerman.'
   },
   agraria: [
@@ -74,6 +74,7 @@ function getCMSData() {
   localStorage.removeItem('admiral_malika_cms_data');
   localStorage.removeItem('admiral_malika_cms_v2');
   localStorage.removeItem('admiral_malika_cms_v3');
+  localStorage.removeItem('admiral_malika_cms_v4');
 
   const data = localStorage.getItem(CMS_STORAGE_KEY);
   if (!data) {
