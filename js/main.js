@@ -11,18 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Dynamic Rendering from CMS State
+  // Dynamic Rendering from CMS State (for dynamic catalogs)
   if (typeof getCMSData === 'function') {
     const cms = getCMSData();
-
-    // Render Hero if elements exist
-    const heroTitle = document.getElementById('hero-title');
-    const heroSubtitle = document.getElementById('hero-subtitle');
-    const heroTag = document.getElementById('hero-tag');
-
-    if (heroTitle && cms.hero.title) heroTitle.innerHTML = cms.hero.title;
-    if (heroSubtitle && cms.hero.subtitle) heroSubtitle.textContent = cms.hero.subtitle;
-    if (heroTag && cms.hero.tag) heroTag.textContent = cms.hero.tag;
 
     // Render Agraria Catalog
     const agrariaContainer = document.getElementById('agraria-catalog-grid');

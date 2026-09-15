@@ -4,9 +4,9 @@ const CMS_STORAGE_KEY = 'admiral_malika_cms_v5';
 
 const DEFAULT_CMS_DATA = {
   hero: {
-    tag: '⚡ PT. ADMIRAL MALIKA INTERNASIONAL',
-    title: 'Solusi Terpercaya <span>Agraria</span>',
-    subtitle: 'PT. Admiral Malika Internasional menghadirkan komoditas pertanian unggulan Indonesia ke pasar dunia serta membuka jalan karir & studi internasional di Jerman.'
+    tag: '',
+    title: "Indonesia's Premier <span>Global Trade Aggregator & Exporter</span>",
+    subtitle: "PT. Admiral Malika Internasional is a corporate enterprise engaged in domestic and international trade, aggregating, processing, and exporting Indonesia's finest commodities to global markets."
   },
   agraria: [
     {
