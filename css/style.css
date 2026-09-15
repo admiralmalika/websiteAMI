@@ -651,3 +651,237 @@ a {
         var(--primary-navy) 100%);
   }
 }
+
+/* ==========================================================================
+   B2B Export Portfolios & Fulfillment Grid Architecture
+   ========================================================================== */
+
+.portfolios-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.portfolios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 2.25rem;
+}
+
+.portfolio-column {
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2.4rem 2rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-column:hover {
+  box-shadow: var(--shadow-glow);
+  border-color: var(--accent-gold);
+}
+
+.portfolio-header {
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  padding-bottom: 1.25rem;
+}
+
+.portfolio-category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(212, 175, 55, 0.14);
+  color: var(--accent-gold);
+  margin-bottom: 0.8rem;
+}
+
+.portfolio-category-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.portfolio-category-desc {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-bottom: 1.8rem;
+}
+
+.product-card-b2b {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: var(--transition);
+}
+
+.product-card-b2b:hover {
+  background: rgba(212, 175, 55, 0.05);
+  border-color: rgba(212, 175, 55, 0.35);
+  transform: translateX(4px);
+}
+
+.product-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.product-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-name i {
+  color: var(--accent-gold);
+  font-size: 0.95rem;
+}
+
+.product-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(56, 189, 248, 0.14);
+  color: #38bdf8;
+  white-space: nowrap;
+}
+
+.product-specs {
+  font-size: 0.86rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin-top: 0.4rem;
+}
+
+.product-specs strong {
+  color: #e2e8f0;
+}
+
+/* Reusable Product-Level Trust Badge Component */
+.export-assurance-badge {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem 1.2rem;
+  background: rgba(212, 175, 55, 0.09);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  margin: 1.2rem 0;
+  width: 100%;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.export-assurance-badge .badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #cbd5e1;
+}
+
+.export-assurance-badge .badge-item i {
+  color: #10b981;
+  font-size: 0.88rem;
+}
+
+/* 4-Card Fulfillment & Quality Reassurance Module */
+.fulfillment-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.6rem;
+}
+
+.fulfillment-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem 1.8rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.fulfillment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+  border-color: var(--accent-gold);
+}
+
+.fulfillment-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.fulfillment-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.fulfillment-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+  .portfolios-grid {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-column {
+    padding: 1.8rem 1.25rem;
+  }
+  .export-assurance-badge {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .fulfillment-grid {
+    grid-template-columns: 1fr;
+  }
+}

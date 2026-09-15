@@ -75,16 +75,21 @@ admiral-malika/
 ## 3. Business Divisions & Subdomain Specifications
 
 ### 🏢 1. Holding Headquarters (`admiralmalika.com`)
-- **Primary Role**: Corporate group identity, trade aggregator umbrella, strategic vision, multi-pillar overview, and group directory.
-- **Key Modules**:
-  - Full panoramic graphic banner with smooth gradient blending.
-  - Three Corporate Pillars:
-    1. *Pillar 1: Agricultural & Spice Trade* (Komoditas Agraria & Rempah).
-    2. *Pillar 2: Natural Energy & Derivatives* (Produk Energi Alami & Turunannya).
-    3. *Pillar 3: Export Logistics & Facilitation* (Fasilitasi & Logistik Ekspor).
+- **Primary Role**: Corporate group identity, premier Indonesian commodity exporter & aggregator umbrella, strategic vision, dual export portfolios, and global fulfillment infrastructure.
+- **Sharpened B2B Export Positioning**:
+  - Direct commodity originator and aggregator (NOT a standalone freight forwarding/logistics provider).
+  - **Two Distinct Product Portfolios**:
+    1. *Portfolio 1: Specialty Agriculture & Food Ingredients* (Planifolia Vanilla Beans, Sumatra Gayo Arabica Coffee, Organic Coconut Sugar, Frozen Banana Leaves, Mocaf Flour).
+    2. *Portfolio 2: Sustainable Biomass & Green Energy* (Coconut Shell Charcoal Briquettes, Palm & Nipah Ekel Broom Sticks, Natural Essential Oils).
+  - **Embedded Export Assurance Badges** (`ExportAssuranceBadge`): Reusable trust component on each portfolio card highlighting `[✓ FOB / CIF Available]`, `[✓ Phytosanitary & COO Certified]`, `[✓ Export Food-Grade Packaging]`.
+  - **Global Supply Chain, Compliance & Export Fulfillment Section**: Direct fulfillment trust module featuring 4 operational cards:
+    - *Incoterms & Loading Ports* (FOB, CIF, CFR via Tanjung Priok & Belawan).
+    - *Statutory Export Documentation* (Phytosanitary, Certificate of Origin Form A/AK/E, CoA, Halal/Organic).
+    - *Export-Grade Packaging* (Vacuum sealing, Nitrogen-flushed food bags, UN steel drums, master cartons).
+    - *Carrier & Forwarding Relations* (Contract rates with Maersk, MSC, CMA CGM, ONE).
   - Global Trade Network Pills (`DE`, `JP`, `US`, `ID`, `SG`).
-  - Executive contact channels and integrated lead capture.
-- **Languages**: Indonesian (`ID`), English (`EN`), German (`DE`).
+  - Executive contact channels and integrated RFQ lead capture.
+- **Languages**: Default English (`EN`), with full trilingual toggle support for Indonesian (`ID`) and German (`DE`).
 
 ### 🌾 2. Agricultural Export Division (`export.admiralmalika.com`)
 - **Primary Role**: Global B2B international trade portal for international buyers, industrial importers, and food processors.
