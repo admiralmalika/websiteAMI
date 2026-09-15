@@ -388,42 +388,49 @@
         <p style="color: var(--text-muted); font-size: 0.98rem;" data-i18n="contact_desc">Send B2B trade inquiries or commodity sample requests directly to the executive team of PT. Admiral Malika Internasional.</p>
       </div>
 
-      <form id="corporate-contact-form" onsubmit="handleContactSubmit(event)">
+      <form id="corporate-contact-form" action="https://formsubmit.co/hary.kristianto.info@gmail.com" method="POST" onsubmit="handleContactSubmit(event)">
+        <!-- FormSubmit Configuration -->
+        <input type="hidden" name="_cc" value="malikamannacenter@gmail.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom:1.25rem;">
           <div class="form-group">
             <label class="form-label" data-i18n="lbl_name">Full Name / Enterprise Name *</label>
-            <input type="text" required class="form-control" data-i18n-ph="ph_name" placeholder="John Doe / Global Importer Corp">
+            <input type="text" id="contact-name" name="name" required class="form-control" data-i18n-ph="ph_name" placeholder="John Doe / Global Importer Corp">
           </div>
           <div class="form-group">
             <label class="form-label" data-i18n="lbl_email">Corporate Email *</label>
-            <input type="email" required class="form-control" data-i18n-ph="ph_email" placeholder="buyer@company.com">
+            <input type="email" id="contact-email" name="email" required class="form-control" data-i18n-ph="ph_email" placeholder="buyer@company.com">
           </div>
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom:1.25rem;">
           <div class="form-group">
             <label class="form-label" data-i18n="lbl_subject">Trade Inquiry Subject *</label>
-            <select class="form-control" id="contact-subject-select" style="background:#070f1e;">
-              <option value="rfq" data-i18n="opt_rfq">Export Quotation Request (RFQ)</option>
-              <option value="sample" data-i18n="opt_sample">Commodity Sample Request</option>
-              <option value="supply" data-i18n="opt_supply">Domestic Supply Partnership</option>
-              <option value="aggregator" data-i18n="opt_aggregator">Trade Aggregator Cooperation</option>
+            <select class="form-control" id="contact-subject-select" name="subject" style="background:#070f1e;">
+              <option value="Export Quotation Request (RFQ)" data-i18n="opt_rfq">Export Quotation Request (RFQ)</option>
+              <option value="Commodity Sample Request" data-i18n="opt_sample">Commodity Sample Request</option>
+              <option value="Domestic Supply Partnership" data-i18n="opt_supply">Domestic Supply Partnership</option>
+              <option value="Trade Aggregator Cooperation" data-i18n="opt_aggregator">Trade Aggregator Cooperation</option>
             </select>
           </div>
           <div class="form-group">
             <label class="form-label" data-i18n="lbl_country">Destination Country / Port *</label>
-            <input type="text" required class="form-control" data-i18n-ph="ph_country" placeholder="e.g. Port of Rotterdam, Netherlands">
+            <input type="text" id="contact-country" name="destination" required class="form-control" data-i18n-ph="ph_country" placeholder="e.g. Port of Rotterdam, Netherlands">
           </div>
         </div>
 
-        <div class="form-group" style="margin-bottom:2rem;">
+        <div class="form-group" style="margin-bottom:1.5rem;">
           <label class="form-label" data-i18n="lbl_msg">Commodity Requirements & Order Specs *</label>
-          <textarea rows="4" required class="form-control" data-i18n-ph="ph_msg" placeholder="Specify commodity type, estimated tonnage volume, shipping terms (FOB/CIF), and custom specs..."></textarea>
+          <textarea id="contact-message" name="message" rows="4" required class="form-control" data-i18n-ph="ph_msg" placeholder="Specify commodity type, estimated tonnage volume, shipping terms (FOB/CIF), and custom specs..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; font-size:1.05rem; padding:1rem;">
+        <button type="submit" id="contact-submit-btn" class="btn btn-gold" style="width: 100%; justify-content: center; font-size:1.05rem; padding:1rem;">
           <i class="fas fa-paper-plane"></i> <span data-i18n="btn_submit">Submit Official Trade Inquiry</span>
         </button>
+
+        <div id="contact-form-status" style="display:none; margin-top:1.25rem; border-radius:12px; padding:1.2rem 1.4rem; font-size:0.95rem;"></div>
       </form>
     </div>
   </section>
@@ -628,16 +635,171 @@
       }
     }
 
-    function handleContactSubmit(e) {
+    async function handleContactSubmit(e) {
       e.preventDefault();
+      const form = e.target;
+      const btn = document.getElementById('contact-submit-btn') || form.querySelector('button[type="submit"]');
+      const statusBox = document.getElementById('contact-form-status');
+
+      const name = (document.getElementById('contact-name')?.value || '').trim();
+      const email = (document.getElementById('contact-email')?.value || '').trim();
+      const subjSelect = document.getElementById('contact-subject-select');
+      const subjectText = subjSelect ? subjSelect.options[subjSelect.selectedIndex].text : 'B2B Trade Inquiry';
+      const country = (document.getElementById('contact-country')?.value || '').trim();
+      const message = (document.getElementById('contact-message')?.value || '').trim();
+
       const lang = localStorage.getItem('ami_selected_lang') || 'en';
-      const alerts = {
-        en: "Thank you. Your official trade inquiry has been received by the executive team of PT. Admiral Malika Internasional. We will contact you within 24 hours.",
-        id: "Terima kasih. Pesan inkuiri perdagangan Anda telah diterima oleh tim eksekutif PT. Admiral Malika Internasional. Kami akan menghubungi Anda dalam 24 jam.",
-        de: "Vielen Dank. Ihre offizielle Handelsanfrage ist beim Führungsteam von PT. Admiral Malika Internasional eingegangen. Wir werden uns innerhalb von 24 Stunden bei Ihnen melden."
+
+      const i18nTexts = {
+        en: {
+          sending: "Transmitting Official Inquiry...",
+          successTitle: "Trade Inquiry Successfully Transmitted!",
+          successDesc: "Your inquiry has been dispatched to the executive trade desks at PT. Admiral Malika Internasional (<strong>hary.kristianto.info@gmail.com</strong> & <strong>malikamannacenter@gmail.com</strong>). Our executive team will review your specifications and contact you within 24 hours.",
+          noteActivation: "First-time Note: If this is the initial submission, FormSubmit sends a one-time activation link to the admin email to begin instant forwarding.",
+          errorTitle: "Submission Interrupted by Network / Firewall",
+          errorDesc: "We could not transmit your inquiry automatically. Please use the direct channels below to send your trade inquiry immediately:",
+          openMailBtn: "Open in Email App",
+          openWaBtn: "Direct Executive WhatsApp"
+        },
+        id: {
+          sending: "Mengirimkan Inkuiri Resmi...",
+          successTitle: "Inkuiri Perdagangan Berhasil Terkirim!",
+          successDesc: "Inkuiri Anda telah dikirimkan ke email eksekutif PT. Admiral Malika Internasional (<strong>hary.kristianto.info@gmail.com</strong> & <strong>malikamannacenter@gmail.com</strong>). Tim kami akan meninjau spesifikasi dan menghubungi Anda dalam 24 jam.",
+          noteActivation: "Catatan Administrator: Jika ini pengiriman perdana, FormSubmit mengirimkan link aktivasi satu kali ke email untuk memulai penerusan instan.",
+          errorTitle: "Pengiriman Otomatis Terkendala Jaringan",
+          errorDesc: "Gagal menghubungkan ke server pengiriman. Silakan kirimkan inkuiri langsung melalui jalur resmi di bawah:",
+          openMailBtn: "Buka di Aplikasi Email",
+          openWaBtn: "Chat WhatsApp Eksekutif"
+        },
+        de: {
+          sending: "Handelsanfrage wird gesendet...",
+          successTitle: "Handelsanfrage erfolgreich übermittelt!",
+          successDesc: "Ihre Anfrage wurde an das Führungsteam von PT. Admiral Malika Internasional (<strong>hary.kristianto.info@gmail.com</strong> & <strong>malikamannacenter@gmail.com</strong>) weitergeleitet. Wir antworten innerhalb von 24 Stunden.",
+          noteActivation: "Administratorhinweis: Bei der allerersten Übertragung sendet FormSubmit einen einmaligen Aktivierungslink an die E-Mail-Adresse.",
+          errorTitle: "Übertragung fehlgeschlagen",
+          errorDesc: "Die automatische Weiterleitung konnte nicht abgeschlossen werden. Bitte kontaktieren Sie uns direkt:",
+          openMailBtn: "Im E-Mail-Programm öffnen",
+          openWaBtn: "Direkt per WhatsApp"
+        }
       };
-      alert(alerts[lang] || alerts.en);
-      e.target.reset();
+
+      const t = i18nTexts[lang] || i18nTexts.en;
+
+      const originalBtnHtml = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> <span>${t.sending}</span>`;
+      if (statusBox) {
+        statusBox.style.display = 'none';
+      }
+
+      // Save to CMS state locally
+      if (typeof submitInquiry === 'function') {
+        try {
+          submitInquiry({
+            name: name,
+            email: email,
+            phone: '-',
+            pillar: `B2B: ${subjectText} (${country})`,
+            message: message
+          });
+        } catch (storageErr) {
+          console.warn("Local CMS save skipped:", storageErr);
+        }
+      }
+
+      const payload = {
+        name: name,
+        email: email,
+        _replyto: email,
+        _subject: `[B2B Trade Inquiry] ${subjectText} - ${name}`,
+        _cc: "malikamannacenter@gmail.com",
+        _template: "table",
+        _captcha: "false",
+        "Enterprise / Contact Name": name,
+        "Corporate Email": email,
+        "Trade Subject": subjectText,
+        "Destination Country & Port": country,
+        "Commodity Requirements & Order Specs": message,
+        "Submitted At": new Date().toLocaleString()
+      };
+
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/hary.kristianto.info@gmail.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const result = await response.json().catch(() => ({}));
+
+        if (response.ok && (result.success === "true" || result.success === true || response.status === 200)) {
+          form.reset();
+          if (subjSelect) subjSelect.value = 'Export Quotation Request (RFQ)';
+          if (statusBox) {
+            statusBox.style.display = 'block';
+            statusBox.style.background = 'rgba(16, 185, 129, 0.15)';
+            statusBox.style.border = '1px solid #10b981';
+            statusBox.style.color = '#e2e8f0';
+            statusBox.innerHTML = `
+              <div style="display:flex; align-items:flex-start; gap:14px;">
+                <i class="fas fa-check-circle" style="color:#10b981; font-size:1.6rem; margin-top:2px;"></i>
+                <div style="flex:1;">
+                  <strong style="color:#10b981; font-size:1.05rem; display:block; margin-bottom:6px;">${t.successTitle}</strong>
+                  <p style="margin:0 0 8px 0; font-size:0.92rem; line-height:1.5;">${t.successDesc}</p>
+                  <small style="color:#94a3b8; font-size:0.8rem; display:block; border-top:1px solid rgba(255,255,255,0.1); padding-top:6px; margin-top:6px;">${t.noteActivation}</small>
+                </div>
+              </div>
+            `;
+            statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        } else {
+          throw new Error(result.message || 'Form submission returned unsuccessful status');
+        }
+      } catch (err) {
+        console.error("Form submission fallback triggered:", err);
+
+        const mailtoUrl = `mailto:hary.kristianto.info@gmail.com?cc=malikamannacenter@gmail.com&subject=${encodeURIComponent('[B2B Trade Inquiry] ' + subjectText + ' - ' + name)}&body=${encodeURIComponent(
+          'Dear PT. Admiral Malika Internasional Executive Team,\n\n' +
+          'Name / Company: ' + name + '\n' +
+          'Corporate Email: ' + email + '\n' +
+          'Inquiry Subject: ' + subjectText + '\n' +
+          'Destination Port / Country: ' + country + '\n\n' +
+          'Commodity Specs & Requirements:\n' + message + '\n\n' +
+          'Best regards,\n' + name
+        )}`;
+
+        const waText = `Halo PT Admiral Malika Internasional,\n\nSaya ingin menyampaikan B2B Trade Inquiry:\n• *Nama:* ${name}\n• *Email:* ${email}\n• *Topik:* ${subjectText}\n• *Tujuan Port:* ${country}\n• *Kebutuhan:* ${message}`;
+        const waUrl = `https://wa.me/6281118893389?text=${encodeURIComponent(waText)}`;
+
+        if (statusBox) {
+          statusBox.style.display = 'block';
+          statusBox.style.background = 'rgba(239, 68, 68, 0.15)';
+          statusBox.style.border = '1px solid #ef4444';
+          statusBox.style.color = '#fecaca';
+          statusBox.innerHTML = `
+            <div style="display:flex; align-items:flex-start; gap:14px;">
+              <i class="fas fa-exclamation-triangle" style="color:#ef4444; font-size:1.6rem; margin-top:2px;"></i>
+              <div style="flex:1;">
+                <strong style="color:#f87171; font-size:1.05rem; display:block; margin-bottom:6px;">${t.errorTitle}</strong>
+                <p style="margin:0 0 10px 0; font-size:0.92rem; line-height:1.5;">${t.errorDesc}</p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+                  <a href="${mailtoUrl}" class="btn btn-gold btn-sm" style="text-decoration:none;"><i class="fas fa-envelope"></i> ${t.openMailBtn}</a>
+                  <a href="${waUrl}" target="_blank" class="btn btn-sm" style="background:#25D366; color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:6px; padding:0.55rem 1rem; border-radius:6px; font-weight:700;"><i class="fab fa-whatsapp"></i> ${t.openWaBtn}</a>
+                </div>
+              </div>
+            </div>
+          `;
+          statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          window.location.href = mailtoUrl;
+        }
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = originalBtnHtml;
+      }
     }
   </script>
 
