@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Germany Education & Career Division | edu.admiralmalika.com</title>
   <meta name="description" content="Official Germany Education & Work Subdomain (edu.admiralmalika.com) - Paid Ausbildung Dual Vocational Training (€1,000+ stipend), Studienkolleg & Public Universities in Germany.">
+  
+  <!-- Canonical & International SEO (hreflang) for German & English Searchers -->
+  <link rel="canonical" href="https://edu.admiralmalika.com/">
+  <link rel="alternate" hreflang="x-default" href="https://edu.admiralmalika.com/">
+  <link rel="alternate" hreflang="de" href="https://edu.admiralmalika.com/?lang=de">
+  <link rel="alternate" hreflang="de-DE" href="https://edu.admiralmalika.com/?lang=de">
+  <link rel="alternate" hreflang="de-AT" href="https://edu.admiralmalika.com/?lang=de">
+  <link rel="alternate" hreflang="de-CH" href="https://edu.admiralmalika.com/?lang=de">
+  <link rel="alternate" hreflang="en" href="https://edu.admiralmalika.com/?lang=en">
+  <link rel="alternate" hreflang="en-US" href="https://edu.admiralmalika.com/?lang=en">
+  <link rel="alternate" hreflang="en-GB" href="https://edu.admiralmalika.com/?lang=en">
+  <link rel="alternate" hreflang="id" href="https://edu.admiralmalika.com/?lang=id">
+  <link rel="alternate" hreflang="id-ID" href="https://edu.admiralmalika.com/?lang=id">
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,16 +41,16 @@
 
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link">Corporate Holding</a></li>
-        <li><a href="edu.html" class="nav-link active" style="color:#38bdf8;" data-i18n="edu_nav_prog">Program Jerman</a></li>
-        <li><a href="#screener-section" class="nav-link" data-i18n="edu_nav_screen">Kalkulator Jalur</a></li>
-        <li><a href="contact.html" class="nav-link" data-i18n="edu_nav_contact">Konsultasi Gratis</a></li>
+        <li><a href="edu.html" class="nav-link active" style="color:#38bdf8;" data-i18n="edu_nav_prog">Germany Programs</a></li>
+        <li><a href="#screener-section" class="nav-link" data-i18n="edu_nav_screen">Pathway Calculator</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="edu_nav_contact">Free Consultation</a></li>
       </ul>
 
       <div class="nav-actions">
-        <!-- Trilingual Buttons (ID | EN | DE) -->
+        <!-- Trilingual Buttons (EN | ID | DE) - English is Default -->
         <div class="lang-selector-container">
-          <button class="lang-btn active" onclick="setEduLang('id')">🇮🇩 ID</button>
-          <button class="lang-btn" onclick="setEduLang('en')">🇬🇧 EN</button>
+          <button class="lang-btn active" onclick="setEduLang('en')">🇬🇧 EN</button>
+          <button class="lang-btn" onclick="setEduLang('id')">🇮🇩 ID</button>
           <button class="lang-btn" onclick="setEduLang('de')">🇩🇪 DE</button>
         </div>
 
@@ -53,10 +66,10 @@
         <i class="fas fa-graduation-cap"></i> OFFICIAL GERMANY STUDY & CAREER DIVISION
       </div>
       <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 3.6rem);" data-i18n="edu_hero_title">
-        Jembatan Karir & Studi Unggulan Anda di <span style="color:#38bdf8;">Jerman</span>
+        Your Pathway to Academic & Career Excellence in <span style="color:#38bdf8;">Germany</span>
       </h1>
       <p class="hero-subtitle" style="margin: 0 auto 2.5rem auto;" data-i18n="edu_hero_desc">
-        Penyelenggara persiapan komprehensif, Akademi Bahasa Jerman (A1-B2), penempatan Ausbildung bergaji (€1.000+/bulan), Studienkolleg, serta pengurusan visa & akomodasi resmi.
+        End-to-end guidance for paid Ausbildung dual vocational training (€1,000+/month stipend), Studienkolleg entrance, public universities, and intensive A1-B2 German language academy.
       </p>
       <div class="hero-btns" style="justify-content: center;">
         <a href="#screener-section" class="btn btn-blue"><i class="fas fa-calculator"></i> Hitung Rekomendasi Jalur Saya</a>
@@ -214,16 +227,28 @@
     };
 
     function setEduLang(lang) {
+      if (!eduDict[lang]) lang = 'en';
+      localStorage.setItem('ami_selected_lang', lang);
+      document.documentElement.lang = lang;
+
       document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('onclick').includes(lang));
+        const onclickAttr = btn.getAttribute('onclick') || '';
+        btn.classList.toggle('active', onclickAttr.includes(`'${lang}'`));
       });
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (eduDict[lang] && eduDict[lang][key]) {
-          el.innerText = eduDict[lang][key];
+          el.innerHTML = eduDict[lang][key];
         }
       });
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      const initialLang = (urlLang && eduDict[urlLang]) ? urlLang : (localStorage.getItem('ami_selected_lang') || 'en');
+      setEduLang(initialLang);
+    });
 
     function calculatePathway() {
       const edu = document.getElementById('edu-level').value;
