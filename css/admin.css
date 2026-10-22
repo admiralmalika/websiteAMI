@@ -116,3 +116,65 @@ body.admin-body {
 
 .badge-new { background: #dbeafe; color: #1e40af; }
 .badge-active { background: #d1fae5; color: #065f46; }
+
+/* ==========================================================================
+   Admin Authentication Guard & Login Modal Styling
+   ========================================================================== */
+body.admin-body.admin-locked .admin-main,
+body.admin-body.admin-locked .admin-sidebar {
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+}
+
+#admin-auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(7, 15, 30, 0.88);
+  backdrop-filter: blur(14px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.admin-login-box {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  padding: 2.5rem 2.2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 175, 55, 0.35);
+  box-sizing: border-box;
+  text-align: center;
+  animation: adminModalPop 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes adminModalPop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.shake-error {
+  animation: shakeInput 0.4s ease-in-out !important;
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+}
+
+@keyframes shakeInput {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+
