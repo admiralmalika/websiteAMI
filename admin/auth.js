@@ -1,83 +1,21 @@
 /**
  * CMS Admin Authentication Gate - PT. Admiral Malika Internasional
- * Secures all /admin/ pages with session-based password authentication
+ * Secures all /admin/ pages with session-based password authentication (MZ212)
  */
 (function() {
   const AUTH_KEY = 'ami_admin_session';
-  const AUTH_SECRET = 'MZ212'; // Protected admin password
+  const AUTH_SECRET = 'MZ212';
 
-  function isAuthenticated() {
-    return sessionStorage.getItem(AUTH_KEY) === 'MZ212_AUTHENTICATED';
-  }
-
-  function initAdminAuth() {
-    if (!isAuthenticated()) {
-      document.body.classList.add('admin-locked');
-      renderLoginOverlay();
-    } else {
-      document.body.classList.remove('admin-locked');
-      const existingOverlay = document.getElementById('admin-auth-overlay');
-      if (existingOverlay) existingOverlay.remove();
-    }
-  }
-
-  function renderLoginOverlay() {
-    if (document.getElementById('admin-auth-overlay')) return;
-
-    const overlay = document.createElement('div');
-    overlay.id = 'admin-auth-overlay';
-    overlay.innerHTML = `
-      <div class="admin-login-box">
-        <div class="admin-login-header">
-          <div class="logo-badge" style="width:48px; height:48px; font-size:1.25rem; margin:0 auto 14px auto; background:linear-gradient(135deg, #d4af37, #aa7c11); color:#070f1e; font-weight:800; border-radius:12px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 15px rgba(212,175,55,0.4);">AMI</div>
-          <h2 style="font-family:'Cinzel', serif, sans-serif; font-size:1.35rem; font-weight:700; color:#070f1e; margin-bottom:4px;">CMS Admin Portal</h2>
-          <p style="font-size:0.82rem; color:#64748b; margin:0 0 18px 0; text-transform:uppercase; letter-spacing:0.8px;">PT. Admiral Malika Internasional</p>
-        </div>
-
-        <div id="admin-auth-error" style="display:none; background:#fef2f2; border:1px solid #fecaca; color:#dc2626; padding:10px 14px; border-radius:10px; font-size:0.84rem; margin-bottom:16px; text-align:left;">
-          <i class="fas fa-exclamation-triangle" style="margin-right:6px;"></i> Password salah! Silakan coba lagi.
-        </div>
-
-        <form id="admin-login-form" onsubmit="window.handleAdminLoginSubmit(event)">
-          <div style="margin-bottom:1.25rem; text-align:left;">
-            <label style="display:block; font-size:0.82rem; font-weight:700; color:#1e293b; margin-bottom:6px;">Password Administrator</label>
-            <div style="position:relative;">
-              <input type="password" id="admin-auth-pass" required placeholder="Masukkan password..." autofocus
-                     style="width:100%; box-sizing:border-box; padding:0.75rem 2.8rem 0.75rem 1rem; border:1.5px solid #cbd5e1; border-radius:10px; font-size:0.95rem; outline:none; transition:border-color 0.2s;"
-                     onfocus="this.style.borderColor='#d4af37'" onblur="this.style.borderColor='#cbd5e1'">
-              <button type="button" onclick="window.toggleAdminPassVisibility()" 
-                      style="position:absolute; right:10px; top:50%; transform:translateY(-50%); background:none; border:none; color:#64748b; cursor:pointer; padding:6px; font-size:0.95rem;">
-                <i class="fas fa-eye" id="pass-toggle-icon"></i>
-              </button>
-            </div>
-          </div>
-
-          <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center; padding:0.8rem; font-weight:800; font-size:0.95rem; border-radius:10px; cursor:pointer;">
-            <i class="fas fa-shield-alt"></i> Masuk ke CMS Admin
-          </button>
-
-          <div style="margin-top:1.25rem; text-align:center;">
-            <a href="../index.html" style="font-size:0.84rem; color:#64748b; text-decoration:none; display:inline-flex; align-items:center; gap:6px; transition:color 0.2s;"
-               onmouseover="this.style.color='#070f1e'" onmouseout="this.style.color='#64748b'">
-              <i class="fas fa-arrow-left"></i> Kembali ke Beranda Utama
-            </a>
-          </div>
-        </form>
-      </div>
-    `;
-    document.body.appendChild(overlay);
-
-    setTimeout(() => {
-      const passInput = document.getElementById('admin-auth-pass');
-      if (passInput) passInput.focus();
-    }, 100);
-  }
+  window.adminLogout = function() {
+    sessionStorage.removeItem(AUTH_KEY);
+    localStorage.removeItem(AUTH_KEY);
+    window.location.href = '../index.html';
+  };
 
   window.handleAdminLoginSubmit = function(e) {
-    e.preventDefault();
+    if (e) e.preventDefault();
     const input = document.getElementById('admin-auth-pass');
     const errBox = document.getElementById('admin-auth-error');
-
     if (!input) return;
 
     if (input.value.trim() === AUTH_SECRET) {
@@ -107,15 +45,58 @@
     }
   };
 
-  window.adminLogout = function() {
-    sessionStorage.removeItem(AUTH_KEY);
-    window.location.href = '../index.html';
-  };
+  function enforceAuth() {
+    if (sessionStorage.getItem(AUTH_KEY) !== 'MZ212_AUTHENTICATED') {
+      document.body.classList.add('admin-locked');
+      if (!document.getElementById('admin-auth-overlay')) {
+        const overlay = document.createElement('div');
+        overlay.id = 'admin-auth-overlay';
+        overlay.innerHTML = `
+          <div class="admin-login-box">
+            <div class="admin-login-header">
+              <div class="logo-badge" style="width:48px; height:48px; font-size:1.25rem; margin:0 auto 14px auto; background:linear-gradient(135deg, #d4af37, #aa7c11); color:#070f1e; font-weight:800; border-radius:12px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 15px rgba(212,175,55,0.4);">AMI</div>
+              <h2 style="font-family:'Cinzel', serif, sans-serif; font-size:1.35rem; font-weight:700; color:#070f1e; margin-bottom:4px;">CMS Admin Portal</h2>
+              <p style="font-size:0.82rem; color:#64748b; margin:0 0 18px 0; text-transform:uppercase; letter-spacing:0.8px;">PT. Admiral Malika Internasional</p>
+            </div>
+            <div id="admin-auth-error" style="display:none; background:#fef2f2; border:1px solid #fecaca; color:#dc2626; padding:10px 14px; border-radius:10px; font-size:0.84rem; margin-bottom:16px; text-align:left;">
+              <i class="fas fa-exclamation-triangle" style="margin-right:6px;"></i> Password salah! Silakan coba lagi.
+            </div>
+            <form id="admin-login-form" onsubmit="window.handleAdminLoginSubmit(event)">
+              <div style="margin-bottom:1.25rem; text-align:left;">
+                <label style="display:block; font-size:0.82rem; font-weight:700; color:#1e293b; margin-bottom:6px;">Password Administrator</label>
+                <div style="position:relative;">
+                  <input type="password" id="admin-auth-pass" required placeholder="Masukkan password..." autofocus
+                         style="width:100%; box-sizing:border-box; padding:0.75rem 2.8rem 0.75rem 1rem; border:1.5px solid #cbd5e1; border-radius:10px; font-size:0.95rem; outline:none;"
+                         onfocus="this.style.borderColor='#d4af37'" onblur="this.style.borderColor='#cbd5e1'">
+                  <button type="button" onclick="window.toggleAdminPassVisibility()" 
+                          style="position:absolute; right:10px; top:50%; transform:translateY(-50%); background:none; border:none; color:#64748b; cursor:pointer; padding:6px; font-size:0.95rem;">
+                    <i class="fas fa-eye" id="pass-toggle-icon"></i>
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center; padding:0.8rem; font-weight:800; font-size:0.95rem; border-radius:10px; cursor:pointer;">
+                <i class="fas fa-shield-alt"></i> Masuk ke CMS Admin
+              </button>
+              <div style="margin-top:1.25rem; text-align:center;">
+                <a href="../index.html" style="font-size:0.84rem; color:#64748b; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+                  <i class="fas fa-arrow-left"></i> Kembali ke Beranda Utama
+                </a>
+              </div>
+            </form>
+          </div>
+        `;
+        document.body.appendChild(overlay);
+        setTimeout(() => {
+          const passInput = document.getElementById('admin-auth-pass');
+          if (passInput) passInput.focus();
+        }, 80);
+      }
+    }
+  }
 
-  // Run immediately on page load
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAdminAuth);
+    document.addEventListener('DOMContentLoaded', enforceAuth);
   } else {
-    initAdminAuth();
+    enforceAuth();
   }
 })();
