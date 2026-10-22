@@ -522,10 +522,16 @@ a {
   color: #cbd5e1;
 }
 
-.pillar-list i {
-  color: var(--accent-gold);
-  font-size: 1rem;
-  margin-top: 3px;
+.pillar-desc {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.vision-desc-text {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 /* Form Styles */
@@ -885,3 +891,157 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Solid White Section Variant (.section-white)
+   Applied to About, Vision & Mission, and Portfolios sections
+   ========================================================================== */
+.section-white {
+  background-color: #ffffff !important;
+  color: #1e293b;
+  position: relative;
+}
+
+/* Crisp divider between consecutive white sections */
+#vision-section.section-white,
+#portfolios-section.section-white {
+  border-top: 1px solid #f1f5f9;
+}
+
+/* Transition to dark fulfillment section */
+#fulfillment-section {
+  border-top: 3px solid var(--accent-gold);
+}
+
+/* Header elements in white sections */
+.section-white .section-badge {
+  color: #a16207;
+  background: rgba(212, 175, 55, 0.12);
+  padding: 0.3rem 0.95rem;
+  border-radius: 50px;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+}
+
+.section-white .section-title {
+  color: #070f1e;
+}
+
+.section-white .section-desc {
+  color: #475569;
+}
+
+/* Pillar Cards (Corporate Profile & Vision/Mission) */
+.section-white .pillar-card {
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  box-shadow: 0 10px 25px -5px rgba(7, 15, 30, 0.06), 0 4px 6px -4px rgba(7, 15, 30, 0.02);
+}
+
+.section-white .pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -4px rgba(212, 175, 55, 0.22), 0 6px 12px -4px rgba(7, 15, 30, 0.06);
+  border-color: var(--accent-gold);
+}
+
+.section-white .pillar-icon-box {
+  background: rgba(212, 175, 55, 0.12);
+  color: #b47b16;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.section-white .pillar-title {
+  color: #070f1e;
+}
+
+.section-white .pillar-desc,
+.section-white .pillar-card p {
+  color: #475569 !important;
+}
+
+.section-white .pillar-list li {
+  color: #334155;
+  font-weight: 500;
+}
+
+.section-white .pillar-list i {
+  color: #b47b16;
+}
+
+/* Portfolios Section in White */
+.section-white .portfolio-column {
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  box-shadow: 0 10px 25px -5px rgba(7, 15, 30, 0.06), 0 4px 6px -4px rgba(7, 15, 30, 0.02);
+}
+
+.section-white .portfolio-column:hover {
+  box-shadow: 0 16px 32px -4px rgba(212, 175, 55, 0.22), 0 6px 12px -4px rgba(7, 15, 30, 0.06);
+  border-color: var(--accent-gold);
+}
+
+.section-white .portfolio-header {
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.section-white .portfolio-category-badge {
+  background: rgba(212, 175, 55, 0.14);
+  color: #925c04;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.section-white .portfolio-category-title {
+  color: #070f1e;
+}
+
+.section-white .portfolio-category-desc {
+  color: #475569;
+}
+
+.section-white .product-card-b2b {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.section-white .product-card-b2b:hover {
+  background: #ffffff;
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.16);
+  transform: translateX(4px);
+}
+
+.section-white .product-name {
+  color: #0f172a;
+}
+
+.section-white .product-name i {
+  color: #b47b16;
+}
+
+.section-white .product-tag {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+  border: 1px solid rgba(2, 132, 199, 0.2);
+}
+
+.section-white .product-specs {
+  color: #64748b;
+}
+
+.section-white .product-specs strong {
+  color: #1e293b;
+}
+
+.section-white .export-assurance-badge {
+  background: #fefce8;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #1e293b;
+}
+
+.section-white .export-assurance-badge .badge-item {
+  color: #334155;
+}
+
+.section-white .export-assurance-badge .badge-item i {
+  color: #059669;
+}
+
