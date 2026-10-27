@@ -747,6 +747,50 @@ a {
   transform: translateX(4px);
 }
 
+.product-card-has-media {
+  display: flex;
+  gap: 1.15rem;
+  align-items: center;
+}
+
+.product-card-img-container {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: #0f172a;
+}
+
+.product-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card-b2b:hover .product-thumbnail-img {
+  transform: scale(1.08);
+}
+
+.product-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 576px) {
+  .product-card-has-media {
+    gap: 0.85rem;
+  }
+  .product-card-img-container {
+    width: 78px;
+    height: 78px;
+  }
+}
+
 .product-card-top {
   display: flex;
   justify-content: space-between;
@@ -1029,6 +1073,12 @@ a {
 
 .section-white .product-specs strong {
   color: #1e293b;
+}
+
+.section-white .product-card-img-container {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
 }
 
 .section-white .export-assurance-badge {
