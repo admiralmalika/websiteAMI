@@ -25,6 +25,8 @@
     },
     { "source": "/export", "destination": "/export.html" },
     { "source": "/edu", "destination": "/edu.html" },
+    { "source": "/assurance", "destination": "/assurance.html" },
+    { "source": "/trade-assurance", "destination": "/assurance.html" },
     { "source": "/agraria", "destination": "/export.html" },
     { "source": "/agraria.html", "destination": "/export.html" },
     { "source": "/jerman-education", "destination": "/edu.html" },

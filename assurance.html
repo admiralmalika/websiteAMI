@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>International Trade Assurance | PT Admiral Malika Internasional</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Assurance Page White Theme Styling */
+    .assurance-section-white {
+      background-color: #ffffff;
+      padding: 5rem 1.5rem 6rem 1.5rem;
+      position: relative;
+    }
+    .assurance-title-wrap {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 3.5rem auto;
+    }
+    .assurance-badge-gold {
+      display: inline-block;
+      color: #92400e;
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      padding: 0.35rem 1.2rem;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .assurance-heading-dark {
+      font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+      font-size: clamp(2rem, 3.6vw, 2.75rem);
+      font-weight: 800;
+      color: #070f1e;
+      line-height: 1.25;
+      margin: 0.6rem 0 1rem 0;
+      letter-spacing: 0.5px;
+    }
+    .assurance-sub-dark {
+      color: #475569;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+    .assurance-grid-white {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+    }
+    .assurance-card-white {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 2.4rem 1.9rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .assurance-card-white:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(212, 175, 55, 0.18);
+      border-color: var(--accent-gold);
+    }
+    .assurance-card-stripe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #d4af37, #f7df79);
+    }
+    .assurance-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(212, 175, 55, 0.14);
+      color: #b45309;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      margin-bottom: 1.4rem;
+    }
+    .assurance-card-title {
+      font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #070f1e;
+      margin-bottom: 0.85rem;
+      line-height: 1.35;
+      letter-spacing: 0.3px;
+    }
+    .assurance-card-desc {
+      font-size: 0.93rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .assurance-cta-banner {
+      background: linear-gradient(135deg, #0a192f, #061121);
+      border: 1px solid var(--border-gold);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      text-align: center;
+      max-width: 1000px;
+      margin: 4.5rem auto 0 auto;
+      box-shadow: var(--shadow-glow);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-badge">AMI</div>
+        <div>
+          <div class="brand-name">ADMIRAL MALIKA</div>
+          <div class="brand-subtitle">PT. ADMIRAL MALIKA INTERNASIONAL</div>
+        </div>
+      </a>
+      <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="index.html#portfolios-section" class="nav-link">Produk</a></li>
+        <li><a href="assurance.html" class="nav-link active">Assurance</a></li>
+        <li><a href="export.html" class="nav-link">Ekspor Agraria</a></li>
+        <li><a href="edu.html" class="nav-link">Pendidikan Jerman</a></li>
+        <li><a href="contact.html" class="nav-link">Kontak</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="admin/index.html" onclick="return handleCmsNavClick(event)" class="btn btn-outline btn-sm"><i class="fas fa-user-shield"></i> CMS Admin</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section style="background: linear-gradient(135deg, #0a192f, #061121); color:#fff; padding: 4.5rem 2rem; text-align: center; border-bottom: 3px solid var(--accent-gold);">
+    <div style="max-width: 860px; margin: 0 auto;">
+      <span class="hero-tag">ASSURANCE & STANDARDS</span>
+      <h1 style="font-size: 2.6rem; font-weight: 800; margin: 1rem 0; letter-spacing: 0.5px;">International Trade Assurance</h1>
+      <p style="color: #94a3b8; font-size: 1.1rem; max-width: 720px; margin: 0 auto; line-height: 1.6;">
+        Standardisasi kepatuhan ekspor resmi, proteksi kargo lintas samudra, serta transparansi rantai pasok global PT. Admiral Malika Internasional.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Section: Global Supply Chain (With White Background) -->
+  <section class="assurance-section-white" id="fulfillment-section">
+    <div class="assurance-title-wrap">
+      <span class="assurance-badge-gold">INTERNATIONAL TRADE ASSURANCE</span>
+      <h2 class="assurance-heading-dark">GLOBAL SUPPLY CHAIN, COMPLIANCE &amp; EXPORT FULFILLMENT</h2>
+      <p class="assurance-sub-dark">
+        Every shipment dispatched under PT. Admiral Malika Internasional is governed by rigorous trade protocols, statutory export compliance, and trans-oceanic transit protection.
+      </p>
+    </div>
+
+    <div class="assurance-grid-white">
+      <!-- Card 1: Incoterms & Loading Ports -->
+      <div class="assurance-card-white">
+        <div class="assurance-card-stripe"></div>
+        <div class="assurance-icon-box"><i class="fas fa-anchor"></i></div>
+        <h3 class="assurance-card-title">INCOTERMS &amp; LOADING PORTS</h3>
+        <p class="assurance-card-desc">
+          Flexible delivery terms under ICC Incoterms® 2020 (FOB, CIF, CFR). Primary ocean dispatches originate from Indonesia's premier deep-water hubs: Tanjung Priok Port (Jakarta, IDJKT) and Tanjung Perak Port (Surabaya, IDSUB).
+        </p>
+      </div>
+
+      <!-- Card 2: Statutory Documentation & Compliance -->
+      <div class="assurance-card-white">
+        <div class="assurance-card-stripe"></div>
+        <div class="assurance-icon-box"><i class="fas fa-file-shield"></i></div>
+        <h3 class="assurance-card-title">STATUTORY DOCUMENTATION &amp; COMPLIANCE</h3>
+        <p class="assurance-card-desc">
+          Full documentation guarantee: Official Certificate of Origin (COO / Form A, AK, IJEPA), Agricultural Quarantine Phytosanitary Certificates, Fumigation (AQIS standard), Commercial Invoices, and Ocean Bills of Lading.
+        </p>
+      </div>
+
+      <!-- Card 3: Export-Grade Protective Packaging -->
+      <div class="assurance-card-white">
+        <div class="assurance-card-stripe"></div>
+        <div class="assurance-icon-box"><i class="fas fa-box-open"></i></div>
+        <h3 class="assurance-card-title">EXPORT-GRADE PROTECTIVE PACKAGING</h3>
+        <p class="assurance-card-desc">
+          Engineered packaging preserving cargo integrity: Food-grade vacuum pouches, GrainPro hermetic liners, multi-wall moisture-barrier bags, container desiccant dry-bags, and reinforced OEM master cartons.
+        </p>
+      </div>
+
+      <!-- Card 4: Carrier Relations & Transit Tracking -->
+      <div class="assurance-card-white">
+        <div class="assurance-card-stripe"></div>
+        <div class="assurance-icon-box"><i class="fas fa-ship"></i></div>
+        <h3 class="assurance-card-title">CARRIER RELATIONS &amp; TRANSIT TRACKING</h3>
+        <p class="assurance-card-desc">
+          Direct volume partnerships with premier international container carriers (Maersk, MSC, CMA CGM, Hapag-Lloyd, ONE) ensuring guaranteed space allocations, live GPS tracking, and end-to-end voyage reliability.
+        </p>
+      </div>
+    </div>
+
+    <!-- B2B Inquiry CTA -->
+    <div class="assurance-cta-banner">
+      <h3 style="color: #fff; font-size: 1.6rem; font-weight: 800; margin-bottom: 0.8rem;">
+        Butuh Penawaran Ekspor Resmi atau Spesifikasi Sertifikasi?
+      </h3>
+      <p style="color: #94a3b8; font-size: 1rem; max-width: 680px; margin: 0 auto 1.8rem auto; line-height: 1.6;">
+        Tim eksekutif logistik dan perdagangan internasional kami siap merespons RFQ, pengiriman sampel komoditas, dan audit dokumen ekspor.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html#contact-section" class="btn btn-gold">
+          <i class="fas fa-file-invoice-dollar"></i> Ajukan Inkuiri Ekspor (RFQ)
+        </a>
+        <a href="https://wa.me/6281118893389?text=Halo%20PT.%20Admiral%20Malika%20Internasional%2C%20saya%20tertarik%20dengan%20informasi%20layanan%20Trade%20Assurance." 
+           target="_blank" rel="noopener noreferrer" class="btn" style="background:#25D366; color:#fff; display:inline-flex; align-items:center; gap:8px;">
+          <i class="fab fa-whatsapp"></i> Chat WhatsApp Hotline
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <div class="brand-logo" style="margin-bottom: 1rem;">
+          <div class="logo-badge">AMI</div>
+          <div style="color: #fff; font-weight: 800; font-size: 1.2rem;">PT. ADMIRAL MALIKA INTERNASIONAL</div>
+        </div>
+        <p style="color: #94a3b8; font-size: 0.9rem; max-width: 360px;">
+          Entitas induk korporat agregator dan eksportir komoditas Indonesia terpercaya untuk pasar global.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigasi Utama</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="index.html#portfolios-section">Produk</a></li>
+          <li><a href="assurance.html">Trade Assurance</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak Resmi Korporat</h4>
+        <ul class="footer-contact-list">
+          <li><i class="fas fa-envelope" style="color:var(--accent-gold); margin-right:8px;"></i> info@admiralmalika.com</li>
+          <li><i class="fas fa-envelope" style="color:var(--accent-gold); margin-right:8px;"></i> admin@admiralmalika.com</li>
+          <li><i class="fab fa-whatsapp" style="color:var(--accent-gold); margin-right:8px;"></i> +6281118893389</li>
+          <li><i class="fas fa-map-marker-alt" style="color:var(--accent-gold); margin-right:8px;"></i> Indonesia (HQ) &amp; Global Network</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 PT. Admiral Malika Internasional. All Rights Reserved.</div>
+      <div>Official Corporate Holding &amp; Global Trade Assurance Portal.</div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Direct Chat Widget -->
+  <a href="https://wa.me/6281118893389?text=Halo%20PT.%20Admiral%20Malika%20Internasional%2C%20saya%20tertarik%20dengan%20informasi%20layanan%20Trade%20Assurance." 
+     target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Chat WhatsApp PT. Admiral Malika Internasional">
+    <i class="fab fa-whatsapp"></i>
+    <span>Chat WhatsApp</span>
+  </a>
+
+  <script src="js/cms.js"></script>
+</body>
+</html>
