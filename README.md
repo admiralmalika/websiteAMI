@@ -9,7 +9,7 @@ Platform digital untuk **Admiral Malika**, terdiri dari:
 ---
 
 ## 📬 Kontak Resmi
-- **Email**: `hary.kristianto.info@gmail.com` | `malikamannacenter@gmail.com`
+- **Email**: `info@admiralmalika.com` | `admin@admiralmalika.com`
 - **WhatsApp**: `+6281118893389`
 
 ---

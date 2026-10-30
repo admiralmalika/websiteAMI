@@ -275,8 +275,8 @@ Every public contact and RFQ form operates on a dual-dispatch architecture:
                │       - Opens WhatsApp API directly to Executive Hotline (+6281118893389)
                │
                └──► 3. Direct Email Contact Points:
-                       - Official Desks: hary.kristianto.info@gmail.com
-                       - Secondary Desk: malikamannacenter@gmail.com
+                       - Official Desks: info@admiralmalika.com
+                       - Secondary Desk: admin@admiralmalika.com
 ```
 
 ---
@@ -325,8 +325,8 @@ Zero external dependencies required. Built on Node.js native `http`, `fs`, and `
 | Channel | Details |
 |---|---|
 | **Parent Corporate Holding** | PT. Admiral Malika Internasional |
-| **Primary Executive Email** | `hary.kristianto.info@gmail.com` |
-| **Secondary Corporate Email** | `malikamannacenter@gmail.com` |
+| **Primary Executive Email** | `info@admiralmalika.com` |
+| **Secondary Corporate Email** | `admin@admiralmalika.com` |
 | **WhatsApp Executive Hotline** | `+6281118893389` |
 | **Global Operational Hubs** | Indonesia (HQ) & Germany Network |
 | **Production Domains** | `admiralmalika.com` · `export.admiralmalika.com` · `edu.admiralmalika.com` |

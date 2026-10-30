@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
         email: email,
         _replyto: email,
         _subject: `[Website Contact] ${pillar} - ${name}`,
-        _cc: "malikamannacenter@gmail.com",
+        _cc: "admin@admiralmalika.com",
         _template: "table",
         _captcha: "false",
         "Nama Pengirim": name,
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const waUrl = `https://wa.me/6281118893389?text=${encodeURIComponent(waText)}`;
 
       try {
-        const response = await fetch("https://formsubmit.co/ajax/hary.kristianto.info@gmail.com", {
+        const response = await fetch("https://formsubmit.co/ajax/info@admiralmalika.com", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <i class="fas fa-check-circle" style="color:#16a34a; font-size:1.5rem; margin-top:2px;"></i>
                 <div style="flex:1;">
                   <strong style="color:#15803d; font-size:1rem; display:block; margin-bottom:4px;">Pesan Anda Berhasil Terkirim!</strong>
-                  <p style="margin:0 0 10px 0; font-size:0.9rem; line-height:1.5; color:#1e293b;">Pesan Anda telah dikirimkan ke email manajemen PT. Admiral Malika Internasional (<strong>hary.kristianto.info@gmail.com</strong> & <strong>malikamannacenter@gmail.com</strong>). Tim kami akan segera merespons.</p>
+                  <p style="margin:0 0 10px 0; font-size:0.9rem; line-height:1.5; color:#1e293b;">Pesan Anda telah dikirimkan ke email manajemen PT. Admiral Malika Internasional (<strong>info@admiralmalika.com</strong> & <strong>admin@admiralmalika.com</strong>). Tim kami akan segera merespons.</p>
                   <a href="${waUrl}" target="_blank" class="btn btn-sm" style="background:#25D366; color:#fff; display:inline-flex; align-items:center; gap:6px; padding:0.5rem 0.9rem; border-radius:6px; text-decoration:none; font-weight:600;"><i class="fab fa-whatsapp"></i> Teruskan ke WhatsApp Langsung (Opsional)</a>
                 </div>
               </div>
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (err) {
         console.error("Inquiry form submission error:", err);
 
-        const mailtoUrl = `mailto:hary.kristianto.info@gmail.com?cc=malikamannacenter@gmail.com&subject=${encodeURIComponent('[Website Contact] ' + pillar + ' - ' + name)}&body=${encodeURIComponent(
+        const mailtoUrl = `mailto:info@admiralmalika.com?cc=admin@admiralmalika.com&subject=${encodeURIComponent('[Website Contact] ' + pillar + ' - ' + name)}&body=${encodeURIComponent(
           'Halo Tim Admiral Malika,\n\n' +
           'Nama: ' + name + '\n' +
           'Email: ' + email + '\n' +
