@@ -1023,6 +1023,33 @@ a {
   color: #b47b16;
 }
 
+/* Fulfillment Cards in Solid White Section */
+.section-white .fulfillment-card {
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  box-shadow: 0 10px 25px -5px rgba(7, 15, 30, 0.06), 0 4px 6px -4px rgba(7, 15, 30, 0.02);
+}
+
+.section-white .fulfillment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px -4px rgba(212, 175, 55, 0.22), 0 6px 12px -4px rgba(7, 15, 30, 0.06);
+  border-color: var(--accent-gold);
+}
+
+.section-white .fulfillment-icon {
+  background: rgba(212, 175, 55, 0.12);
+  color: #b47b16;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.section-white .fulfillment-card-title {
+  color: #070f1e;
+}
+
+.section-white .fulfillment-card-desc {
+  color: #475569 !important;
+}
+
 /* Portfolios Section in White */
 .section-white .portfolio-column {
   background: #ffffff;
