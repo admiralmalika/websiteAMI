@@ -37,10 +37,10 @@ admiral-malika/
 ├── ARCHITECTURAL_DOCUMENTATION.md   # Comprehensive technical & architectural specifications
 ├── README.md                        # Quickstart, ecosystem summary, and deployment guide
 ├── index.html                       # Holding Corporate Profile (Panoramic Banner & Trade Aggregator)
-├── export.html                      # Agricultural Export Division Portal (B2B Full English)
-├── edu.html                         # Germany Education & Career Division Portal (Trilingual)
-├── about.html                       # Corporate Profile & Values (Indonesian)
+├── assurance.html                   # International Trade Assurance & Compliance Protocols
+├── about.html                       # Corporate Profile & Values (Executive Theme)
 ├── contact.html                     # Corporate Contact, Direct Channels & RFQ Lead Form
+├── export.html                      # Agricultural Export Division Portal (B2B Full English)
 ├── server.js                        # Native Node.js zero-dependency HTTP server (Port 8080)
 ├── vercel.json                      # Edge deployment configuration with host & path rewrites
 │
@@ -48,7 +48,6 @@ admiral-malika/
 │   ├── index.html                   # Admin Dashboard Overview & Real-time Metrics
 │   ├── content-editor.html          # Hero Banner & Headline CMS Editor
 │   ├── agraria-admin.html           # Agricultural Commodity CRUD Management
-│   ├── education-admin.html         # German Academic & Ausbildung Program Manager
 │   └── inquiries.html               # B2B RFQ & Contact Leads Inbox with WhatsApp Direct
 │
 ├── css/                             # Stylesheet Architecture
@@ -108,22 +107,14 @@ admiral-malika/
   - Technical specification tables for every commodity.
   - Dedicated B2B RFQ Form with target port, estimated tonnage, and Incoterms (FOB/CIF).
 
-### 🎓 3. Germany Education & Career Division (`edu.admiralmalika.com`)
-- **Primary Role**: Pathway consulting, vocational training placements, university admissions, and language training in Germany.
-- **Languages**: **Trilingual** (Indonesian `ID`, English `EN`, German `DE`).
-- **Core Educational Tracks**:
-  1. **Ausbildung (Paid Dual Vocational Training)**:
-     - Monthly stipend: €1,000 - €1,400 / month.
-     - 100% tuition-free (employer-sponsored).
-     - Sectors: Nursing & Healthcare, IT & Software, Mechatronics/Engineering, Hospitality/Hotel Management.
-  2. **Studienkolleg & Public Universities (Bachelor / Master)**:
-     - Preparatory courses: T-Kurs (Tech/Math), M-Kurs (Medicine/Bio), W-Kurs (Business/Economics), G-Kurs (Humanities).
-     - Full support: APS certification, blocked account setup, visa processing, accommodation finding.
-  3. **Admiral German Language Academy**:
-     - Intensive courses: A1, A2, B1, B2, C1.
-     - Native and Goethe-certified instructors; Telc/Goethe exam preparation.
-  4. **Interactive Pathway Eligibility Calculator**:
-     - Client-side decision engine matching applicant education level (SMA/SMK, D3/D4, S1/S2) and German proficiency (A0, A1, B1/B2) with tailored recommendations.
+### 🛡️ 3. International Trade Assurance (`assurance.html`)
+- **Primary Role**: Standardized trans-oceanic cargo protection, statutory export compliance, and direct carrier logistics alliances governing all dispatches from PT. Admiral Malika Internasional.
+- **Languages**: **Trilingual** (English `EN`, Indonesian `ID`, German `DE`).
+- **Core Fulfillment Protocols**:
+  1. **Incoterms & Loading Ports**: ICC Incoterms® 2020 (FOB, CIF, CFR) with ocean departures from Tanjung Priok Port (Jakarta) and Tanjung Perak Port (Surabaya).
+  2. **Statutory Documentation & Compliance**: Official COO (Form A, AK, IJEPA), Phytosanitary Certificates, AQIS Fumigation, and Commercial Invoices.
+  3. **Export-Grade Protective Packaging**: Food-grade vacuum pouches, GrainPro hermetic liners, moisture-barrier multi-wall bags, and ocean cargo desiccants.
+  4. **Carrier Relations & Transit Tracking**: Tier-1 container liner partnerships (Maersk, MSC, CMA CGM, Hapag-Lloyd, ONE) with guaranteed space and live tracking.
 
 ---
 

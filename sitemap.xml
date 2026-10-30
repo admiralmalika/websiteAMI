@@ -13,18 +13,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- German Education & Career Division -->
-  <url>
-    <loc>https://edu.admiralmalika.com/</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://edu.admiralmalika.com/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://edu.admiralmalika.com/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="de-DE" href="https://edu.admiralmalika.com/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://edu.admiralmalika.com/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://edu.admiralmalika.com/?lang=id"/>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
 
   <!-- Agricultural Commodity Export Division -->
   <url>

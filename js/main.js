@@ -33,27 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `).join('');
     }
-
-    // Render Education Programs
-    const eduContainer = document.getElementById('edu-program-grid');
-    if (eduContainer && cms.education) {
-      eduContainer.innerHTML = cms.education.map(item => `
-        <div class="pillar-card">
-          <div class="pillar-top-stripe stripe-edu"></div>
-          <div class="pillar-icon-box icon-edu">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <h3 class="pillar-title">${item.title}</h3>
-          <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 1rem;">${item.description}</p>
-          <ul class="pillar-list">
-            ${item.details.map(d => `<li><i class="fas fa-check-circle"></i> ${d}</li>`).join('')}
-          </ul>
-          <a href="contact.html?subject=${encodeURIComponent('Konsultasi: ' + item.title)}" class="btn btn-gold btn-sm" style="margin-top: auto;">
-            <i class="fab fa-whatsapp"></i> Konsultasi Program
-          </a>
-        </div>
-      `).join('');
-    }
   }
 
   // Handle Form Submissions

@@ -42,30 +42,7 @@ const DEFAULT_CMS_DATA = {
       badge: 'Komoditas Industri'
     }
   ],
-  education: [
-    {
-      id: 'ed-1',
-      title: 'Program Sekolah Kejuruan / Ausbildung (Setara D3)',
-      partner: '',
-      description: 'Program persiapan dan penyaluran lulusan SMA/SMK/Diploma untuk magang kejuruan berbayar di Jerman.',
-      details: [
-        'Uang saku bulanan €1.000 - €1.400 / bulan di Jerman',
-        'Persiapan intensif Bahasa Jerman (A1 - B2)',
-        'Bidang: Teknik, Hospitality, Nursing, Logistics'
-      ]
-    },
-    {
-      id: 'ed-2',
-      title: 'Program Duales Studium (Setara D4 / Applied Bachelor)',
-      partner: '',
-      description: 'Program pendidikan tinggi terintegrasi (Kuliah D4 Terapan + Kerja Bergaji) di Universitas & Perusahaan Jerman.',
-      details: [
-        'Gaji kerja tahunan & bebas biaya kuliah di Jerman',
-        'Gelar Bachelor of Engineering / Science resmi Jerman',
-        'Persiapan Bahasa Jerman & Mentoring Akademik'
-      ]
-    }
-  ],
+  education: [],
   inquiries: []
 };
 
@@ -84,12 +61,8 @@ function getCMSData() {
   
   try {
     let parsed = JSON.parse(data);
-    if (parsed.education) {
-      parsed.education.forEach(item => {
-        item.partner = '';
-      });
-      localStorage.setItem(CMS_STORAGE_KEY, JSON.stringify(parsed));
-    }
+    parsed.education = [];
+    localStorage.setItem(CMS_STORAGE_KEY, JSON.stringify(parsed));
     return parsed;
   } catch (e) {
     localStorage.setItem(CMS_STORAGE_KEY, JSON.stringify(DEFAULT_CMS_DATA));

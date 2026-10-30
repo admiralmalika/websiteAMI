@@ -21,15 +21,15 @@
           "value": "edu.admiralmalika.com"
         }
       ],
-      "destination": "/edu.html"
+      "destination": "/index.html"
     },
     { "source": "/export", "destination": "/export.html" },
-    { "source": "/edu", "destination": "/edu.html" },
+    { "source": "/edu", "destination": "/index.html" },
     { "source": "/assurance", "destination": "/assurance.html" },
     { "source": "/trade-assurance", "destination": "/assurance.html" },
     { "source": "/agraria", "destination": "/export.html" },
     { "source": "/agraria.html", "destination": "/export.html" },
-    { "source": "/jerman-education", "destination": "/edu.html" },
-    { "source": "/jerman-education.html", "destination": "/edu.html" }
+    { "source": "/jerman-education", "destination": "/index.html" },
+    { "source": "/jerman-education.html", "destination": "/index.html" }
   ]
 }
