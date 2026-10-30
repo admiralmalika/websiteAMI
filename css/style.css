@@ -959,13 +959,12 @@ a {
 }
 
 /* Crisp divider between consecutive white sections */
-#vision-section.section-white,
 #portfolios-section.section-white {
   border-top: 1px solid #f1f5f9;
 }
 
-/* Transition to dark fulfillment section */
-#fulfillment-section {
+/* Transition to dark contact section */
+#contact-section {
   border-top: 3px solid var(--accent-gold);
 }
 
