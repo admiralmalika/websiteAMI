@@ -13,7 +13,6 @@
     <priority>1.0</priority>
   </url>
 
-
   <!-- Agricultural Commodity Export Division -->
   <url>
     <loc>https://export.admiralmalika.com/</loc>
@@ -31,22 +30,6 @@
   <url>
     <loc>https://www.admiralmalika.com/contact.html</loc>
     <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Corporate About Us -->
-  <url>
-    <loc>https://www.admiralmalika.com/about.html</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- International Trade Assurance -->
-  <url>
-    <loc>https://www.admiralmalika.com/assurance.html</loc>
-    <lastmod>2026-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

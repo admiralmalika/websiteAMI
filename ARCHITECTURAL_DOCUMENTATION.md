@@ -37,8 +37,8 @@ admiral-malika/
 ├── ARCHITECTURAL_DOCUMENTATION.md   # Comprehensive technical & architectural specifications
 ├── README.md                        # Quickstart, ecosystem summary, and deployment guide
 ├── index.html                       # Holding Corporate Profile (Panoramic Banner & Trade Aggregator)
-├── assurance.html                   # International Trade Assurance & Compliance Protocols
-├── about.html                       # Corporate Profile & Values (Executive Theme)
+
+
 ├── contact.html                     # Corporate Contact, Direct Channels & RFQ Lead Form
 ├── export.html                      # Agricultural Export Division Portal (B2B Full English)
 ├── server.js                        # Native Node.js zero-dependency HTTP server (Port 8080)
@@ -107,16 +107,6 @@ admiral-malika/
   - Technical specification tables for every commodity.
   - Dedicated B2B RFQ Form with target port, estimated tonnage, and Incoterms (FOB/CIF).
 
-### 🛡️ 3. International Trade Assurance (`assurance.html`)
-- **Primary Role**: Standardized trans-oceanic cargo protection, statutory export compliance, and direct carrier logistics alliances governing all dispatches from PT. Admiral Malika Internasional.
-- **Languages**: **Trilingual** (English `EN`, Indonesian `ID`, German `DE`).
-- **Core Fulfillment Protocols**:
-  1. **Incoterms & Loading Ports**: ICC Incoterms® 2020 (FOB, CIF, CFR) with ocean departures from Tanjung Priok Port (Jakarta) and Tanjung Perak Port (Surabaya).
-  2. **Statutory Documentation & Compliance**: Official COO (Form A, AK, IJEPA), Phytosanitary Certificates, AQIS Fumigation, and Commercial Invoices.
-  3. **Export-Grade Protective Packaging**: Food-grade vacuum pouches, GrainPro hermetic liners, moisture-barrier multi-wall bags, and ocean cargo desiccants.
-  4. **Carrier Relations & Transit Tracking**: Tier-1 container liner partnerships (Maersk, MSC, CMA CGM, Hapag-Lloyd, ONE) with guaranteed space and live tracking.
-
----
 
 ## 4. Administrative CMS Portal Architecture
 
@@ -321,3 +311,4 @@ Zero external dependencies required. Built on Node.js native `http`, `fs`, and `
 | **WhatsApp Executive Hotline** | `+6281118893389` |
 | **Global Operational Hubs** | Indonesia (HQ) & Germany Network |
 | **Production Domains** | `admiralmalika.com` · `export.admiralmalika.com` · `edu.admiralmalika.com` |
+
