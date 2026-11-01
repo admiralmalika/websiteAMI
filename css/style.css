@@ -959,6 +959,7 @@ a {
 }
 
 /* Crisp divider between consecutive white sections */
+#credentials-section.section-white,
 #portfolios-section.section-white {
   border-top: 1px solid #f1f5f9;
 }
