@@ -33,4 +33,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Dedicated Commodity Portfolios Page -->
+  <url>
+    <loc>https://www.admiralmalika.com/produk.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.admiralmalika.com/produk.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.admiralmalika.com/produk.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.admiralmalika.com/produk.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://www.admiralmalika.com/produk.html?lang=id"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
