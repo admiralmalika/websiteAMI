@@ -103,6 +103,28 @@ a {
   white-space: nowrap;
 }
 
+
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--accent-gold);
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-toggle:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--accent-gold);
+  color: #ffffff;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -932,6 +954,26 @@ a {
 }
 
 @media (max-width: 768px) {
+  .mobile-toggle {
+    display: inline-flex;
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #070f1e;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    border-bottom: 2px solid var(--accent-gold);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+  .nav-menu.show {
+    display: flex;
+  }
   .portfolios-grid {
     grid-template-columns: 1fr;
   }
