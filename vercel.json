@@ -25,6 +25,8 @@
     },
     { "source": "/produk", "destination": "/produk.html" },
     { "source": "/products", "destination": "/produk.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/kontak", "destination": "/contact.html" },
     { "source": "/export", "destination": "/export.html" },
     { "source": "/edu", "destination": "/index.html" },
     { "source": "/agraria", "destination": "/export.html" },

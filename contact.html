@@ -6,13 +6,20 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>Hubungi Kami | PT Admiral Malika</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Hubungi Kami &amp; Kredensial Owner | PT. Admiral Malika Internasional</title>
+  
+  <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <header class="header">
     <div class="nav-container">
       <a href="index.html" class="brand-logo">
@@ -22,191 +29,264 @@
           <div class="brand-subtitle">PT. ADMIRAL MALIKA INTERNASIONAL</div>
         </div>
       </a>
+
       <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Beranda</a></li>
-        <li><a href="produk.html" class="nav-link">Produk</a></li>
-        <li><a href="contact.html" class="nav-link active">Kontak</a></li>
+        <li><a href="index.html" class="nav-link" data-i18n="nav_home">Beranda</a></li>
+        <li><a href="produk.html" class="nav-link" data-i18n="nav_portfolios">Produk</a></li>
+        <li><a href="contact.html" class="nav-link active" data-i18n="nav_contact">Kontak</a></li>
       </ul>
+
       <div class="nav-actions">
-        <a href="admin/index.html" onclick="return handleCmsNavClick(event)" class="btn btn-outline btn-sm"><i class="fas fa-user-shield"></i> CMS Admin</a>
+        <!-- Banner Language Switcher Buttons (EN | ID | DE) -->
+        <div class="lang-selector-container">
+          <button class="lang-btn" onclick="setAppLang('en')">🇬🇧 EN</button>
+          <button class="lang-btn active" onclick="setAppLang('id')">🇮🇩 ID</button>
+          <button class="lang-btn" onclick="setAppLang('de')">🇩🇪 DE</button>
+        </div>
+
+        <a href="admin/index.html" onclick="return handleCmsNavClick(event)" class="btn btn-outline btn-sm"><i class="fas fa-user-shield"></i> <span data-i18n="btn_cms">CMS Admin</span></a>
       </div>
     </div>
   </header>
 
-  <section style="background: linear-gradient(135deg, #0a192f, #061121); color:#fff; padding: 4rem 2rem; text-align: center;">
-    <div style="max-width: 800px; margin: 0 auto;">
-      <span class="hero-tag">GET IN TOUCH</span>
-      <h1 style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0;">Hubungi Tim Admiral Malika</h1>
-      <p style="color: #94a3b8; font-size: 1.1rem;">Kami siap melayani kebutuhan informasi ekspor komoditas agraria dan kemitraan perdagangan internasional.</p>
-    </div>
-  </section>
-
-    <!-- Owner Credentials Section (Institusi Pendidikan & Pemerintah Jerman) -->
-  <section style="background: #ffffff; padding: 3.5rem 1.5rem 1.5rem 1.5rem;">
-    <div style="max-width: 1100px; margin: 0 auto; background: linear-gradient(135deg, #0b1a30 0%, #070f1e 100%); border: 1px solid rgba(212, 175, 55, 0.45); border-radius: 20px; padding: 2.5rem 2.2rem; color: #fff; box-shadow: 0 16px 36px rgba(7, 15, 30, 0.12); position: relative; overflow: hidden;">
-      <div style="position: absolute; right: -25px; top: -25px; width: 180px; height: 180px; background: radial-gradient(circle, rgba(212,175,55,0.18) 0%, transparent 70%); pointer-events: none;"></div>
-
-      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(212, 175, 55, 0.25); padding-bottom: 1.2rem;">
-        <div>
-          <span style="display: inline-block; background: rgba(212, 175, 55, 0.18); color: #f59e0b; border: 1px solid rgba(212, 175, 55, 0.4); padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;">
-            PROFIL &amp; KREDENSIAL OWNER
-          </span>
-          <h2 style="font-family: var(--font-heading); font-size: 1.85rem; color: #fff; margin: 0;">
-            Pengalaman Luas di Institusi Pendidikan &amp; Pemerintah Jerman
-          </h2>
-        </div>
-        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 0.45rem 0.85rem; border-radius: 8px; font-size: 0.85rem; color: #e2e8f0;">
-            <i class="fas fa-landmark" style="color: #d4af37;"></i> Institusi Pemerintah Jerman
-          </span>
-          <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 0.45rem 0.85rem; border-radius: 8px; font-size: 0.85rem; color: #e2e8f0;">
-            <i class="fas fa-graduation-cap" style="color: #60a5fa;"></i> Pendidikan Tinggi &amp; Vokasi
-          </span>
-        </div>
-      </div>
-
-      <p style="color: #cbd5e1; font-size: 1.02rem; line-height: 1.75; margin-bottom: 2rem;">
-        Sebagai pendiri dan pemilik PT. Admiral Malika Internasional, kepemimpinan korporat kami ditopang oleh pengalaman profesional bertahun-tahun yang bekerja secara langsung di dalam ekosistem institusi pendidikan tinggi, kejuruan, dan badan pemerintahan di Republik Federal Jerman. Hubungan institusional yang kokoh ini memberikan jaminan akuntabilitas, standar mutu tinggi, dan transparansi terpercaya bagi seluruh mitra bisnis dan klien kami.
+  <!-- Hero Header Section -->
+  <section class="hero-section" style="padding: 4.5rem 1.5rem 3.5rem 1.5rem; text-align: center; border-bottom: 2px solid var(--accent-gold); background: radial-gradient(circle at 50% 25%, #0d1f3d 0%, var(--primary-navy) 75%); position: relative;">
+    <div style="max-width: 900px; margin: 0 auto; position: relative; z-index: 2;">
+      <span class="section-badge" data-i18n="contact_hero_badge"><i class="fas fa-handshake"></i> KREDENSIAL KORPORAT &amp; KONTAK RESMI</span>
+      <h1 class="hero-title" style="font-size: clamp(2.2rem, 4vw, 3.2rem); font-family: var(--font-heading); color: #fff; margin: 0.8rem 0 1rem 0; line-height: 1.25;">
+        <span data-i18n="contact_hero_title1">Kredensial Owner &amp;</span> <span class="gold-text" data-i18n="contact_hero_title2">Kontak Resmi PT. Admiral Malika</span>
+      </h1>
+      <p class="hero-subtitle" style="max-width: 780px; margin: 0 auto 1.8rem auto; color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;" data-i18n="contact_hero_desc">
+        Membangun jembatan kepercayaan internasional antara Indonesia dan Jerman, diperkuat oleh rekam jejak kepemimpinan di institusi pendidikan tinggi, vokasi, dan badan pemerintahan Jerman.
       </p>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 175, 55, 0.25); border-radius: 14px; padding: 1.5rem;">
-          <div style="width: 44px; height: 44px; background: rgba(212, 175, 55, 0.15); color: #d4af37; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 1rem;">
-            <i class="fas fa-building-columns"></i>
-          </div>
-          <h4 style="font-size: 1.1rem; color: #f8fafc; margin-bottom: 0.5rem; font-weight: 700;">Kerjasama Otoritas &amp; Pemerintah Jerman</h4>
-          <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin: 0;">
-            Rekam jejak teruji dalam koordinasi program bilateral, kementerian resmi, badan ketenagakerjaan federal Jerman (Bundesagentur für Arbeit), serta kepatuhan regulasi institusional standar Eropa.
-          </p>
-        </div>
-
-        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(96, 165, 250, 0.25); border-radius: 14px; padding: 1.5rem;">
-          <div style="width: 44px; height: 44px; background: rgba(96, 165, 250, 0.15); color: #60a5fa; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 1rem;">
-            <i class="fas fa-user-graduate"></i>
-          </div>
-          <h4 style="font-size: 1.1rem; color: #f8fafc; margin-bottom: 0.5rem; font-weight: 700;">Institusi Pendidikan Tinggi &amp; Sistem Vokasi</h4>
-          <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin: 0;">
-            Kemitraan strategis bersama universitas terkemuka, Hochschule, dan sistem vokasi Jerman (*Duales Studium* &amp; *Ausbildung*), mendorong standardisasi kompetensi akademik dan kejuruan internasional.
-          </p>
-        </div>
-
-        <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(52, 211, 153, 0.25); border-radius: 14px; padding: 1.5rem;">
-          <div style="width: 44px; height: 44px; background: rgba(52, 211, 153, 0.15); color: #34d399; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 1rem;">
-            <i class="fas fa-handshake-angle"></i>
-          </div>
-          <h4 style="font-size: 1.1rem; color: #f8fafc; margin-bottom: 0.5rem; font-weight: 700;">Standar Akuntabilitas &amp; Etika Jerman</h4>
-          <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin: 0;">
-            Menerapkan presisi tinggi, tata kelola akuntabel, dan keandalan kerja Jerman (*Deutsche Zuverlässigkeit*) ke dalam operasional bisnis korporat serta kemitraan lintas benua.
-          </p>
-        </div>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="#owner-credentials" class="btn btn-gold btn-sm"><i class="fas fa-award"></i> <span data-i18n="btn_jump_cred">Lihat Kredensial Owner</span></a>
+        <a href="#contact-channels" class="btn btn-blue btn-sm"><i class="fas fa-envelope"></i> <span data-i18n="btn_jump_contact">Saluran Kontak Resmi</span></a>
       </div>
     </div>
   </section>
 
-  <section class="section" style="padding-top: 2rem;">
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem;">
-      <!-- Contact Cards -->
-      <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-        <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 1.2rem;">
-          <div style="width: 50px; height: 50px; background: rgba(5, 150, 105, 0.15); color: #059669; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-            <i class="fab fa-whatsapp"></i>
-          </div>
+  <!-- SECTION 1: KREDENSIAL & PROFIL OWNER (Institusi Pendidikan & Pemerintah Jerman) -->
+  <section class="section section-white" id="owner-credentials" style="border-bottom: 1px solid #e2e8f0;">
+    <div class="section-title-wrap">
+      <span class="section-badge" data-i18n="owner_sec_badge"><i class="fas fa-certificate"></i> PROFIL &amp; KREDENSIAL PEMILIK (OWNER)</span>
+      <h2 class="section-title" data-i18n="owner_sec_title">Kredensial &amp; Profil Owner: Pengalaman Luas di Institusi Pendidikan &amp; Pemerintah Jerman</h2>
+      <p class="section-desc" data-i18n="owner_sec_desc">Kepemimpinan eksekutif kami dibangun atas fondasi integritas tinggi dan pengalaman bertahun-tahun di sektor publik, kemitraan bilateral, dan ekosistem pendidikan Republik Federal Jerman.</p>
+    </div>
+
+    <div style="max-width: 1140px; margin: 0 auto;">
+      
+      <!-- Main Credentials Showcase Card -->
+      <div style="background: linear-gradient(135deg, #0b1a30 0%, #070f1e 100%); border: 1px solid rgba(212, 175, 55, 0.45); border-radius: 24px; padding: 2.8rem 2.4rem; color: #fff; box-shadow: 0 16px 36px rgba(7, 15, 30, 0.15); position: relative; overflow: hidden; margin-bottom: 2rem;">
+        <div style="position: absolute; right: -30px; top: -30px; width: 220px; height: 220px; background: radial-gradient(circle, rgba(212,175,55,0.2) 0%, transparent 70%); pointer-events: none;"></div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.2rem; margin-bottom: 1.8rem; border-bottom: 1px solid rgba(212, 175, 55, 0.25); padding-bottom: 1.4rem;">
           <div>
-            <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-navy);">WhatsApp Direct Chat</h4>
-            <p style="color: #64748b; font-size: 0.9rem;">+62 811-1889-3389</p>
-            <a href="https://wa.me/6281118893389" target="_blank" style="color: var(--accent-emerald); font-weight: 700; font-size: 0.85rem;">Buka WhatsApp Direct &rarr;</a>
+            <span style="display: inline-block; background: rgba(212, 175, 55, 0.18); color: #f59e0b; border: 1px solid rgba(212, 175, 55, 0.4); padding: 0.35rem 0.95rem; border-radius: 50px; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem;" data-i18n="owner_card_badge">
+              FOUNDER &amp; MANAGING OWNER
+            </span>
+            <h3 style="font-family: var(--font-heading); font-size: 1.95rem; color: #fff; margin: 0;" data-i18n="owner_card_headline">
+              Kredensial &amp; Profil Eksekutif Pemilik
+            </h3>
+          </div>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 0.5rem 0.9rem; border-radius: 8px; font-size: 0.88rem; color: #e2e8f0;">
+              <i class="fas fa-landmark" style="color: #d4af37;"></i> <span data-i18n="tag_germany_gov">Institusi Pemerintah Jerman</span>
+            </span>
+            <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); padding: 0.5rem 0.9rem; border-radius: 8px; font-size: 0.88rem; color: #e2e8f0;">
+              <i class="fas fa-graduation-cap" style="color: #60a5fa;"></i> <span data-i18n="tag_germany_edu">Pendidikan Tinggi &amp; Vokasi Jerman</span>
+            </span>
           </div>
         </div>
 
-        <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 1.2rem;">
-          <div style="width: 50px; height: 50px; background: rgba(245, 158, 11, 0.15); color: #f59e0b; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-            <i class="fas fa-envelope"></i>
-          </div>
-          <div>
-            <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-navy);">Email Pertanyaan Umum & Ekspor</h4>
-            <p style="color: #64748b; font-size: 0.88rem;">info@admiralmalika.com</p>
-            <p style="color: #64748b; font-size: 0.88rem;">admin@admiralmalika.com</p>
-          </div>
-        </div>
+        <p style="color: #cbd5e1; font-size: 1.08rem; line-height: 1.8; margin-bottom: 2.2rem; max-width: 1060px;" data-i18n="owner_narrative">
+          Sebagai pendiri dan pemilik utama PT. Admiral Malika Internasional, kepemimpinan korporat kami ditopang oleh pengalaman profesional bertahun-tahun yang bekerja secara langsung di dalam ekosistem institusi pendidikan tinggi, kejuruan, dan badan pemerintahan di Republik Federal Jerman. Hubungan institusional yang kokoh dan berkelanjutan ini menjadi landasan terpercaya yang menjamin standar akuntabilitas tinggi, transparansi penuh, dan kepatuhan hukum internasional (*EU Compliance*) bagi seluruh mitra bisnis dan korporasi kami.
+        </p>
 
-        <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 1.2rem;">
-          <div style="width: 50px; height: 50px; background: rgba(14, 165, 233, 0.15); color: #0284c7; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-            <i class="fas fa-map-marker-alt"></i>
+        <!-- 3 Pillars of German Credentials -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.6rem;">
+          
+          <!-- Pillar 1: German Government -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(212, 175, 55, 0.28); border-radius: 16px; padding: 1.8rem; display: flex; flex-direction: column;">
+            <div style="width: 50px; height: 50px; background: rgba(212, 175, 55, 0.15); color: #d4af37; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.1rem;">
+              <i class="fas fa-building-columns"></i>
+            </div>
+            <h4 style="font-size: 1.18rem; color: #f8fafc; margin-bottom: 0.65rem; font-weight: 700;" data-i18n="cred_gov_title">Kerjasama Institusi &amp; Pemerintah Jerman</h4>
+            <p style="color: #94a3b8; font-size: 0.93rem; line-height: 1.65; margin: 0;" data-i18n="cred_gov_desc">
+              Pengalaman mendalam bekerja sama dengan kementerian, badan ketenagakerjaan resmi Jerman (*Bundesagentur für Arbeit*), serta otoritas publik federal dalam koordinasi program bilateral, kepatuhan regulasi Eropa, dan tata kelola kelembagaan tingkat tinggi.
+            </p>
           </div>
-          <div>
-            <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-navy);">Kantor Pusat & Jaringan Ekspor</h4>
-            <p style="color: #64748b; font-size: 0.88rem;">Indonesia (HQ) & Trans-Oceanic Global Network</p>
-          </div>
-        </div>
 
-        <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 1.2rem;">
-          <div style="width: 50px; height: 50px; background: rgba(99, 102, 241, 0.15); color: #4f46e5; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
-            <i class="fas fa-globe-europe"></i>
+          <!-- Pillar 2: German Education System -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(96, 165, 250, 0.28); border-radius: 16px; padding: 1.8rem; display: flex; flex-direction: column;">
+            <div style="width: 50px; height: 50px; background: rgba(96, 165, 250, 0.15); color: #60a5fa; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.1rem;">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h4 style="font-size: 1.18rem; color: #f8fafc; margin-bottom: 0.65rem; font-weight: 700;" data-i18n="cred_edu_title">Institusi Pendidikan Tinggi &amp; Sistem Vokasi Jerman</h4>
+            <p style="color: #94a3b8; font-size: 0.93rem; line-height: 1.65; margin: 0;" data-i18n="cred_edu_desc">
+              Keterlibatan mendalam dengan universitas, Hochschule terkemuka, dan lembaga kejuruan Jerman (*Duales Studium* &amp; *Ausbildung*), mendorong transfer pengetahuan, penyelarasan kurikulum, dan standardisasi kompetensi akademik serta profesional internasional.
+            </p>
           </div>
-          <div>
-            <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-navy);">Penghubung Kerjasama Jerman &amp; Eropa</h4>
-            <p style="color: #64748b; font-size: 0.88rem;">Meja koordinasi khusus institusi pendidikan &amp; instansi pemerintah Jerman</p>
-            <p style="color: #4f46e5; font-weight: 700; font-size: 0.85rem; margin-top: 4px;">Germany Desk Liaison &amp; Academic Cooperation</p>
+
+          <!-- Pillar 3: Integrity & German Work Ethic -->
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(52, 211, 153, 0.28); border-radius: 16px; padding: 1.8rem; display: flex; flex-direction: column;">
+            <div style="width: 50px; height: 50px; background: rgba(52, 211, 153, 0.15); color: #34d399; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.1rem;">
+              <i class="fas fa-handshake-angle"></i>
+            </div>
+            <h4 style="font-size: 1.18rem; color: #f8fafc; margin-bottom: 0.65rem; font-weight: 700;" data-i18n="cred_bridge_title">Jembatan Kepercayaan &amp; Akuntabilitas Jerman</h4>
+            <p style="color: #94a3b8; font-size: 0.93rem; line-height: 1.65; margin: 0;" data-i18n="cred_bridge_desc">
+              Menghadirkan etos ketepatan waktu, transparansi tanpa kompromi, dan keandalan kerja Jerman (*Deutsche Zuverlässigkeit*) ke dalam setiap lini manajemen korporasi, relasi mitra luar negeri, dan pelayanan klien PT. Admiral Malika Internasional.
+            </p>
           </div>
+
         </div>
       </div>
 
-      <!-- General Contact Form (Exact Match to User Mockup Image) -->
-      <div style="background: #ffffff; padding: 2.5rem 2rem; border-radius: 16px; border: 1px solid #cbd5e1; box-shadow: var(--shadow-md);">
-        <h3 style="font-size: 1.4rem; font-weight: 700; color: #091424; margin-bottom: 1.5rem;">Kirim pesan langsung</h3>
+    </div>
+  </section>
+
+  <!-- SECTION 2: OFFICIAL CONTACT INFORMATION & DIRECT MESSAGE FORM -->
+  <section class="section" id="contact-channels" style="background: #f8fafc; padding: 4rem 1.5rem;">
+    <div style="max-width: 1140px; margin: 0 auto;">
+      
+      <div style="text-align: center; margin-bottom: 2.8rem;">
+        <span class="section-badge" data-i18n="contact_sec_badge"><i class="fas fa-address-book"></i> SALURAN HUBUNGAN RESMI</span>
+        <h2 style="font-family: var(--font-heading); font-size: 2.1rem; color: #070f1e; margin-top: 0.4rem;" data-i18n="contact_sec_title">
+          Informasi Kontak &amp; Meja Komunikasi Resmi
+        </h2>
+        <p style="color: #64748b; font-size: 1rem; max-width: 700px; margin: 0.4rem auto 0 auto;" data-i18n="contact_sec_desc">
+          Hubungi tim eksekutif PT. Admiral Malika Internasional secara langsung melalui saluran resmi di bawah ini atau kirimkan formulir pesan.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1.25fr; gap: 2.5rem; align-items: start;">
         
-        <form id="inquiry-form">
+        <!-- Left Column: 4 Official Contact Cards -->
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
           
-          <div style="margin-bottom: 1.25rem;">
-            <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;">Nama* :</label>
-            <input type="text" id="inq-name" required class="form-control" style="width: 100%; padding: 0.65rem 0.9rem; border: 1px solid #94a3b8; border-radius: 4px; font-size: 0.95rem;">
-          </div>
-
-          <div style="margin-bottom: 1.25rem;">
-            <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;">Email* :</label>
-            <input type="email" id="inq-email" required class="form-control" style="width: 100%; padding: 0.65rem 0.9rem; border: 1px solid #94a3b8; border-radius: 4px; font-size: 0.95rem;">
-          </div>
-
-          <div style="margin-bottom: 1.5rem;">
-            <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;">HP/WA* :</label>
-            <input type="tel" id="inq-phone" required class="form-control" style="width: 100%; padding: 0.65rem 0.9rem; border: 1px solid #94a3b8; border-radius: 4px; font-size: 0.95rem;">
-          </div>
-
-          <div style="margin-bottom: 1.75rem;">
-            <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.75rem;">Pilihan Kebutuhan* :</label>
-            <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.92rem; color: #334155;">
-              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
-                <input type="checkbox" name="need_option" value="Produk agraria dan perikanan" style="margin-top: 3px; accent-color: #0077c5; width: 16px; height: 16px;">
-                <span>Produk agraria dan perikanan</span>
-              </label>
-              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
-                <input type="checkbox" name="need_option" value="Produk garmen, pakaian dan batik" style="margin-top: 3px; accent-color: #0077c5; width: 16px; height: 16px;">
-                <span>Produk garmen, pakaian dan batik</span>
-              </label>
-              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
-                <input type="checkbox" name="need_option" value="Kerjasama Bisnis & Kemitraan Ekspor" style="margin-top: 3px; accent-color: #0077c5; width: 16px; height: 16px;">
-                <span>Kerjasama Bisnis & Kemitraan Ekspor</span>
-              </label>
-              <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
-                <input type="checkbox" name="need_option" value="Kebutuhan lainnya" style="margin-top: 3px; accent-color: #0077c5; width: 16px; height: 16px;">
-                <span>Kebutuhan lainnya</span>
-              </label>
+          <!-- Card 1: WhatsApp Direct -->
+          <div class="pillar-card" style="padding: 1.6rem 1.4rem; border: 1px solid rgba(5, 150, 105, 0.25); background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.04); display: flex; align-items: flex-start; gap: 1.2rem;">
+            <div style="width: 48px; height: 48px; background: rgba(5, 150, 105, 0.12); color: #059669; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 700; color: #070f1e; margin-bottom: 0.25rem;" data-i18n="c_wa_title">WhatsApp Direct Chat</h4>
+              <p style="color: #64748b; font-size: 0.88rem; margin-bottom: 0.4rem;" data-i18n="c_wa_desc">Respon cepat konsultasi dan koordinasi pesan langsung.</p>
+              <div style="font-weight: 800; color: #059669; font-size: 1.05rem; margin-bottom: 0.4rem;">+62 811-1889-3389</div>
+              <a href="https://wa.me/6281118893389" target="_blank" rel="noopener noreferrer" style="color: #059669; font-weight: 700; font-size: 0.86rem; display: inline-flex; align-items: center; gap: 4px;">
+                <span data-i18n="btn_chat_wa">Buka Chat WhatsApp</span> &rarr;
+              </a>
             </div>
           </div>
 
-          <div style="margin-bottom: 1.75rem;">
-            <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;">Pesan Anda :</label>
-            <textarea id="inq-message" required rows="6" class="form-control" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid #94a3b8; border-radius: 4px; font-size: 0.95rem; resize: vertical;"></textarea>
+          <!-- Card 2: Official Corporate Email -->
+          <div class="pillar-card" style="padding: 1.6rem 1.4rem; border: 1px solid rgba(212, 175, 55, 0.35); background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.04); display: flex; align-items: flex-start; gap: 1.2rem;">
+            <div style="width: 48px; height: 48px; background: rgba(212, 175, 55, 0.14); color: #b45309; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+              <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 700; color: #070f1e; margin-bottom: 0.25rem;" data-i18n="c_email_title">Email Resmi Perusahaan</h4>
+              <p style="color: #64748b; font-size: 0.88rem; margin-bottom: 0.4rem;" data-i18n="c_email_desc">Korespondensi resmi B2B, proposal kerjasama, dan administrasi.</p>
+              <div style="font-size: 0.92rem; color: #1e293b; line-height: 1.5;">
+                <strong>info@admiralmalika.com</strong><br>
+                <strong>admin@admiralmalika.com</strong>
+              </div>
+            </div>
           </div>
 
-          <button type="submit" id="inq-submit-btn" class="btn btn-primary" style="width: 100%; padding: 0.85rem; font-size: 0.95rem; font-weight: 700; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 8px;">
-            <i class="fas fa-paper-plane"></i> Kirim Pesan Langsung
-          </button>
+          <!-- Card 3: Head Office HQ -->
+          <div class="pillar-card" style="padding: 1.6rem 1.4rem; border: 1px solid rgba(14, 165, 233, 0.25); background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.04); display: flex; align-items: flex-start; gap: 1.2rem;">
+            <div style="width: 48px; height: 48px; background: rgba(14, 165, 233, 0.12); color: #0284c7; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+              <i class="fas fa-building"></i>
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 700; color: #070f1e; margin-bottom: 0.25rem;" data-i18n="c_hq_title">Kantor Pusat (HQ)</h4>
+              <p style="color: #64748b; font-size: 0.88rem; margin-bottom: 0.4rem;" data-i18n="c_hq_desc">Pusat tata kelola holding korporat dan operasional ekspor.</p>
+              <div style="font-size: 0.92rem; color: #1e293b; line-height: 1.5;">
+                <strong>Indonesia (HQ)</strong><br>
+                <span style="color:#64748b; font-size:0.85rem;" data-i18n="c_hq_sub">Jaringan Antarbenua &amp; Hub Pelabuhan Laut Internasional</span>
+              </div>
+            </div>
+          </div>
 
-          <div id="inquiry-form-status" style="display:none; margin-top:1.25rem; border-radius:8px; padding:1.1rem 1.25rem; font-size:0.95rem;"></div>
-        </form>
+          <!-- Card 4: Germany Desk Liaison -->
+          <div class="pillar-card" style="padding: 1.6rem 1.4rem; border: 1px solid rgba(99, 102, 241, 0.25); background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.04); display: flex; align-items: flex-start; gap: 1.2rem;">
+            <div style="width: 48px; height: 48px; background: rgba(99, 102, 241, 0.12); color: #4f46e5; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+              <i class="fas fa-globe-europe"></i>
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.25rem;" data-i18n="c_de_title">Penghubung Kerjasama Jerman &amp; Eropa</h4>
+              <p style="color: #64748b; font-size: 0.88rem; margin-bottom: 0.4rem;" data-i18n="c_de_desc">Meja kemitraan khusus institusi pendidikan &amp; instansi pemerintah Jerman.</p>
+              <div style="color: #4f46e5; font-weight: 700; font-size: 0.85rem;" data-i18n="c_de_sub">Germany Desk Liaison &amp; Academic Cooperation</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Direct Message Form -->
+        <div style="background: #ffffff; padding: 2.8rem 2.2rem; border-radius: 20px; border: 1px solid #cbd5e1; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+          <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 1.2rem; margin-bottom: 1.6rem;">
+            <span style="color: #059669; font-weight: 800; font-size: 0.82rem; letter-spacing: 1px; text-transform: uppercase;" data-i18n="form_tag">KIRIM PESAN LANGSUNG</span>
+            <h3 style="font-size: 1.55rem; font-weight: 800; color: #091424; margin: 0.3rem 0 0 0;" data-i18n="form_heading">Formulir Pesan &amp; Kemitraan</h3>
+            <p style="color: #64748b; font-size: 0.92rem; margin-top: 0.3rem;" data-i18n="form_sub">Kirimkan inkuiri bisnis atau kemitraan langsung ke meja eksekutif.</p>
+          </div>
+          
+          <form id="inquiry-form">
+            <div style="margin-bottom: 1.25rem;">
+              <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;" data-i18n="lbl_name">Nama Lengkap / Perusahaan* :</label>
+              <input type="text" id="inq-name" required class="form-control" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid #94a3b8; border-radius: 8px; font-size: 0.95rem;">
+            </div>
+
+            <div style="margin-bottom: 1.25rem;">
+              <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;" data-i18n="lbl_email">Email Perusahaan / Resmi* :</label>
+              <input type="email" id="inq-email" required class="form-control" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid #94a3b8; border-radius: 8px; font-size: 0.95rem;">
+            </div>
+
+            <div style="margin-bottom: 1.4rem;">
+              <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;" data-i18n="lbl_phone">Nomor Telepon / WhatsApp* :</label>
+              <input type="tel" id="inq-phone" required class="form-control" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid #94a3b8; border-radius: 8px; font-size: 0.95rem;">
+            </div>
+
+            <div style="margin-bottom: 1.6rem;">
+              <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.75rem;" data-i18n="lbl_category">Kategori Kebutuhan / Kerjasama* :</label>
+              <div style="display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.92rem; color: #334155;">
+                <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                  <input type="checkbox" name="need_option" value="Kemitraan Institusi & Pendidikan Jerman" style="margin-top: 3px; accent-color: #0077c5; width: 16px; height: 16px;">
+                  <span data-i18n="opt_edu">Kemitraan Institusi &amp; Pendidikan Jerman</span>
+                </label>
+                <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                  <input type="checkbox" name="need_option" value="Produk Agraria & Komoditas Ekspor" style="margin-top: 3px; accent-color: #0077c5; width: 16px; height: 16px;">
+                  <span data-i18n="opt_agraria">Produk Agraria &amp; Komoditas Ekspor</span>
+                </label>
+                <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                  <input type="checkbox" name="need_option" value="Kerjasama Bisnis & Kemitraan Ekspor" style="margin-top: 3px; accent-color: #0077c5; width: 16px; height: 16px;">
+                  <span data-i18n="opt_trade">Kerjasama Bisnis &amp; Kemitraan Ekspor</span>
+                </label>
+                <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer;">
+                  <input type="checkbox" name="need_option" value="Kebutuhan Lainnya" style="margin-top: 3px; accent-color: #0077c5; width: 16px; height: 16px;">
+                  <span data-i18n="opt_other">Kebutuhan Lainnya</span>
+                </label>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 1.6rem;">
+              <label style="display: block; font-weight: 600; font-size: 0.95rem; color: #1e293b; margin-bottom: 0.4rem;" data-i18n="lbl_msg">Detail Pesan / Spesifikasi* :</label>
+              <textarea id="inq-message" required rows="5" class="form-control" style="width: 100%; padding: 0.75rem 0.9rem; border: 1px solid #94a3b8; border-radius: 8px; font-size: 0.95rem; resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" id="inq-submit-btn" class="btn btn-primary" style="width: 100%; padding: 0.95rem; font-size: 1rem; font-weight: 700; border-radius: 8px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+              <i class="fas fa-paper-plane"></i> <span data-i18n="btn_submit_msg">Kirim Pesan Langsung</span>
+            </button>
+
+            <div id="inquiry-form-status" style="display:none; margin-top:1.25rem; border-radius:8px; padding:1.1rem 1.25rem; font-size:0.95rem;"></div>
+          </form>
+        </div>
+
       </div>
+
     </div>
   </section>
 
@@ -218,22 +298,22 @@
           <div class="logo-badge">AMI</div>
           <div style="color: #fff; font-weight: 800; font-size: 1.2rem;">PT. ADMIRAL MALIKA INTERNASIONAL</div>
         </div>
-        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.8rem; max-width: 360px;">
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 0.8rem; max-width: 360px;" data-i18n="footer_brand_desc">
           Entitas induk korporat agregator dan eksportir komoditas Indonesia terpercaya untuk pasar global.
         </p>
       </div>
 
       <div>
-        <div class="footer-title">Navigasi Utama</div>
+        <div class="footer-title" data-i18n="footer_nav_title">Navigasi Utama</div>
         <ul class="footer-links">
-          <li><a href="index.html">Beranda</a></li>
-          <li><a href="produk.html">Produk</a></li>
-          <li><a href="contact.html">Kontak</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Beranda</a></li>
+          <li><a href="produk.html" data-i18n="nav_portfolios">Produk</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Kontak</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="footer-title">Kontak Resmi Korporat</div>
+        <div class="footer-title" data-i18n="footer_contact_title">Kontak Resmi Korporat</div>
         <ul class="footer-links">
           <li><i class="fas fa-envelope" style="color:var(--accent-gold); margin-right:8px;"></i> info@admiralmalika.com</li>
           <li><i class="fas fa-envelope" style="color:var(--accent-gold); margin-right:8px;"></i> admin@admiralmalika.com</li>
@@ -245,7 +325,7 @@
 
     <div class="footer-bottom">
       <div>&copy; 2026 PT. Admiral Malika Internasional. All Rights Reserved.</div>
-      <div>Official Corporate Holding &amp; Global Trade Aggregator Portal.</div>
+      <div data-i18n="footer_bottom_tag">Official Corporate Holding &amp; Global Trade Aggregator Portal.</div>
     </div>
   </footer>
 
@@ -255,6 +335,145 @@
     <i class="fab fa-whatsapp"></i>
     <span>Chat WhatsApp</span>
   </a>
+
+  <!-- Multilingual Dictionary Script (EN, ID, DE) -->
+  <script>
+    const contactDictionary = {
+      en: {
+        nav_home: "Home", nav_portfolios: "Products", nav_contact: "Contact", btn_cms: "CMS Admin",
+        contact_hero_badge: "CORPORATE CREDENTIALS &amp; OFFICIAL CONTACT",
+        contact_hero_title1: "Owner Credentials &amp;", contact_hero_title2: "Official Corporate Contact",
+        contact_hero_desc: "Building international bridges of trust between Indonesia and Germany, powered by executive leadership experience with German universities, vocational institutions, and federal government authorities.",
+        btn_jump_cred: "View Owner Credentials", btn_jump_contact: "Official Contact Channels",
+        owner_sec_badge: "FOUNDER &amp; OWNER CREDENTIALS",
+        owner_sec_title: "Owner Credentials &amp; Profile: Extensive Experience with German Educational &amp; Government Institutions",
+        owner_sec_desc: "Our executive leadership is built upon deep integrity and decades of direct engagement within the public sector, bilateral partnerships, and academic ecosystems of the Federal Republic of Germany.",
+        owner_card_badge: "FOUNDER &amp; MANAGING OWNER",
+        owner_card_headline: "Executive Credentials &amp; Owner Profile",
+        tag_germany_gov: "German Federal Institutions", tag_germany_edu: "Higher &amp; Vocational Education",
+        owner_narrative: "As founder and managing owner of PT. Admiral Malika Internasional, our corporate leadership is grounded in extensive professional experience working directly within the ecosystem of German universities, vocational training bodies, and federal government authorities. This established institutional foundation guarantees uncompromising standards of precision, full accountability, and EU regulatory compliance across all our international business operations and client engagements.",
+        cred_gov_title: "German Government Institutions &amp; Public Sector",
+        cred_gov_desc: "Extensive experience collaborating directly with federal ministries, the German Federal Employment Agency (Bundesagentur für Arbeit), and official bilateral agencies in intergovernmental program coordination, European regulatory compliance, and institutional governance.",
+        cred_edu_title: "German Higher &amp; Vocational Education Systems",
+        cred_edu_desc: "Deep involvement with premier German universities, Fachhochschulen, and vocational training frameworks (Duales Studium &amp; Ausbildung), driving knowledge transfer, curriculum alignment, and international academic/professional certification standards.",
+        cred_bridge_title: "Bridge of Trust &amp; German Precision",
+        cred_bridge_desc: "Delivering German standards of reliability, punctual execution, and uncompromising business ethics (Deutsche Zuverlässigkeit) into every facet of our corporate management, overseas trade relations, and enterprise partnerships.",
+        contact_sec_badge: "OFFICIAL CHANNELS",
+        contact_sec_title: "Official Corporate Contacts &amp; Liaison Desks",
+        contact_sec_desc: "Connect directly with PT. Admiral Malika Internasional executive team via the official channels below or submit a formal inquiry.",
+        c_wa_title: "WhatsApp Direct Chat", c_wa_desc: "Fast response for direct inquiries and priority messaging.", btn_chat_wa: "Open WhatsApp Chat",
+        c_email_title: "Official Corporate Email", c_email_desc: "Formal enterprise correspondence, partnership proposals, and administrative desks.",
+        c_hq_title: "Corporate Head Office (HQ)", c_hq_desc: "Holding corporate governance and international commerce hubs.", c_hq_sub: "Indonesia (HQ) &amp; Trans-Oceanic Global Network",
+        c_de_title: "Germany &amp; European Liaison Desk", c_de_desc: "Dedicated desk for German universities, vocational partners, and public sector collaboration.", c_de_sub: "Germany Desk Liaison &amp; Academic Cooperation",
+        form_tag: "DIRECT INQUIRY DESK", form_heading: "Corporate Inquiry &amp; Partnership Form", form_sub: "Submit your business proposal or inquiry directly to our executive team.",
+        lbl_name: "Full Name / Organization* :", lbl_email: "Corporate Email Address* :", lbl_phone: "Phone / WhatsApp Number* :",
+        lbl_category: "Inquiry / Partnership Category* :",
+        opt_edu: "German Education &amp; Institutional Partnership", opt_agraria: "Agricultural &amp; Commodity Portfolios",
+        opt_trade: "International Trade Cooperation &amp; RFQ", opt_other: "Other Inquiries",
+        lbl_msg: "Message Details / Specifications* :", btn_submit_msg: "Submit Direct Inquiry",
+        footer_brand_desc: "Trusted corporate parent holding aggregator and exporter of Indonesian commodities for global markets.",
+        footer_nav_title: "Main Navigation", footer_contact_title: "Official Corporate Contact",
+        footer_bottom_tag: "Official Corporate Holding &amp; Global Trade Aggregator Portal."
+      },
+      id: {
+        nav_home: "Beranda", nav_portfolios: "Produk", nav_contact: "Kontak", btn_cms: "CMS Admin",
+        contact_hero_badge: "KREDENSIAL KORPORAT &amp; KONTAK RESMI",
+        contact_hero_title1: "Kredensial Owner &amp;", contact_hero_title2: "Kontak Resmi PT. Admiral Malika",
+        contact_hero_desc: "Membangun jembatan kepercayaan internasional antara Indonesia dan Jerman, diperkuat oleh rekam jejak kepemimpinan di institusi pendidikan tinggi, vokasi, dan badan pemerintahan Jerman.",
+        btn_jump_cred: "Lihat Kredensial Owner", btn_jump_contact: "Saluran Kontak Resmi",
+        owner_sec_badge: "PROFIL &amp; KREDENSIAL PEMILIK (OWNER)",
+        owner_sec_title: "Kredensial &amp; Profil Owner: Pengalaman Luas di Institusi Pendidikan &amp; Pemerintah Jerman",
+        owner_sec_desc: "Kepemimpinan eksekutif kami dibangun atas fondasi integritas tinggi dan pengalaman bertahun-tahun di sektor publik, kemitraan bilateral, dan ekosistem pendidikan Republik Federal Jerman.",
+        owner_card_badge: "FOUNDER &amp; MANAGING OWNER",
+        owner_card_headline: "Kredensial &amp; Profil Eksekutif Pemilik",
+        tag_germany_gov: "Institusi Pemerintah Jerman", tag_germany_edu: "Pendidikan Tinggi &amp; Vokasi Jerman",
+        owner_narrative: "Sebagai pendiri dan pemilik utama PT. Admiral Malika Internasional, kepemimpinan korporat kami ditopang oleh pengalaman profesional bertahun-tahun yang bekerja secara langsung di dalam ekosistem institusi pendidikan tinggi, kejuruan, dan badan pemerintahan di Republik Federal Jerman. Hubungan institusional yang kokoh dan berkelanjutan ini menjadi landasan terpercaya yang menjamin standar akuntabilitas tinggi, transparansi penuh, dan kepatuhan hukum internasional (*EU Compliance*) bagi seluruh mitra bisnis dan korporasi kami.",
+        cred_gov_title: "Kerjasama Institusi &amp; Pemerintah Jerman",
+        cred_gov_desc: "Pengalaman mendalam bekerja sama dengan kementerian, badan ketenagakerjaan resmi Jerman (*Bundesagentur für Arbeit*), serta otoritas publik federal dalam koordinasi program bilateral, kepatuhan regulasi Eropa, dan tata kelola kelembagaan tingkat tinggi.",
+        cred_edu_title: "Institusi Pendidikan Tinggi &amp; Sistem Vokasi Jerman",
+        cred_edu_desc: "Keterlibatan mendalam dengan universitas, Hochschule terkemuka, dan lembaga kejuruan Jerman (*Duales Studium* &amp; *Ausbildung*), mendorong transfer pengetahuan, penyelarasan kurikulum, dan standardisasi kompetensi akademik serta profesional internasional.",
+        cred_bridge_title: "Jembatan Kepercayaan &amp; Akuntabilitas Jerman",
+        cred_bridge_desc: "Menghadirkan etos ketepatan waktu, transparansi tanpa kompromi, dan keandalan kerja Jerman (*Deutsche Zuverlässigkeit*) ke dalam setiap lini manajemen korporasi, relasi mitra luar negeri, dan pelayanan klien PT. Admiral Malika Internasional.",
+        contact_sec_badge: "SALURAN HUBUNGAN RESMI",
+        contact_sec_title: "Informasi Kontak &amp; Meja Komunikasi Resmi",
+        contact_sec_desc: "Hubungi tim eksekutif PT. Admiral Malika Internasional secara langsung melalui saluran resmi di bawah ini atau kirimkan formulir pesan.",
+        c_wa_title: "WhatsApp Direct Chat", c_wa_desc: "Respon cepat konsultasi dan koordinasi pesan langsung.", btn_chat_wa: "Buka Chat WhatsApp",
+        c_email_title: "Email Resmi Perusahaan", c_email_desc: "Korespondensi resmi B2B, proposal kerjasama, dan administrasi.",
+        c_hq_title: "Kantor Pusat (HQ)", c_hq_desc: "Pusat tata kelola holding korporat dan operasional ekspor.", c_hq_sub: "Indonesia (HQ) &amp; Hub Pelabuhan Laut Internasional",
+        c_de_title: "Penghubung Kerjasama Jerman &amp; Eropa", c_de_desc: "Meja kemitraan khusus institusi pendidikan &amp; instansi pemerintah Jerman.", c_de_sub: "Germany Desk Liaison &amp; Academic Cooperation",
+        form_tag: "KIRIM PESAN LANGSUNG", form_heading: "Formulir Pesan &amp; Kemitraan", form_sub: "Kirimkan inkuiri bisnis atau kemitraan langsung ke meja eksekutif.",
+        lbl_name: "Nama Lengkap / Perusahaan* :", lbl_email: "Email Perusahaan / Resmi* :", lbl_phone: "Nomor Telepon / WhatsApp* :",
+        lbl_category: "Kategori Kebutuhan / Kerjasama* :",
+        opt_edu: "Kemitraan Institusi &amp; Pendidikan Jerman", opt_agraria: "Produk Agraria &amp; Komoditas Ekspor",
+        opt_trade: "Kerjasama Bisnis &amp; Kemitraan Ekspor", opt_other: "Kebutuhan Lainnya",
+        lbl_msg: "Detail Pesan / Spesifikasi* :", btn_submit_msg: "Kirim Pesan Langsung",
+        footer_brand_desc: "Entitas induk korporat agregator dan eksportir komoditas Indonesia terpercaya untuk pasar global.",
+        footer_nav_title: "Navigasi Utama", footer_contact_title: "Kontak Resmi Korporat",
+        footer_bottom_tag: "Official Corporate Holding &amp; Global Trade Aggregator Portal."
+      },
+      de: {
+        nav_home: "Startseite", nav_portfolios: "Produkte", nav_contact: "Kontakt", btn_cms: "CMS Admin",
+        contact_hero_badge: "UNTERNEHMENSREFERENZEN &amp; KONTAKT",
+        contact_hero_title1: "Gründerreferenzen &amp;", contact_hero_title2: "Offizieller Konzernkontakt",
+        contact_hero_desc: "Aufbau internationaler Vertrauensbrücken zwischen Indonesien und Deutschland, gestützt auf langjährige Führungserfahrung in deutschen Hochschulen, Bildungseinrichtungen und Bundesbehörden.",
+        btn_jump_cred: "Gründerprofil Ansehen", btn_jump_contact: "Offizielle Kontaktkanäle",
+        owner_sec_badge: "GRÜNDERPROFIL &amp; REFERENZEN",
+        owner_sec_title: "Gründerprofil &amp; Referenzen: Langjährige Erfahrung in deutschen Bildungs- &amp; Regierungsinstitutionen",
+        owner_sec_desc: "Unsere Geschäftsführung stützt sich auf höchste Integrität und jahrzehntelange direkte Zusammenarbeit mit Bundesbehörden, Ministerien und deutschen Bildungsträgern.",
+        owner_card_badge: "GRÜNDER &amp; UNTERNEHMENSINHABER",
+        owner_card_headline: "Führungserfahrung &amp; Referenzen des Gründers",
+        tag_germany_gov: "Deutsche Bundesbehörden", tag_germany_edu: "Hochschul- &amp; Berufsbildung",
+        owner_narrative: "Als Gründer und Inhaber der PT. Admiral Malika Internasional basiert unsere Unternehmensführung auf langjähriger beruflicher Praxis im direkten Umfeld deutscher Hochschulen, Berufsbildungsträger und öffentlicher Regierungsinstitutionen. Dieses gefestigte institutionelle Netzwerk garantiert höchste Präzision, lückenlose Transparenz und die strikte Einhaltung europäischer Compliance-Standards (EU Compliance) in allen internationalen Handelsbeziehungen.",
+        cred_gov_title: "Deutsche Regierungsinstitutionen &amp; Öffentlicher Sektor",
+        cred_gov_desc: "Fundierte Erfahrung in der direkten Zusammenarbeit mit Bundesministerien, der Bundesagentur für Arbeit und bilateralen Trägern in zwischenstaatlicher Programmkoordination und behördlicher Compliance.",
+        cred_edu_title: "Deutsche Hochschulen &amp; Duales Ausbildungssystem",
+        cred_edu_desc: "Enge Kooperation mit führenden Universitäten, Fachhochschulen sowie Trägern des dualen Studiums und der beruflichen Ausbildung zur Standardisierung akademischer und beruflicher Qualifikationen.",
+        cred_bridge_title: "Brücke des Vertrauens &amp; Deutsche Präzision",
+        cred_bridge_desc: "Konsequente Verankerung deutscher Zuverlässigkeitsstandards, Termintreue und geschäftlicher Integrität (Deutsche Zuverlässigkeit) in allen Unternehmensprozessen und Partnerschaften.",
+        contact_sec_badge: "OFFIZIELLE KANÄLE",
+        contact_sec_title: "Offizielle Unternehmenskontakte &amp; Verbindungsstellen",
+        contact_sec_desc: "Kontaktieren Sie das Führungsteam von PT. Admiral Malika Internasional direkt über die folgenden offiziellen Kanäle.",
+        c_wa_title: "WhatsApp-Direktkontakt", c_wa_desc: "Schnelle Reaktionszeit für direkte Anfragen und Prioritätsnachrichten.", btn_chat_wa: "WhatsApp-Chat Starten",
+        c_email_title: "Offizielle Unternehmens-E-Mail", c_email_desc: "Offizielle B2B-Geschäftskorrespondenz, Kooperationsvorschläge und Administration.",
+        c_hq_title: "Konzernhauptsitz (HQ)", c_hq_desc: "Zentrale Holding-Governance und internationale Handelsknotenpunkte.", c_hq_sub: "Indonesien (HQ) &amp; Globales Seehafennetzwerk",
+        c_de_title: "Deutschland- &amp; Europadesk", c_de_desc: "Spezialisierte Verbindungsstelle für deutsche Universitäten, Bildungsträger und Bundesbehörden.", c_de_sub: "Germany Desk Liaison &amp; Academic Cooperation",
+        form_tag: "DIREKTE ANFRAGE", form_heading: "Kontakt- &amp; Partnerschaftsformular", form_sub: "Senden Sie Ihr Kooperationsangebot oder Ihre Anfrage direkt an die Geschäftsleitung.",
+        lbl_name: "Vollständiger Name / Firmenname* :", lbl_email: "Offizielle E-Mail-Adresse* :", lbl_phone: "Telefon- / WhatsApp-Nummer* :",
+        lbl_category: "Anfrage- &amp; Kooperationskategorie* :",
+        opt_edu: "Deutsche Bildungsträger &amp; Institutionelle Kooperation", opt_agraria: "Agrar- &amp; Rohstoffportfolios",
+        opt_trade: "Internationaler B2B-Handel &amp; Preisanfrage", opt_other: "Sonstige Anfragen",
+        lbl_msg: "Nachricht &amp; Spezifikationen* :", btn_submit_msg: "Anfrage Absenden",
+        footer_brand_desc: "Vertrauenswürdiger Handelsaggregator und Exporteur indonesischer Rohstoffe für globale Märkte.",
+        footer_nav_title: "Hauptnavigation", footer_contact_title: "Offizieller Konzernkontakt",
+        footer_bottom_tag: "Offizielles Portal der Holdinggesellschaft &amp; des globalen Handelsaggregators."
+      }
+    };
+
+    function setAppLang(lang) {
+      if (!contactDictionary[lang]) lang = 'id';
+      localStorage.setItem('ami_selected_lang', lang);
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const onclickAttr = btn.getAttribute('onclick') || '';
+        btn.classList.toggle('active', onclickAttr.includes(`'${lang}'`));
+      });
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (contactDictionary[lang] && contactDictionary[lang][key]) {
+          el.innerHTML = contactDictionary[lang][key];
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      const initialLang = (urlLang && contactDictionary[urlLang]) ? urlLang : (localStorage.getItem('ami_selected_lang') || 'id');
+      setAppLang(initialLang);
+    });
+  </script>
 
   <script src="js/cms.js"></script>
   <script src="js/main.js"></script>
